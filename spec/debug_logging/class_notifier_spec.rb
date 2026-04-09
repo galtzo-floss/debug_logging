@@ -30,7 +30,7 @@ RSpec.describe DebugLogging::ClassNotifier do
         complete_notified_klass.k_with_dsplat(a: "a")
       end
       expect(output).to match("k_with_dsplat.log")
-      expect(output).to match('args=\(\*\*{:a=>"a"}\) payload={}')
+      expect(output).to match('args=\(\*\*{a: "a"}\) payload={}')
       expect(events.length).to eq(1)
       event = events.first
       expect(event).to have_attributes(
@@ -58,7 +58,7 @@ RSpec.describe DebugLogging::ClassNotifier do
         },
       )
       expect(output).to match("k_with_dsplat_payload.log")
-      expect(output).to match('args=\(\*\*{:a=>"a"}\) payload={:id=>2, :first_name=>"Bae", :last_name=>"Fae"}')
+      expect(output).to match('args=\(\*\*{a: "a"}\) payload={id: 2, first_name: "Bae", last_name: "Fae"}')
     end
 
     it "works with a config override hash" do
@@ -78,8 +78,8 @@ RSpec.describe DebugLogging::ClassNotifier do
       )
       expect(output).to match("ERROR")
       expect(output).to match(Regexp.escape("k_with_dsplat_payload_and_config.log"))
-      expect(output).to match(Regexp.escape('args=(**{:a=>"a"})'))
-      expect(output).to match(Regexp.escape('payload={:id=>3, :first_name=>"Jae", :last_name=>"Tae"}'))
+      expect(output).to match(Regexp.escape('args=(**{a: "a"})'))
+      expect(output).to match(Regexp.escape('payload={id: 3, first_name: "Jae", last_name: "Tae"}'))
     end
   end
 
@@ -106,9 +106,9 @@ RSpec.describe DebugLogging::ClassNotifier do
       expect(output).to match("i.log")
       expect(output).to match(Regexp.escape("args=() payload={}"))
       expect(output).to match("i_with_ssplat.log")
-      expect(output).to match('payload={:id=>1, :first_name=>"Joe", :last_name=>"Schmoe"}')
+      expect(output).to match('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
       expect(output).to match("i_with_dsplat.log")
-      expect(output).to match('payload={:salutation=>"Mr.", :suffix=>"Jr."}')
+      expect(output).to match('payload={salutation: "Mr.", suffix: "Jr."}')
       expect(output).to match("i_with_dsplat_payload.log")
       expect(output).to match('["blue", "green"]')
       expect(output).to match("i_with_dsplat_payload_and_config.log")
@@ -119,9 +119,9 @@ RSpec.describe DebugLogging::ClassNotifier do
       expect(output).to match("k_with_ssplat.log")
       expect(output).to match("k_with_dsplat.log")
       expect(output).to match("k_with_dsplat_payload.log")
-      expect(output).to match('payload={:id=>2, :first_name=>"Bae", :last_name=>"Fae"}')
+      expect(output).to match('payload={id: 2, first_name: "Bae", last_name: "Fae"}')
       expect(output).to match("k_with_dsplat_payload_and_config.log")
-      expect(output).to match('payload={:id=>3, :first_name=>"Jae", :last_name=>"Tae"}')
+      expect(output).to match('payload={id: 3, first_name: "Jae", last_name: "Tae"}')
       # Config options do not bleed through
       expect(output).not_to match("log_level")
       expect(events[0]).to have_attributes(
@@ -260,9 +260,9 @@ RSpec.describe DebugLogging::ClassNotifier do
       expect(output).to match("i.log")
       expect(output).to match(Regexp.escape("args=() payload={}"))
       expect(output).to match("i_with_ssplat.log")
-      expect(output).to match('payload={:id=>1, :first_name=>"Joe", :last_name=>"Schmoe"}')
+      expect(output).to match('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
       expect(output).to match("i_with_dsplat.log")
-      expect(output).to match('payload={:salutation=>"Mr.", :suffix=>"Jr."}')
+      expect(output).to match('payload={salutation: "Mr.", suffix: "Jr."}')
       expect(events).to contain_exactly(
         have_attributes(
           name: "i.log",
@@ -298,9 +298,9 @@ RSpec.describe DebugLogging::ClassNotifier do
         complete_notified_klass.k_with_ssplat
       end
       expect(output).to match("i_with_ssplat.log")
-      expect(output).to match('payload={:id=>1, :first_name=>"Joe", :last_name=>"Schmoe"}')
+      expect(output).to match('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
       expect(output).to match("i_with_ssplat.log")
-      expect(output).to match('payload={:id=>1, :first_name=>"Joe", :last_name=>"Schmoe"}')
+      expect(output).to match('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
       expect(output).to match("k_with_ssplat.log")
       expect(output).to match(Regexp.escape("args=() payload={}"))
       expect(output).to match("k_with_ssplat.log")
