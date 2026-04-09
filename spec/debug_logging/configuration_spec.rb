@@ -337,10 +337,12 @@ RSpec.describe DebugLogging::Configuration do
         Class.new do
           # adds the helper methods to the class, all are prefixed with debug_*
           extend DebugLogging
+
           self.debug_instance_benchmarks = true
           self.debug_add_invocation_id = true
           # Includes a new anonymous module each time, so can include multiple times, each with a different config!
           extend DebugLogging::InstanceLogger
+
           i_logged [:i], {instance_benchmarks: false}
           i_logged [:i_with_ssplat], {add_invocation_id: false}
           i_logged [:i_with_dsplat], {instance_benchmarks: false, add_invocation_id: false}
@@ -371,12 +373,14 @@ RSpec.describe DebugLogging::Configuration do
         Class.new do
           # adds the helper methods to the class, all are prefixed with debug_*
           extend DebugLogging
+
           self.debug_instance_benchmarks = false
           self.debug_add_invocation_id = false
           # A bit redundant - but you can override the class settings above,
           #   which would apply to singleton and instance methods for this class,
           #   for all *instance* methods, like this:
           extend DebugLogging::InstanceLogger
+
           i_logged instance_methods(false), {add_invocation_id: true}
 
           def i
@@ -402,6 +406,7 @@ RSpec.describe DebugLogging::Configuration do
           extend DebugLogging
           extend DebugLogging::ClassLogger
           extend DebugLogging::InstanceLogger
+
           self.debug_instance_benchmarks = false
           self.debug_add_invocation_id = false
           # rubocop:disable Lint/ConstantDefinitionInBlock

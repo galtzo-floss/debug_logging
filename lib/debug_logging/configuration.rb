@@ -1,6 +1,7 @@
 module DebugLogging
   class Configuration
     include Constants
+
     # For reference, log levels as integers mapped to symbols:
     # LEVELS = { 0 => :debug, 1 => :info, 2 => :warn, 3 => :error, 4 => :fatal, 5 => :unknown }
     attr_accessor(*CONFIG_ATTRS)
