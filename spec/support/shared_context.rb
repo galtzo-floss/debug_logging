@@ -29,6 +29,7 @@ RSpec.shared_context "with example classes" do
     extend DebugLogging::ClassLogger
     # Needs to be at the top of the class, adds `notified` class method
     extend DebugLogging::ClassNotifier
+
     self.debug_instance_benchmarks = true
     self.debug_add_invocation_id = false
     self.debug_ellipsis = "..."
@@ -326,6 +327,7 @@ RSpec.shared_context "with example classes" do
       # Adds `i_logged` class method, but we're not going to use it in this class.
       # Just want to test that inclusion alone doesn't break anything.
       extend DebugLogging::InstanceLogger
+
       logged def self.k
         10
       end
@@ -397,6 +399,7 @@ RSpec.shared_context "with example classes" do
       extend DebugLogging::ClassNotifier
       # Can only be at the top of the class *if* methods are explicitly defined
       extend DebugLogging::InstanceNotifier
+
       i_notified [
         :i,
         [:i_with_ssplat, {id: 1, first_name: "Joe", last_name: "Schmoe"}],
@@ -527,6 +530,7 @@ RSpec.shared_context "with example classes" do
       extend DebugLogging
       # Needs to be at the top of the class
       extend DebugLogging::ClassLogger
+
       logged def self.k
         10
       end
@@ -562,6 +566,7 @@ RSpec.shared_context "with example classes" do
       extend DebugLogging
       # Needs to be at the top of the class
       extend DebugLogging::ClassNotifier
+
       notified def self.k
         10
       end
@@ -590,6 +595,7 @@ RSpec.shared_context "with example classes" do
       # adds the helper methods to the class, all are prefixed with debug_*
       extend DebugLogging
       extend DebugLogging::InstanceLogger
+
       i_logged %i[i i_with_ssplat i_with_dsplat]
 
       def i
@@ -629,6 +635,7 @@ RSpec.shared_context "with example classes" do
       # adds the helper methods to the class, all are prefixed with debug_*
       extend DebugLogging
       extend DebugLogging::InstanceNotifier
+
       i_notified [
         :i,
         [
@@ -675,6 +682,7 @@ RSpec.shared_context "with example classes" do
       # adds the helper methods to the class, all are prefixed with debug_*
       extend DebugLogging
       extend DebugLogging::InstanceLogger
+
       def i
         40
       end

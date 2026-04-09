@@ -4,6 +4,7 @@ RSpec.describe DebugLogging::Hooks do
       timeout_time = Rational(1, 2)
       klass = Class.new do
         include DebugLogging::Hooks
+
         def meth
           sleep 1
         end
@@ -24,6 +25,7 @@ RSpec.describe DebugLogging::Hooks do
       before do
         test_class = Class.new do
           include DebugLogging::Hooks
+
           def meth
             sleep 0.2
           end
@@ -146,9 +148,10 @@ RSpec.describe DebugLogging::Hooks do
     end
 
     context "when the method fails" do
-      blk = ->(err = nil) { {test_value: "test", error: err} }
+      let(:blk) { ->(err = nil) { {test_value: "test", error: err} } }
 
       before do
+        the_blk = blk
         @test_class =
           Class.new do
             include DebugLogging::Hooks
@@ -157,7 +160,7 @@ RSpec.describe DebugLogging::Hooks do
               raise StandardError, "fart sound"
             end
 
-            debug_rescue_on_fail(:meth, &blk)
+            debug_rescue_on_fail(:meth, &the_blk)
           end
       end
 
@@ -179,6 +182,7 @@ RSpec.describe DebugLogging::Hooks do
       @test_class = Class.new do
         # require 'rspec/expectations'
         include DebugLogging::Hooks
+
         def meth(*_args, &_blk)
           nil
         end
@@ -237,6 +241,7 @@ RSpec.describe DebugLogging::Hooks do
       @test_class = Class.new do
         # require 'rspec/expectations'
         include DebugLogging::Hooks
+
         def meth(*_args, &_blk)
           nil
         end
