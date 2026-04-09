@@ -106,6 +106,7 @@ Automatically log selected methods and their arguments as they are called at run
   spec.executables = []
 
   # Utilities
+  spec.add_dependency("colorize", ">= 0")
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
@@ -134,6 +135,7 @@ Automatically log selected methods and their arguments as they are called at run
   spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.4")            # ruby >= 2.2.0
 
   # Testing
+  spec.add_development_dependency("activesupport", ">= 5.2.4.4")
   spec.add_development_dependency("appraisal2", "~> 3.0", ">= 3.0.6")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
   spec.add_development_dependency("kettle-test", "~> 1.0", ">= 1.0.10")              # ruby >= 2.3
 
