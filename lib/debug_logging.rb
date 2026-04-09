@@ -2,8 +2,11 @@
 require "logger"
 require "digest"
 
-# External gems
+# frozen_string_literal: true
+
 require "version_gem"
+require_relative "debug_logging/version"
+
 require "colorized_string"
 
 # This gem

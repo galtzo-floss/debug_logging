@@ -1,16 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: "bundler"
+  - package-ecosystem: bundler
     directory: "/"
-    allow:
-      - dependency-name: "rubocop"
-      - dependency-name: "rubocop-performance"
     schedule:
       interval: "weekly"
-      day: monday
+    open-pull-requests-limit: 5
     ignore:
       - dependency-name: "rubocop-lts"
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'daily'
+      interval: "weekly"

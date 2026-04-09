@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Fail on error and unset variables
+set -eu
+
+# Run the generated wrapper directly so hook execution does not depend on shell activation.
+exec "kettle-commit-msg" "$@"

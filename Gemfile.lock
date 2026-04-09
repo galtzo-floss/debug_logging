@@ -2,8 +2,7 @@ PATH
   remote: .
   specs:
     debug_logging (4.0.2)
-      colorize
-      version_gem (~> 1.1, >= 1.1.4)
+      version_gem (~> 1.1, >= 1.1.9)
 
 PATH
   remote: /home/pboling/src/kettle-rb/ast-merge
@@ -156,19 +155,6 @@ PATH
 GEM
   remote: https://gem.coop/
   specs:
-    activesupport (8.1.3)
-      base64
-      bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.3.1)
-      connection_pool (>= 2.2.5)
-      drb
-      i18n (>= 1.6, < 2)
-      json
-      logger (>= 1.4.2)
-      minitest (>= 5.1)
-      securerandom (>= 0.3)
-      tzinfo (~> 2.0, >= 2.0.5)
-      uri (>= 0.13.1)
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     ansi (1.6.0)
@@ -178,7 +164,6 @@ GEM
       thor (>= 0.14)
     ast (2.4.3)
     backports (3.25.3)
-    base64 (0.3.0)
     benchmark (0.5.0)
     bigdecimal (3.3.1)
     bundler-audit (0.9.3)
@@ -187,9 +172,7 @@ GEM
     byebug (13.0.0)
       reline (>= 0.6.0)
     citrus (3.0.2)
-    colorize (1.1.0)
     concurrent-ruby (1.3.6)
-    connection_pool (3.0.2)
     date (3.5.1)
     debug (1.11.1)
       irb (~> 1.10)
@@ -198,7 +181,6 @@ GEM
     diff-lcs (1.6.2)
     diffy (3.4.4)
     docile (1.4.1)
-    drb (2.2.3)
     dry-configurable (1.3.0)
       dry-core (~> 1.1)
       zeitwerk (~> 2.6)
@@ -234,8 +216,6 @@ GEM
       version_gem (~> 1.1, >= 1.1.4)
     gitmoji-regex (1.0.3)
       version_gem (~> 1.1, >= 1.1.8)
-    i18n (1.14.8)
-      concurrent-ruby (~> 1.0)
     io-console (0.8.2)
     irb (1.17.0)
       pp (>= 0.6.0)
@@ -253,9 +233,6 @@ GEM
     markly (0.15.2)
     matrix (0.4.3)
     mini_portile2 (2.8.9)
-    minitest (6.0.3)
-      drb (~> 2.0)
-      prism (~> 1.5)
     mutex_m (0.3.0)
     nokogiri (1.19.2)
       mini_portile2 (~> 2.8.2)
@@ -389,7 +366,6 @@ GEM
       sorbet-runtime
       zeitwerk
     ruby_version (1.0.3)
-    securerandom (0.4.1)
     service_actor (3.9.4)
       zeitwerk (>= 1.0)
     service_actor-promptable (1.0.2)
@@ -455,8 +431,6 @@ GEM
     tsort (0.2.0)
     ttfunk (1.8.0)
       bigdecimal (~> 3.1)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
@@ -464,7 +438,6 @@ GEM
       diff-lcs (>= 1.6, < 3)
       parser (>= 3.3.0)
       prism (>= 1.5.1)
-    uri (1.1.1)
     version_gem (1.1.9)
     yaml-converter (0.1.0)
       kramdown (>= 2.4, < 3)
@@ -493,7 +466,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (>= 5.2.4.4)
   addressable (>= 2.8, < 3)
   appraisal2 (~> 3.0, >= 3.0.6)
   ast-merge!
@@ -529,10 +501,6 @@ DEPENDENCIES
   rdoc (~> 6.11)
   reek (~> 6.5)
   require_bench (~> 1.0, >= 1.0.4)
-  rspec (>= 3)
-  rspec-block_is_expected (~> 1.0, >= 1.0.5)
-  rspec-pending_for
-  rspec_junit_formatter (~> 0.6)
   rubocop-lts (~> 22.0)
   rubocop-on-rbs (~> 1.8)
   rubocop-packaging (~> 0.6, >= 0.6.0)
@@ -540,9 +508,7 @@ DEPENDENCIES
   rubocop-ruby3_1
   ruby-progressbar (~> 1.13)
   ruby_tree_sitter (~> 2.1)
-  silent_stream (>= 1)
   standard (>= 1.50)
-  standard-rubocop-lts (~> 1.0, >= 1.0.10)
   stone_checksums (~> 1.0, >= 1.0.3)
   stringio (>= 3.0)
   toml

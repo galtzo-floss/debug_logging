@@ -1,60 +1,101 @@
 # Changelog
 
+[![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]
+
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][📗keep-changelog],
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
+and [yes][📌major-versions-not-sacred], platform and engine support are part of the [public API][📌semver-breaking].
+Please file a bug if you notice a violation of semantic versioning.
+
+[📌semver]: https://semver.org/spec/v2.0.0.html
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 
 ## [Unreleased]
+
 ### Added
+
 ### Changed
-### Fixed
+
+### Deprecated
+
 ### Removed
 
+### Fixed
+
+### Security
+
 ## [4.0.2] ([tag][4.0.2t]) - 2024-05-12
+
 ### Added
+
 - More documentation
+
 ### Changed
+
 - DRY logic for `DebugLogging::ClassLogger` & `DebugLogging::InstanceLogger` via `LambDart`
 - Refactored test suite; increased test coverage to 97%
 - Refactored ActiveSupport::Notification integration (DRY)
+
 ### Fixed
+
 - Add undeclared runtime dependency `version_gem`
 - `DebugLogging::Hooks` integration via `extend`
 - `DebugLogging::ClassNotifier` support for method signatures with kwargs
 - `error_handler_proc` support for method signatures with kwargs
 
 ## [4.0.1] ([tag][4.0.1t]) - 2024-03-01
+
 ### Added
+
 - Support for all Numeric types to be used as monotonic timestamps for ActiveSupport::Notifications
 - `time_formatter_proc` - used to format timestamp added to beginning of log lines
 - `add_timestamp` - Add timestamp to front of each log line
+
 ### Changed
+
 - `DebugLogging::ArgumentPrinter.debug_time_to_s` => `DebugLogging::ArgumentPrinter.debug_event_time_to_s`
+
 ### Fixed
+
 ### Removed
 
 ## [4.0.0] ([tag][4.0.0t]) - 2024-02-28
+
 ### Added
+
 - Class method DSL:
     - `logged`
 - Instance method DSL:
     - `i_logged`
+
 ### Changed
+
 - Class method DSL renamed:
   - `notifies` => `notified`
 - Instance method DSL renamed:
   - `i_notifies` => `i_notified`
 - Disambiguated class method log output send message separator:
   - `.` => `::`, because `.` is ambiguous; same call syntax used for instance method calls
+
 ### Fixed
+
 - Per method config for every decorated method
+
 ### Removed
+
 - Support for `include DebugLogging::InstanceLogger.new(...)`
 - Support for `include DebugLogging::InstanceNotifier.new(...)`
 
 ## [3.1.9] ([tag][3.1.9t]) - 2023-10-31
+
 ### Fixed
+
 - Maximum Ruby version is 2.7. Versions 3.x are not compatible with Ruby >= 3
 
 ## [3.1.8] ([tag][3.1.8t]) - 2020-12-19
@@ -116,6 +157,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] ([tag][1.0.0t]) - 2017-03-26
 
 ## [0.1.0] ([tag][0.1.0t]) - 2017-03-25
+
 - Initial release
 
 [Unreleased]: https://gitlab.com/kettle-rb/kettle-soup-cover/-/compare/v4.0.2...HEAD
