@@ -118,7 +118,13 @@ module DebugLogging
 
   #### CONFIG ####
   class << self
-    attr_accessor :debug_logging_configuration
+    def debug_logging_configuration
+      @@debug_logging_configuration
+    end
+
+    def debug_logging_configuration=(config)
+      @@debug_logging_configuration = config
+    end
   end
 
   module ConfigClassMethods

@@ -2,10 +2,10 @@ DebugLogging.configuration.active_support_notifications = true
 
 RSpec.describe DebugLogging::Configuration do
   include_context "with example classes"
-  context "config" do
-    context "global inherited config" do
+  context "with config" do
+    context "with global inherited config" do
       context "with block" do
-        context "instance logging" do
+        context "when instance logging" do
           before do
             DebugLogging.configure do |config|
               config.instance_benchmarks = true
@@ -18,20 +18,20 @@ RSpec.describe DebugLogging::Configuration do
           end
 
           it "keeps separate configs" do
-            expect(DebugLogging.configuration.instance_benchmarks).to eq(true)
-            expect(DebugLogging.configuration.add_invocation_id).to eq(true)
-            expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to eq(true)
-            expect(instance_logged_klass_dynamic.debug_add_invocation_id).to eq(true)
-            expect(instance_logged_klass_explicit.debug_instance_benchmarks).to eq(false)
-            expect(instance_logged_klass_explicit.debug_add_invocation_id).to eq(false)
+            expect(DebugLogging.configuration.instance_benchmarks).to be(true)
+            expect(DebugLogging.configuration.add_invocation_id).to be(true)
+            expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to be(true)
+            expect(instance_logged_klass_dynamic.debug_add_invocation_id).to be(true)
+            expect(instance_logged_klass_explicit.debug_instance_benchmarks).to be(false)
+            expect(instance_logged_klass_explicit.debug_add_invocation_id).to be(false)
           end
 
           it "uses separate configs" do
             # No options hashes on either, so same methods use class-level config
             instance_logged_klass_dynamic.debug_add_invocation_id = false
             instance_logged_klass_explicit.debug_add_invocation_id = true
-            expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to eq(true)
-            expect(instance_logged_klass_explicit.debug_instance_benchmarks).to eq(false)
+            expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to be(true)
+            expect(instance_logged_klass_explicit.debug_instance_benchmarks).to be(false)
             expect(instance_logged_klass_dynamic.debug_config).to receive(:log).twice.and_call_original
             expect(instance_logged_klass_explicit.debug_config).to receive(:log).once.and_call_original
             output = capture("stdout") do
@@ -64,7 +64,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "instance notification" do
+        context "when instance notification" do
           before do
             DebugLogging.configure do |config|
               config.active_support_notifications = true
@@ -93,7 +93,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "class logging" do
+        context "when class logging" do
           before do
             DebugLogging.configure do |config|
               config.class_benchmarks = true
@@ -104,12 +104,12 @@ RSpec.describe DebugLogging::Configuration do
           end
 
           it "keeps separate configs" do
-            expect(DebugLogging.configuration.class_benchmarks).to eq(true)
-            expect(DebugLogging.configuration.add_invocation_id).to eq(false)
-            expect(singleton_logged_klass.debug_class_benchmarks).to eq(true)
-            expect(singleton_logged_klass.debug_add_invocation_id).to eq(false)
-            expect(complete_logged_klass.debug_class_benchmarks).to eq(false)
-            expect(complete_logged_klass.debug_add_invocation_id).to eq(true)
+            expect(DebugLogging.configuration.class_benchmarks).to be(true)
+            expect(DebugLogging.configuration.add_invocation_id).to be(false)
+            expect(singleton_logged_klass.debug_class_benchmarks).to be(true)
+            expect(singleton_logged_klass.debug_add_invocation_id).to be(false)
+            expect(complete_logged_klass.debug_class_benchmarks).to be(false)
+            expect(complete_logged_klass.debug_add_invocation_id).to be(true)
           end
 
           it "uses separate configs" do
@@ -130,7 +130,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "class notification" do
+        context "when class notification" do
           before do
             DebugLogging.configure do |config|
               config.active_support_notifications = true
@@ -163,8 +163,8 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "per class config" do
-      context "inheritance" do
+    context "with per-class config" do
+      context "when using inheritance" do
         before do
           parent_singleton_klass.debug_args_max_length = 999
           # instantiate child_singleton_logged_klass before setting debug_args_max_length,
@@ -179,32 +179,32 @@ RSpec.describe DebugLogging::Configuration do
         end
 
         it "keeps separate configs" do
-          expect(parent_singleton_klass.debug_instance_benchmarks).to eq(true)
-          expect(parent_singleton_klass.debug_add_invocation_id).to eq(false)
+          expect(parent_singleton_klass.debug_instance_benchmarks).to be(true)
+          expect(parent_singleton_klass.debug_add_invocation_id).to be(false)
           expect(parent_singleton_klass.debug_ellipsis).to eq("...")
           expect(parent_singleton_klass.debug_args_max_length).to eq(999)
           expect(parent_singleton_klass.debug_last_hash_max_length).to eq(888)
 
-          expect(child_singleton_klass.debug_instance_benchmarks).to eq(false)
-          expect(child_singleton_klass.debug_add_invocation_id).to eq(true)
+          expect(child_singleton_klass.debug_instance_benchmarks).to be(false)
+          expect(child_singleton_klass.debug_add_invocation_id).to be(true)
           expect(child_singleton_klass.debug_ellipsis).to eq(",,,")
           expect(child_singleton_klass.debug_args_max_length).to eq(50)
           expect(child_singleton_klass.debug_last_hash_max_length).to eq(777)
 
-          expect(child_singleton_logged_klass.debug_instance_benchmarks).to eq(false)
-          expect(child_singleton_logged_klass.debug_add_invocation_id).to eq(true)
+          expect(child_singleton_logged_klass.debug_instance_benchmarks).to be(false)
+          expect(child_singleton_logged_klass.debug_add_invocation_id).to be(true)
           expect(child_singleton_logged_klass.debug_ellipsis).to eq("<<<")
           expect(child_singleton_logged_klass.debug_args_max_length).to eq(1000)
           expect(child_singleton_logged_klass.debug_last_hash_max_length).to eq(777)
 
-          expect(child_singleton_notified_klass.debug_instance_benchmarks).to eq(false)
-          expect(child_singleton_notified_klass.debug_add_invocation_id).to eq(true)
+          expect(child_singleton_notified_klass.debug_instance_benchmarks).to be(false)
+          expect(child_singleton_notified_klass.debug_add_invocation_id).to be(true)
           expect(child_singleton_notified_klass.debug_ellipsis).to eq(">>>")
           expect(child_singleton_notified_klass.debug_args_max_length).to eq(50)
           expect(child_singleton_notified_klass.debug_last_hash_max_length).to eq(777)
 
-          expect(child_singleton_logged_and_notified_klass.debug_instance_benchmarks).to eq(false)
-          expect(child_singleton_logged_and_notified_klass.debug_add_invocation_id).to eq(true)
+          expect(child_singleton_logged_and_notified_klass.debug_instance_benchmarks).to be(false)
+          expect(child_singleton_logged_and_notified_klass.debug_add_invocation_id).to be(true)
           expect(child_singleton_logged_and_notified_klass.debug_ellipsis).to eq("***")
           expect(child_singleton_logged_and_notified_klass.debug_args_max_length).to eq(50)
           expect(child_singleton_logged_and_notified_klass.debug_last_hash_max_length).to eq(777)
@@ -254,7 +254,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "instance logging" do
+      context "when instance logging" do
         before do
           instance_logged_klass_dynamic.debug_instance_benchmarks = true
           instance_logged_klass_dynamic.debug_add_invocation_id = false
@@ -263,10 +263,10 @@ RSpec.describe DebugLogging::Configuration do
         end
 
         it "keeps separate configs" do
-          expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to eq(true)
-          expect(instance_logged_klass_dynamic.debug_add_invocation_id).to eq(false)
-          expect(instance_logged_klass_explicit.debug_instance_benchmarks).to eq(false)
-          expect(instance_logged_klass_explicit.debug_add_invocation_id).to eq(true)
+          expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to be(true)
+          expect(instance_logged_klass_dynamic.debug_add_invocation_id).to be(false)
+          expect(instance_logged_klass_explicit.debug_instance_benchmarks).to be(false)
+          expect(instance_logged_klass_explicit.debug_add_invocation_id).to be(true)
         end
 
         it "uses separate configs" do
@@ -298,7 +298,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "class logging" do
+      context "when class logging" do
         before do
           singleton_logged_klass.debug_class_benchmarks = true
           singleton_logged_klass.debug_add_invocation_id = false
@@ -307,10 +307,10 @@ RSpec.describe DebugLogging::Configuration do
         end
 
         it "keeps separate configs" do
-          expect(singleton_logged_klass.debug_class_benchmarks).to eq(true)
-          expect(singleton_logged_klass.debug_add_invocation_id).to eq(false)
-          expect(complete_logged_klass.debug_class_benchmarks).to eq(false)
-          expect(complete_logged_klass.debug_add_invocation_id).to eq(true)
+          expect(singleton_logged_klass.debug_class_benchmarks).to be(true)
+          expect(singleton_logged_klass.debug_add_invocation_id).to be(false)
+          expect(complete_logged_klass.debug_class_benchmarks).to be(false)
+          expect(complete_logged_klass.debug_add_invocation_id).to be(true)
         end
 
         it "uses separate configs" do
@@ -332,7 +332,7 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "per method config" do
+    context "with per-method config" do
       let(:instance_logged_klass_explicit) do
         Class.new do
           # adds the helper methods to the class, all are prefixed with debug_*
@@ -401,6 +401,11 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
       let(:double_trouble) do
+        log_c_w_config = %i[double_trouble double_trouble! double_trouble? _double_trouble].freeze
+        log_c_wo_config = %i[uses_class_config uses_class_config! uses_class_config? _uses_class_config].freeze
+        log_i_w_config = %i[double_trouble double_trouble! double_trouble? _double_trouble].freeze
+        log_i_wo_config = %i[uses_class_config uses_class_config! uses_class_config? _uses_class_config].freeze
+
         Class.new do
           # adds the helper methods to the class, all are prefixed with debug_*
           extend DebugLogging
@@ -409,15 +414,9 @@ RSpec.describe DebugLogging::Configuration do
 
           self.debug_instance_benchmarks = false
           self.debug_add_invocation_id = false
-          # rubocop:disable Lint/ConstantDefinitionInBlock
-          LOG_C_W_CONFIG = %i[double_trouble double_trouble! double_trouble? _double_trouble].freeze
-          LOG_C_WO_CONFIG = %i[uses_class_config uses_class_config! uses_class_config? _uses_class_config].freeze
-          LOG_I_W_CONFIG = %i[double_trouble double_trouble! double_trouble? _double_trouble].freeze
-          LOG_I_WO_CONFIG = %i[uses_class_config uses_class_config! uses_class_config? _uses_class_config].freeze
-          # rubocop:enable Lint/ConstantDefinitionInBlock
 
-          i_logged LOG_I_WO_CONFIG
-          i_logged LOG_I_W_CONFIG, {add_invocation_id: true, instance_benchmarks: true}
+          i_logged log_i_wo_config
+          i_logged log_i_w_config, {add_invocation_id: true, instance_benchmarks: true}
 
           class << self
             def uses_class_config
@@ -452,8 +451,8 @@ RSpec.describe DebugLogging::Configuration do
               "config is k_pointer"
             end
           end
-          logged LOG_C_W_CONFIG, {add_invocation_id: false, instance_benchmarks: true} # log the class method ^
-          logged LOG_C_WO_CONFIG
+          logged log_c_w_config, {add_invocation_id: false, instance_benchmarks: true} # log the class method ^
+          logged log_c_wo_config
           def uses_class_config
             "config is c_pointer"
           end
@@ -488,7 +487,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "instance and class logging" do
+      context "when instance and class logging" do
         let(:instance) { double_trouble.new }
 
         it "lazily initializes method level configs" do
@@ -602,52 +601,52 @@ RSpec.describe DebugLogging::Configuration do
 
           # add_invocation_id gets overridden in double_trouble's configs
           c_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to be(false)
           end
           k_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to be(false)
           end
           ic_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to be(false)
           end
           i_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to eq(true)
+            expect(double_trouble.instance_variable_get(pointer).add_invocation_id).to be(true)
           end
           # debug_instance_benchmarks gets overridden in double_trouble's configs
           c_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to be(false)
           end
           k_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to eq(true)
+            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to be(true)
           end
           ic_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to be(false)
           end
           i_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to eq(true)
+            expect(double_trouble.instance_variable_get(pointer).instance_benchmarks).to be(true)
           end
           # mark_scope_exit defaults to false, and is never overridden in double_trouble's configs
           c_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to be(false)
           end
           k_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to be(false)
           end
           ic_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to be(false)
           end
           i_pointers.each do |pointer|
-            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to eq(false)
+            expect(double_trouble.instance_variable_get(pointer).mark_scope_exit).to be(false)
           end
         end
       end
 
-      context "instance logging" do
+      context "when instance logging" do
         it "keeps separate class-level configs" do
-          expect(instance_logged_klass_explicit.debug_instance_benchmarks).to eq(true)
-          expect(instance_logged_klass_explicit.debug_add_invocation_id).to eq(true)
-          expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to eq(false)
-          expect(instance_logged_klass_dynamic.debug_add_invocation_id).to eq(false)
+          expect(instance_logged_klass_explicit.debug_instance_benchmarks).to be(true)
+          expect(instance_logged_klass_explicit.debug_add_invocation_id).to be(true)
+          expect(instance_logged_klass_dynamic.debug_instance_benchmarks).to be(false)
+          expect(instance_logged_klass_dynamic.debug_add_invocation_id).to be(false)
         end
 
         it "uses separate configs" do
@@ -699,7 +698,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "class logging" do
+      context "when class logging" do
         before do
           singleton_logged_klass.debug_class_benchmarks = true
           singleton_logged_klass.debug_add_invocation_id = false
@@ -708,10 +707,10 @@ RSpec.describe DebugLogging::Configuration do
         end
 
         it "keeps separate configs" do
-          expect(singleton_logged_klass.debug_class_benchmarks).to eq(true)
-          expect(singleton_logged_klass.debug_add_invocation_id).to eq(false)
-          expect(complete_logged_klass.debug_class_benchmarks).to eq(false)
-          expect(complete_logged_klass.debug_add_invocation_id).to eq(true)
+          expect(singleton_logged_klass.debug_class_benchmarks).to be(true)
+          expect(singleton_logged_klass.debug_add_invocation_id).to be(false)
+          expect(complete_logged_klass.debug_class_benchmarks).to be(false)
+          expect(complete_logged_klass.debug_add_invocation_id).to be(true)
         end
 
         it "uses discrete config for colored singleton class methods" do
@@ -745,8 +744,8 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "last_hash_to_s_proc" do
-      context "class level config" do
+    context "with last_hash_to_s_proc" do
+      context "with class-level config" do
         before do
           allow(singleton_logged_klass).to receive(:debug_log) { logger }
           singleton_logged_klass.debug_last_hash_to_s_proc = ->(hash) { hash.keys.to_s }
@@ -770,7 +769,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "instance level config" do
+      context "with instance-level config" do
         before do
           allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
           instance_logged_klass_dynamic.debug_last_hash_to_s_proc = ->(hash) { hash.keys.to_s }
@@ -801,8 +800,8 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "multiple_last_hashes" do
-      context "class level config" do
+    context "with multiple_last_hashes" do
+      context "with class-level config" do
         before do
           allow(singleton_logged_klass).to receive(:debug_log) { logger }
           singleton_logged_klass.debug_last_hash_to_s_proc = ->(hash) { hash.keys.to_s }
@@ -852,7 +851,7 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "instance level config" do
+      context "with instance-level config" do
         before do
           allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
           instance_logged_klass_dynamic.debug_last_hash_to_s_proc = ->(hash) { hash.keys.to_s }
@@ -909,7 +908,7 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "last_hash_max_length" do
+    context "with last_hash_max_length" do
       context "when last_hash_to_s_proc is set" do
         before do
           allow(singleton_logged_klass).to receive(:debug_log) { logger }
@@ -961,7 +960,7 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "args_max_length" do
+    context "with args_max_length" do
       context "when last_hash_to_s_proc is set" do
         before do
           allow(singleton_logged_klass).to receive(:debug_log) { logger }
@@ -1015,7 +1014,7 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "instance_benchamrks" do
+    context "with instance_benchamrks" do
       before do
         allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
         instance_logged_klass_dynamic.debug_instance_benchmarks = true
@@ -1040,7 +1039,7 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "class_benchamrks" do
+    context "with class_benchamrks" do
       before do
         allow(singleton_logged_klass).to receive(:debug_log) { logger }
         singleton_logged_klass.debug_class_benchmarks = true
@@ -1059,9 +1058,9 @@ RSpec.describe DebugLogging::Configuration do
       end
     end
 
-    context "add_invocation_id" do
-      context "singleton" do
-        context "add_invocation_id is true" do
+    context "with add_invocation_id" do
+      context "with singleton methods" do
+        context "when add_invocation_id is true" do
           before do
             allow(singleton_logged_klass).to receive(:debug_log) { logger }
             singleton_logged_klass.debug_class_benchmarks = true
@@ -1081,7 +1080,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "add_invocation_id is false" do
+        context "when add_invocation_id is false" do
           before do
             allow(singleton_logged_klass).to receive(:debug_log) { logger }
             singleton_logged_klass.debug_class_benchmarks = true
@@ -1101,7 +1100,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "add_invocation_id is proc" do
+        context "when add_invocation_id is a proc" do
           before do
             allow(singleton_logged_klass).to receive(:debug_log) { logger }
             singleton_logged_klass.debug_class_benchmarks = true
@@ -1122,8 +1121,8 @@ RSpec.describe DebugLogging::Configuration do
         end
       end
 
-      context "instance" do
-        context "add_invocation_id is true" do
+      context "with instance methods" do
+        context "when add_invocation_id is true" do
           before do
             allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
             instance_logged_klass_dynamic.debug_instance_benchmarks = true
@@ -1149,7 +1148,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "add_invocation_id is false" do
+        context "when add_invocation_id is false" do
           before do
             allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
             instance_logged_klass_dynamic.debug_instance_benchmarks = true
@@ -1175,7 +1174,7 @@ RSpec.describe DebugLogging::Configuration do
           end
         end
 
-        context "add_invocation_id is proc" do
+        context "when add_invocation_id is a proc" do
           before do
             allow(instance_logged_klass_dynamic).to receive(:debug_log) { logger }
             instance_logged_klass_dynamic.debug_instance_benchmarks = true

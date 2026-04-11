@@ -92,8 +92,10 @@ RSpec.describe DebugLogging::Hooks do
         test_class = Class.new do
           include DebugLogging::Hooks
 
-          def self.expected_result
-            "expected-result"
+          class << self
+            def expected_result
+              "expected-result"
+            end
           end
 
           attr_reader :args
@@ -210,13 +212,18 @@ RSpec.describe DebugLogging::Hooks do
           args: [1, 2],
           blk: -> { "test" },
         }
-        @test_class.instance_exec(self) do |slf|
+        captured_name = nil
+        captured_args = nil
+
+        @test_class.instance_exec do
           debug_before(test_data[:name]) do |name, *args|
-            slf.expect(name).to slf.eq(test_data[:name])
-            slf.expect(args).to slf.eq([*test_data[:args], test_data[:blk]])
+            captured_name = name
+            captured_args = args
           end
         end
         @test_class.new.meth(*test_data[:args], &test_data[:blk])
+        expect(captured_name).to eq(test_data[:name])
+        expect(captured_args).to eq([*test_data[:args], test_data[:blk]])
       end
     end
 

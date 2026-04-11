@@ -266,20 +266,28 @@ class Car
   # == BEGIN CLASS METHODS ==
   # For class methods:
   # Option 1: Use *logged* as a method decorator
-  logged def self.make
-    new
-  end
-  def self.design(*_args)
-    new
-  end
+  class << self
+    def make
+      new
+    end
 
-  def self.safety(*_args)
-    new
-  end
+    def design(*_args)
+      new
+    end
 
-  def self.dealer_options(*_args)
-    new
+    def safety(*_args)
+      new
+    end
+
+    def dealer_options(*_args)
+      new
+    end
+
+    def will_not_be_logged
+      false
+    end
   end
+  logged :make
 
   # Option 2: Use *logged* as a macro
   logged :design, :safety
@@ -291,9 +299,6 @@ class Car
     multiple_last_hashes: true, # <= Overrides config
     error_handler_proc: nil, # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
   }
-  def self.will_not_be_logged
-    false
-  end
   # == END CLASS METHODS ==
 
   # == BEGIN INSTANCE METHODS ==
@@ -402,20 +407,28 @@ class Car
   # == BEGIN CLASS METHODS ==
   # For class methods:
   # Option 1: Use *notified* as a method decorator
-  notified def self.make
-    new
-  end
-  def self.design(*_args)
-    new
-  end
+  class << self
+    def make
+      new
+    end
 
-  def self.safety(*_args)
-    new
-  end
+    def design(*_args)
+      new
+    end
 
-  def self.dealer_options(*_args)
-    new
+    def safety(*_args)
+      new
+    end
+
+    def dealer_options(*_args)
+      new
+    end
+
+    def will_not_be_notified
+      false
+    end
   end
+  notified :make
 
   # Option 2: Use *logged* as a macro
   notified :design, :safety
@@ -426,9 +439,6 @@ class Car
     something: "here", # <== will be added to the event payload, and be available to last_hash_to_s_proc
     add_invocation_id: false, # <== Overrides config
   }
-  def self.will_not_be_notified
-    false
-  end
   # == END CLASS METHODS ==
 
   # == BEGIN INSTANCE METHODS ==

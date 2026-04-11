@@ -8,7 +8,8 @@ module DebugLogging
     end
 
     def debug_invocation_id_to_s(args: nil, kwargs: nil, start_at: nil, config_proxy: nil)
-      return "" unless (args || kwargs) && config_proxy
+      return "" unless config_proxy
+      return "" unless args || kwargs
 
       if config_proxy.debug_add_invocation_id
         time = start_at ? Util.debug_time(start_at) : Time.now
@@ -63,7 +64,8 @@ module DebugLogging
     end
 
     def debug_signature_to_s(args: nil, kwargs: nil, config_proxy: nil) # rubocop:disable Metrics/CyclomaticComplexity
-      return "" unless (args || kwargs) && config_proxy
+      return "" unless config_proxy
+      return "" unless args || kwargs
 
       printed_args = ""
 

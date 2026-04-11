@@ -1,7 +1,7 @@
 RSpec.describe DebugLogging::Util do
   include_context "with example classes"
 
-  context "an instance notified klass with string logged methods" do
+  context "with an instance notified klass using string logged methods" do
     before do
       @events = []
       @subscriber = ActiveSupport::Notifications.subscribe(/log/) do |*args|
@@ -44,7 +44,7 @@ RSpec.describe DebugLogging::Util do
     end
 
     context "when datetime" do
-      let(:time_or_monotonic) { DateTime.new(2019, 8, 10, 4, 10, 9) }
+      let(:time_or_monotonic) { Time.new(2019, 8, 10, 4, 10, 9) }
 
       it "returns a time" do
         expect(debug_time.year).to eq(2019)

@@ -67,7 +67,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
     end
 
     context "when datetime" do
-      let(:time_or_monotonic) { DateTime.new(2019, 8, 10, 4, 10, 9) }
+      let(:time_or_monotonic) { Time.new(2019, 8, 10, 4, 10, 9) }
 
       it "prints" do
         expect(debug_time_to_s).to match(time_format_regex)
@@ -111,7 +111,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
     end
 
     context "when datetime" do
-      let(:time_or_monotonic) { DateTime.new(2019, 8, 10, 4, 10, 9) }
+      let(:time_or_monotonic) { Time.new(2019, 8, 10, 4, 10, 9) }
 
       it "prints" do
         expect(debug_event_time_to_s).to match(event_time_format_regex)
@@ -163,7 +163,17 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           debug_colorized_chain_for_method: ->(str) { str.blue },
         )
       }
-      let(:klass) { ParentSingletonClass }
+      let(:klass) do
+        Class.new do
+          class << self
+            def name
+              "ParentSingletonClass"
+            end
+
+            alias_method :to_s, :name
+          end
+        end
+      end
       let(:separator) { "^.^" }
       let(:decorated_method) { :shoe_fly }
 
@@ -262,7 +272,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
   describe "#debug_payload_to_s" do
     subject(:debug_payload_to_s) { instance.debug_payload_to_s(payload:, config_proxy:) }
 
-    context "no payload, no config" do
+    context "without payload or config" do
       let(:payload) { false }
       let(:config_proxy) { false }
 

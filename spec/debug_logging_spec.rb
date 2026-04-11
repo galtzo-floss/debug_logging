@@ -24,7 +24,7 @@ RSpec.describe DebugLogging do
       expect(output).to eq("")
     end
 
-    context "disabled" do
+    context "when disabled" do
       describe ".debug_log" do
         before { simple_klass.debug_config.enabled = false }
 
@@ -33,7 +33,7 @@ RSpec.describe DebugLogging do
         it "does not log" do
           logger = Logger.new($stdout)
           simple_klass.debug_logger = logger
-          expect(simple_klass.debug_config.enabled).to eq(false)
+          expect(simple_klass.debug_config.enabled).to be(false)
           expect(simple_klass.debug_config).to receive(:log).with(message).and_call_original
           expect(logger).not_to receive(:debug)
           output = capture("stdout") do
@@ -138,9 +138,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_multiple_last_hashes=" do
     it "sets the multiple last hashes setting" do
-      expect(simple_klass.debug_multiple_last_hashes).to eq(false)
+      expect(simple_klass.debug_multiple_last_hashes).to be(false)
       simple_klass.debug_multiple_last_hashes = true
-      expect(simple_klass.debug_multiple_last_hashes).to eq(true)
+      expect(simple_klass.debug_multiple_last_hashes).to be(true)
     end
   end
 
@@ -152,7 +152,7 @@ RSpec.describe DebugLogging do
 
   describe ".debug_last_hash_to_s_proc=" do
     it "sets the multiple last hashes value" do
-      expect(simple_klass.debug_last_hash_to_s_proc).to eq(nil)
+      expect(simple_klass.debug_last_hash_to_s_proc).to be_nil
       simple_klass.debug_last_hash_to_s_proc = ->(a) { a.to_s }
       expect(simple_klass.debug_last_hash_to_s_proc.call(111)).to eq("111")
     end
@@ -166,7 +166,7 @@ RSpec.describe DebugLogging do
 
   describe ".debug_args_to_s_proc=" do
     it "sets the args proc value" do
-      expect(simple_klass.debug_last_hash_to_s_proc).to eq(nil)
+      expect(simple_klass.debug_last_hash_to_s_proc).to be_nil
       simple_klass.debug_args_to_s_proc = ->(a) { a.to_s[0..3] }
       expect(simple_klass.debug_args_to_s_proc.call(11_114_444)).to eq("1111")
     end
@@ -194,9 +194,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_instance_benchmarks=" do
     it "sets the multiple last hashes value" do
-      expect(simple_klass.debug_instance_benchmarks).to eq(false)
+      expect(simple_klass.debug_instance_benchmarks).to be(false)
       simple_klass.debug_instance_benchmarks = true
-      expect(simple_klass.debug_instance_benchmarks).to eq(true)
+      expect(simple_klass.debug_instance_benchmarks).to be(true)
     end
   end
 
@@ -208,9 +208,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_class_benchmarks=" do
     it "sets the debug_class_benchmarks value" do
-      expect(simple_klass.debug_class_benchmarks).to eq(false)
+      expect(simple_klass.debug_class_benchmarks).to be(false)
       simple_klass.debug_class_benchmarks = true
-      expect(simple_klass.debug_class_benchmarks).to eq(true)
+      expect(simple_klass.debug_class_benchmarks).to be(true)
     end
   end
 
@@ -222,9 +222,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_colorized_chain_for_method=" do
     it "sets the debug_colorized_chain_for_method value" do
-      expect(simple_klass.debug_colorized_chain_for_method).to eq(false)
+      expect(simple_klass.debug_colorized_chain_for_method).to be(false)
       simple_klass.debug_colorized_chain_for_method = true
-      expect(simple_klass.debug_colorized_chain_for_method).to eq(true)
+      expect(simple_klass.debug_colorized_chain_for_method).to be(true)
     end
   end
 
@@ -236,9 +236,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_colorized_chain_for_class=" do
     it "sets the debug_colorized_chain_for_class value" do
-      expect(simple_klass.debug_colorized_chain_for_class).to eq(false)
+      expect(simple_klass.debug_colorized_chain_for_class).to be(false)
       simple_klass.debug_colorized_chain_for_class = true
-      expect(simple_klass.debug_colorized_chain_for_class).to eq(true)
+      expect(simple_klass.debug_colorized_chain_for_class).to be(true)
     end
   end
 
@@ -250,9 +250,9 @@ RSpec.describe DebugLogging do
 
   describe ".debug_add_invocation_id=" do
     it "sets the debug_add_invocation_id value" do
-      expect(simple_klass.debug_add_invocation_id).to eq(true)
+      expect(simple_klass.debug_add_invocation_id).to be(true)
       simple_klass.debug_add_invocation_id = false
-      expect(simple_klass.debug_add_invocation_id).to eq(false)
+      expect(simple_klass.debug_add_invocation_id).to be(false)
     end
   end
 

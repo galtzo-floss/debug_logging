@@ -83,7 +83,7 @@ RSpec.describe DebugLogging::ClassNotifier do
     end
   end
 
-  context "a complete notified class" do
+  context "with a complete notified class" do
     before do
       allow(complete_notified_klass.debug_config).to receive(:debug_log) { logger }
     end

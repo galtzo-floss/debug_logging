@@ -1,7 +1,7 @@
 RSpec.describe DebugLogging::ClassLogger do
   include_context "with example classes"
 
-  context "logged macro" do
+  context "with logged macro" do
     it "works without configuration override hash" do
       allow(complete_logged_klass.debug_config).to receive(:log).twice.and_call_original
       output = capture("stdout") do
@@ -51,7 +51,7 @@ RSpec.describe DebugLogging::ClassLogger do
     end
   end
 
-  context "a complete logged class" do
+  context "with a complete logged class" do
     before do
       allow(complete_logged_klass.debug_config).to receive(:debug_log) { logger }
     end
