@@ -70,9 +70,32 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
 Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.2...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...HEAD">Unreleased</a></h2>
 
 <h3 id="added">Added</h3>
+
+<h3 id="changed">Changed</h3>
+
+<h3 id="deprecated">Deprecated</h3>
+
+<h3 id="removed">Removed</h3>
+
+<h3 id="fixed">Fixed</h3>
+
+<h3 id="security">Security</h3>
+
+<h2 id="403---2026-05-27">
+<a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.2...v4.0.3">4.0.3</a> - 2026-05-27</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.3">v4.0.3</a>
+</li>
+  <li>COVERAGE: 97.31% – 650/668 lines in 27 files</li>
+  <li>BRANCH COVERAGE: 87.95% – 146/166 branches in 27 files</li>
+  <li>21.35% documented</li>
+</ul>
+
+<h3 id="added-1">Added</h3>
 
 <ul>
   <li>
@@ -83,7 +106,7 @@ symbol-key <code>Hash#inspect</code> formatting.</li>
   <li>RBS signature coverage for the version constants.</li>
 </ul>
 
-<h3 id="changed">Changed</h3>
+<h3 id="changed-1">Changed</h3>
 
 <ul>
   <li>Refreshed published README, project metadata, funding links, support links,<br>
@@ -95,29 +118,28 @@ and executable support files are consistently included where applicable.</li>
 local certificate is present, improving builds for downstream packagers.</li>
 </ul>
 
-<h3 id="deprecated">Deprecated</h3>
-
-<h3 id="removed">Removed</h3>
-
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 
 <ul>
   <li>Restored the <code>colorize</code> runtime dependency so fresh installs include the<br>
 colorization support used by debug logging output.</li>
 </ul>
 
-<h3 id="security">Security</h3>
-
 <h2 id="402-tag---2024-05-12">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.1...v4.0.2">4.0.2</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v4.0.2">tag</a>) - 2024-05-12</h2>
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.1...v4.0.2">4.0.2</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.2">tag</a>) - 2024-05-12</h2>
 
-<h3 id="added-1">Added</h3>
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.2">v4.0.2</a>
+</li>
+</ul>
+
+<h3 id="added-2">Added</h3>
 
 <ul>
   <li>More documentation</li>
 </ul>
 
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 
 <ul>
   <li>DRY logic for <code>DebugLogging::ClassLogger</code> &amp; <code>DebugLogging::InstanceLogger</code> via <code>LambDart</code>
@@ -126,7 +148,7 @@ colorization support used by debug logging output.</li>
   <li>Refactored ActiveSupport::Notification integration (DRY)</li>
 </ul>
 
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 
 <ul>
   <li>Add undeclared runtime dependency <code>version_gem</code>
@@ -141,9 +163,14 @@ colorization support used by debug logging output.</li>
 </ul>
 
 <h2 id="401-tag---2024-03-01">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.0...v4.0.1">4.0.1</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v4.0.1">tag</a>) - 2024-03-01</h2>
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.0...v4.0.1">4.0.1</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.1">tag</a>) - 2024-03-01</h2>
 
-<h3 id="added-2">Added</h3>
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.1">v4.0.1</a>
+</li>
+</ul>
+
+<h3 id="added-3">Added</h3>
 
 <ul>
   <li>Support for all Numeric types to be used as monotonic timestamps for ActiveSupport::Notifications</li>
@@ -153,7 +180,7 @@ colorization support used by debug logging output.</li>
 <code>add_timestamp</code> - Add timestamp to front of each log line</li>
 </ul>
 
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 
 <ul>
   <li>
@@ -161,14 +188,19 @@ colorization support used by debug logging output.</li>
 </li>
 </ul>
 
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 
 <h3 id="removed-1">Removed</h3>
 
 <h2 id="400-tag---2024-02-28">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.9...v4.0.0">4.0.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v4.0.0">tag</a>) - 2024-02-28</h2>
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.9...v4.0.0">4.0.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.0">tag</a>) - 2024-02-28</h2>
 
-<h3 id="added-3">Added</h3>
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.0">v4.0.0</a>
+</li>
+</ul>
+
+<h3 id="added-4">Added</h3>
 
 <ul>
   <li>Class method DSL:
@@ -183,7 +215,7 @@ colorization support used by debug logging output.</li>
   </li>
 </ul>
 
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 
 <ul>
   <li>Class method DSL renamed:
@@ -208,7 +240,7 @@ colorization support used by debug logging output.</li>
   </li>
 </ul>
 
-<h3 id="fixed-3">Fixed</h3>
+<h3 id="fixed-4">Fixed</h3>
 
 <ul>
   <li>Per method config for every decorated method</li>
@@ -224,112 +256,267 @@ colorization support used by debug logging output.</li>
 </ul>
 
 <h2 id="319-tag---2023-10-31">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.8...v3.1.9">3.1.9</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.9">tag</a>) - 2023-10-31</h2>
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.8...v3.1.9">3.1.9</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.9">tag</a>) - 2023-10-31</h2>
 
-<h3 id="fixed-4">Fixed</h3>
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.9">v3.1.9</a>
+</li>
+</ul>
+
+<h3 id="fixed-5">Fixed</h3>
 
 <ul>
   <li>Maximum Ruby version is 2.7. Versions 3.x are not compatible with Ruby &gt;= 3</li>
 </ul>
 
 <h2 id="318-tag---2020-12-19">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.7...v3.1.8">3.1.8</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.8">tag</a>) - 2020-12-19</h2>
-
-<h2 id="317-tag---2020-12-19">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.6...v3.1.7">3.1.7</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.7">tag</a>) - 2020-12-19</h2>
-
-<h2 id="316-tag---tagged-but-unreleased">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.5...v3.1.6">3.1.6</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.6">tag</a>) - tagged, but unreleased</h2>
-
-<h2 id="315-tag---2020-12-18">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.4...v3.1.5">3.1.5</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.5">tag</a>) - 2020-12-18</h2>
-
-<h2 id="314-tag---2020-12-18">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.3...v3.1.4">3.1.4</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.4">tag</a>) - 2020-12-18</h2>
-
-<h2 id="313-tag---2020-12-18">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.2...v3.1.3">3.1.3</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.3">tag</a>) - 2020-12-18</h2>
-
-<h2 id="312-tag---2020-12-10">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.1...v3.1.2">3.1.2</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.2">tag</a>) - 2020-12-10</h2>
-
-<h2 id="311-tag---2020-12-09">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.0...v3.1.1">3.1.1</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.1">tag</a>) - 2020-12-09</h2>
-
-<h2 id="310-tag---2020-10-24">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.0.0...v3.1.0">3.1.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.1.0">tag</a>) - 2020-10-24</h2>
-
-<h2 id="300-tag---2020-10-07">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v2.0.0...v3.0.0">3.0.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v3.0.0">tag</a>) - 2020-10-07</h2>
-
-<h2 id="200-tag---2020-10-06">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.17...v2.0.0">2.0.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v2.0.0">tag</a>) - 2020-10-06</h2>
-
-<h2 id="1017-tag---2018-09-10">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.16...v1.0.17">1.0.17</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.17">tag</a>) - 2018-09-10</h2>
-
-<h2 id="1016-tag---2018-01-16">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.15...v1.0.16">1.0.16</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.16">tag</a>) - 2018-01-16</h2>
-
-<h2 id="1015-tag---2017-10-17">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.14...v1.0.15">1.0.15</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.15">tag</a>) - 2017-10-17</h2>
-
-<h2 id="1014-tag---2017-10-09">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.13...v1.0.14">1.0.14</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.14">tag</a>) - 2017-10-09</h2>
-
-<h2 id="1013-tag---2017-10-08">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.12...v1.0.13">1.0.13</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.13">tag</a>) - 2017-10-08</h2>
-
-<h2 id="1012-tag---2017-10-08">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.11...v1.0.12">1.0.12</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.12">tag</a>) - 2017-10-08</h2>
-
-<h2 id="1011-tag---2017-10-06">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.10...v1.0.11">1.0.11</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.11">tag</a>) - 2017-10-06</h2>
-
-<h2 id="1010-tag---2017-09-26">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.9...v1.0.10">1.0.10</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.10">tag</a>) - 2017-09-26</h2>
-
-<h2 id="109-tag---2017-09-06">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.8...v1.0.9">1.0.9</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.9">tag</a>) - 2017-09-06</h2>
-
-<h2 id="108-tag---2017-09-06">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.7...v1.0.8">1.0.8</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.8">tag</a>) - 2017-09-06</h2>
-
-<h2 id="107-tag---2017-09-06">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.6...v1.0.7">1.0.7</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.7">tag</a>) - 2017-09-06</h2>
-
-<h2 id="106-tag---2017-09-05">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.5...v1.0.6">1.0.6</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.6">tag</a>) - 2017-09-05</h2>
-
-<h2 id="105-tag---2017-03-31">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.4...v1.0.5">1.0.5</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.5">tag</a>) - 2017-03-31</h2>
-
-<h2 id="104-tag---2017-03-31">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.3...v1.0.4">1.0.4</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.4">tag</a>) - 2017-03-31</h2>
-
-<h2 id="103-tag---2017-03-31">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.2...v1.0.3">1.0.3</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.3">tag</a>) - 2017-03-31</h2>
-
-<h2 id="102-tag---2017-03-30">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.1...v1.0.2">1.0.2</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.2">tag</a>) - 2017-03-30</h2>
-
-<h2 id="101-tag---2017-03-29">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.0...v1.0.1">1.0.1</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.1">tag</a>) - 2017-03-29</h2>
-
-<h2 id="100-tag---2017-03-26">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v0.1.0...v1.0.0">1.0.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v1.0.0">tag</a>) - 2017-03-26</h2>
-
-<h2 id="010-tag---2017-03-25">
-<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/f648ea6832aa85232d320b4c4acc4a84e44a83d3...v0.1.0">0.1.0</a> (<a href="https://gitlab.com/galtzo-floss/debug_logging/-/tags/v0.1.0">tag</a>) - 2017-03-25</h2>
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.7...v3.1.8">3.1.8</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.8">tag</a>) - 2020-12-19</h2>
 
 <ul>
-  <li>Initial release</li>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.8">v3.1.8</a>
+</li>
+</ul>
+
+<h2 id="317-tag---2020-12-19">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.6...v3.1.7">3.1.7</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.7">tag</a>) - 2020-12-19</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.7">v3.1.7</a>
+</li>
+</ul>
+
+<h2 id="316-tag---tagged-but-unreleased">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.5...v3.1.6">3.1.6</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.6">tag</a>) - tagged, but unreleased</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.6">v3.1.6</a>
+</li>
+</ul>
+
+<h2 id="315-tag---2020-12-18">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.4...v3.1.5">3.1.5</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.5">tag</a>) - 2020-12-18</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.5">v3.1.5</a>
+</li>
+</ul>
+
+<h2 id="314-tag---2020-12-18">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.3...v3.1.4">3.1.4</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.4">tag</a>) - 2020-12-18</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.4">v3.1.4</a>
+</li>
+</ul>
+
+<h2 id="313-tag---2020-12-18">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.2...v3.1.3">3.1.3</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.3">tag</a>) - 2020-12-18</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.3">v3.1.3</a>
+</li>
+</ul>
+
+<h2 id="312-tag---2020-12-10">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.1...v3.1.2">3.1.2</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.2">tag</a>) - 2020-12-10</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.2">v3.1.2</a>
+</li>
+</ul>
+
+<h2 id="311-tag---2020-12-09">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.0...v3.1.1">3.1.1</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.1">tag</a>) - 2020-12-09</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.1">v3.1.1</a>
+</li>
+</ul>
+
+<h2 id="310-tag---2020-10-24">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.0.0...v3.1.0">3.1.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.0">tag</a>) - 2020-10-24</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.1.0">v3.1.0</a>
+</li>
+</ul>
+
+<h2 id="300-tag---2020-10-07">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v2.0.0...v3.0.0">3.0.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.0.0">tag</a>) - 2020-10-07</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v3.0.0">v3.0.0</a>
+</li>
+</ul>
+
+<h2 id="200-tag---2020-10-06">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.17...v2.0.0">2.0.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v2.0.0">tag</a>) - 2020-10-06</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v2.0.0">v2.0.0</a>
+</li>
+</ul>
+
+<h2 id="1017-tag---2018-09-10">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.16...v1.0.17">1.0.17</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.17">tag</a>) - 2018-09-10</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.17">v1.0.17</a>
+</li>
+</ul>
+
+<h2 id="1016-tag---2018-01-16">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.15...v1.0.16">1.0.16</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.16">tag</a>) - 2018-01-16</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.16">v1.0.16</a>
+</li>
+</ul>
+
+<h2 id="1015-tag---2017-10-17">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.14...v1.0.15">1.0.15</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.15">tag</a>) - 2017-10-17</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.15">v1.0.15</a>
+</li>
+</ul>
+
+<h2 id="1014-tag---2017-10-09">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.13...v1.0.14">1.0.14</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.14">tag</a>) - 2017-10-09</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.14">v1.0.14</a>
+</li>
+</ul>
+
+<h2 id="1013-tag---2017-10-08">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.12...v1.0.13">1.0.13</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.13">tag</a>) - 2017-10-08</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.13">v1.0.13</a>
+</li>
+</ul>
+
+<h2 id="1012-tag---2017-10-08">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.11...v1.0.12">1.0.12</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.12">tag</a>) - 2017-10-08</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.12">v1.0.12</a>
+</li>
+</ul>
+
+<h2 id="1011-tag---2017-10-06">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.10...v1.0.11">1.0.11</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.11">tag</a>) - 2017-10-06</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.11">v1.0.11</a>
+</li>
+</ul>
+
+<h2 id="1010-tag---2017-09-26">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.9...v1.0.10">1.0.10</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.10">tag</a>) - 2017-09-26</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.10">v1.0.10</a>
+</li>
+</ul>
+
+<h2 id="109-tag---2017-09-06">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.8...v1.0.9">1.0.9</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.9">tag</a>) - 2017-09-06</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.9">v1.0.9</a>
+</li>
+</ul>
+
+<h2 id="108-tag---2017-09-06">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.7...v1.0.8">1.0.8</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.8">tag</a>) - 2017-09-06</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.8">v1.0.8</a>
+</li>
+</ul>
+
+<h2 id="107-tag---2017-09-06">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.6...v1.0.7">1.0.7</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.7">tag</a>) - 2017-09-06</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.7">v1.0.7</a>
+</li>
+</ul>
+
+<h2 id="106-tag---2017-09-05">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.5...v1.0.6">1.0.6</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.6">tag</a>) - 2017-09-05</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.6">v1.0.6</a>
+</li>
+</ul>
+
+<h2 id="105-tag---2017-03-31">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.4...v1.0.5">1.0.5</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.5">tag</a>) - 2017-03-31</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.5">v1.0.5</a>
+</li>
+</ul>
+
+<h2 id="104-tag---2017-03-31">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.3...v1.0.4">1.0.4</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.4">tag</a>) - 2017-03-31</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.4">v1.0.4</a>
+</li>
+</ul>
+
+<h2 id="103-tag---2017-03-31">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.2...v1.0.3">1.0.3</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.3">tag</a>) - 2017-03-31</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.3">v1.0.3</a>
+</li>
+</ul>
+
+<h2 id="102-tag---2017-03-30">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.1...v1.0.2">1.0.2</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.2">tag</a>) - 2017-03-30</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.2">v1.0.2</a>
+</li>
+</ul>
+
+<h2 id="101-tag---2017-03-29">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v1.0.0...v1.0.1">1.0.1</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.1">tag</a>) - 2017-03-29</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.1">v1.0.1</a>
+</li>
+</ul>
+
+<h2 id="100-tag---2017-03-26">
+<a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v0.1.0...v1.0.0">1.0.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.0">tag</a>) - 2017-03-26</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v1.0.0">v1.0.0</a>
+</li>
+</ul>
+
+<h2 id="010-tag---2017-03-25">
+<a href="https://github.com/galtzo-floss/debug_logging/compare/f648ea6832aa85232d320b4c4acc4a84e44a83d3...v0.1.0">0.1.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v0.1.0">tag</a>) - 2017-03-25</h2>
+
+<ul>
+  <li>
+    <p>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v0.1.0">v0.1.0</a></p>
+  </li>
+  <li>
+    <p>Initial release</p>
+  </li>
 </ul>
 
 </div></div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:30 2026 by
+  Generated on Wed May 27 17:40:51 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

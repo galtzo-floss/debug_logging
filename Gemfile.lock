@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    debug_logging (4.0.2)
+    debug_logging (4.0.3)
       colorize
       version_gem (~> 1.1, >= 1.1.9)
 
@@ -92,7 +92,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.19.5)
-    kettle-dev (2.0.2)
+    kettle-dev (2.0.3)
       kettle-test (~> 2.0, >= 2.0.1)
       version_gem (~> 1.1, >= 1.1.9)
     kettle-soup-cover (1.1.3)
