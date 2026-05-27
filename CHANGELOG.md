@@ -20,13 +20,29 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- `DebugLogging::VERSION` as the traditional top-level version constant, in
+  addition to `DebugLogging::Version::VERSION`.
+- Ruby 4 compatibility coverage for log output that includes Ruby's updated
+  symbol-key `Hash#inspect` formatting.
+- RBS signature coverage for the version constants.
+
 ### Changed
+
+- Refreshed published README, project metadata, funding links, support links,
+  and documentation links.
+- Updated gem packaging metadata so generated docs, signatures, certificates,
+  and executable support files are consistently included where applicable.
+- Gem signing now skips cleanly when `SKIP_GEM_SIGNING` is set or no matching
+  local certificate is present, improving builds for downstream packagers.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- Restored the `colorize` runtime dependency so fresh installs include the
+  colorization support used by debug logging output.
 
 ### Security
 
