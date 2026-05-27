@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.44
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><p><a href="https://discord.gg/3qme4XHNKN"><img src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg" alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0"></a> <a href="https://www.ruby-lang.org/"><img src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg" alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5"></a></p>
+
+<h1 id="-debuglogging">🪲 DebugLogging</h1>
+
+<p><a href="https://bestgems.org/gems/debug_logging"><img src="https://img.shields.io/gem/v/debug_logging.svg" alt="Version"></a> <a href="https://github.com/galtzo-floss/debug_logging/releases"><img src="https://img.shields.io/github/tag/galtzo-floss/debug_logging.svg" alt="GitHub tag (latest SemVer)"></a> <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-259D6C.svg" alt="License: MIT"></a> <a href="https://bestgems.org/gems/debug_logging"><img src="https://img.shields.io/gem/rd/debug_logging.svg" alt="Downloads Rank"></a> <a href="https://codecov.io/gh/galtzo-floss/debug_logging"><img src="https://codecov.io/gh/galtzo-floss/debug_logging/graph/badge.svg" alt="CodeCov Test Coverage"></a> <a href="https://coveralls.io/github/galtzo-floss/debug_logging?branch=main"><img src="https://coveralls.io/repos/github/galtzo-floss/debug_logging/badge.svg?branch=main" alt="Coveralls Test Coverage"></a> <a href="https://qlty.sh/gh/galtzo-floss/projects/debug_logging/metrics/code?sort=coverageRating"><img src="https://qlty.sh/gh/galtzo-floss/projects/debug_logging/coverage.svg" alt="QLTY Test Coverage"></a> <a href="https://qlty.sh/gh/galtzo-floss/projects/debug_logging"><img src="https://qlty.sh/gh/galtzo-floss/projects/debug_logging/maintainability.svg" alt="QLTY Maintainability"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/heads.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/heads.yml/badge.svg" alt="CI Heads"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/dep-heads.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/dep-heads.yml/badge.svg" alt="CI Runtime Dependencies @ HEAD"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/current.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/current.yml/badge.svg" alt="CI Current"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffle.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffle.yml/badge.svg" alt="CI Truffle Ruby"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/jruby.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/jruby.yml/badge.svg" alt="CI JRuby"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/locked_deps.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/locked_deps.yml/badge.svg" alt="Deps Locked"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/unlocked_deps.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/unlocked_deps.yml/badge.svg" alt="Deps Unlocked"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/coverage.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/coverage.yml/badge.svg" alt="CI Test Coverage"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/style.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/style.yml/badge.svg" alt="CI Style"></a> <a href="https://github.com/galtzo-floss/debug_logging/security/code-scanning"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/license-eye.yml"><img src="https://github.com/galtzo-floss/debug_logging/actions/workflows/license-eye.yml/badge.svg" alt="Apache SkyWalking Eyes License Compatibility Check"></a></p>
+
+<p><code>if ci_badges.map(&amp;:color).detect { it != "green"}</code> ☝️ <a href="https://discord.gg/3qme4XHNKN">let me know</a>, as I may have missed the <a href="https://discord.gg/3qme4XHNKN">discord notification</a>.</p>
+
+<hr>
+
+<p><code>if ci_badges.map(&amp;:color).all? { it == "green"}</code> 👇️ send money so I can do more of this. FLOSS maintenance is now my full-time job.</p>
+
+<p><a href="https://opencollective.com/galtzo-floss#backer"><img src="https://opencollective.com/galtzo-floss/backers/badge.svg?style=flat" alt="OpenCollective Backers"></a> <a href="https://opencollective.com/galtzo-floss#sponsor"><img src="https://opencollective.com/galtzo-floss/sponsors/badge.svg?style=flat" alt="OpenCollective Sponsors"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&amp;color=a51611&amp;style=flat" alt="Liberapay Goal Progress"></a> <a href="https://www.paypal.com/paypalme/peterboling"><img src="https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&amp;logo=paypal" alt="Donate on PayPal"></a> <a href="https://www.buymeacoffee.com/pboling"><img src="https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat" alt="Buy me a coffee"></a> <a href="https://polar.sh/pboling"><img src="https://img.shields.io/badge/polar-donate-a51611.svg?style=flat" alt="Donate on Polar"></a> <a href="https://ko-fi.com/pboling"><img src="https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat" alt="Donate at ko-fi.com"></a></p>
+
+<details>
+ <summary>👣 How will this project approach the September 2025 hostile takeover of RubyGems? 🚑️</summary>
+
+I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-takeover-of-rubygems-my-thoughts-5hlo).
+
+</details>
+
+<h2 id="-synopsis">🌻 Synopsis</h2>
+
+<h2 id="-info-you-can-shake-a-stick-at">💡 Info you can shake a stick at</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tokens to Remember</th>
+      <th>
+<a href="https://bestgems.org/gems/debug_logging"><img src="https://img.shields.io/badge/name-debug__logging-3C2D2D.svg?style=square&amp;logo=rubygems&amp;logoColor=red" alt="Gem name"></a> <a href="https://github.com/galtzo-floss/debug_logging"><img src="https://img.shields.io/badge/namespace-DebugLogging-3C2D2D.svg?style=square&amp;logo=ruby&amp;logoColor=white" alt="Gem namespace"></a>
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Works with JRuby</td>
+      <td>
+<a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/jruby-9.4.yml"><img src="https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&amp;logo=ruby&amp;logoColor=red" alt="JRuby 9.4 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/jruby.yml"><img src="https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&amp;logo=ruby&amp;logoColor=green" alt="JRuby current Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/heads.yml"><img src="https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&amp;logo=ruby&amp;logoColor=blue" alt="JRuby HEAD Compat"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Works with Truffle Ruby</td>
+      <td>
+<a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffleruby-23.1.yml"><img src="https://img.shields.io/badge/Truffle_Ruby-23.1-34BCB1?style=for-the-badge&amp;logo=ruby&amp;logoColor=pink" alt="Truffle Ruby 23.1 Compat"></a> <br> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffleruby-24.2.yml"><img src="https://img.shields.io/badge/Truffle_Ruby-24.2-34BCB1?style=for-the-badge&amp;logo=ruby&amp;logoColor=pink" alt="Truffle Ruby 24.2 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffleruby-25.0.yml"><img src="https://img.shields.io/badge/Truffle_Ruby-25.0-34BCB1?style=for-the-badge&amp;logo=ruby&amp;logoColor=pink" alt="Truffle Ruby 25.0 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/truffle.yml"><img src="https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&amp;logo=ruby&amp;logoColor=green" alt="Truffle Ruby current Compat"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Works with MRI Ruby 4</td>
+      <td>
+<a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/current.yml"><img src="https://img.shields.io/badge/Ruby-4.0-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=white" alt="Ruby 4.0 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/current.yml"><img src="https://img.shields.io/badge/Ruby-current-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=green" alt="Ruby current Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/heads.yml"><img src="https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=blue" alt="Ruby HEAD Compat"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Works with MRI Ruby 3</td>
+      <td>
+<a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/ruby-3.1.yml"><img src="https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=white" alt="Ruby 3.1 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/ruby-3.2.yml"><img src="https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=white" alt="Ruby 3.2 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/ruby-3.3.yml"><img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=white" alt="Ruby 3.3 Compat"></a> <a href="https://github.com/galtzo-floss/debug_logging/actions/workflows/ruby-3.4.yml"><img src="https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&amp;logo=ruby&amp;logoColor=white" alt="Ruby 3.4 Compat"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Support &amp; Community</td>
+      <td>
+<a href="https://app.daily.dev/squads/rubyfriends"><img src="https://img.shields.io/badge/daily.dev-%F0%9F%92%8E_Ruby_Friends-0A0A0A?style=for-the-badge&amp;logo=dailydotdev&amp;logoColor=white" alt="Join Me on Daily.dev's RubyFriends"></a> <a href="https://discord.gg/3qme4XHNKN"><img src="https://img.shields.io/discord/1373797679469170758?style=for-the-badge&amp;logo=discord" alt="Live Chat on Discord"></a> <a href="https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share"><img src="https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&amp;logo=Upwork&amp;logoColor=white" alt="Get help from me on Upwork"></a> <a href="https://www.codementor.io/peterboling?utm_source=github&amp;utm_medium=button&amp;utm_term=peterboling&amp;utm_campaign=github"><img src="https://img.shields.io/badge/CodeMentor-Get_Help-1abc9c?style=for-the-badge&amp;logo=CodeMentor&amp;logoColor=white" alt="Get help from me on Codementor"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>
+<a href="https://gitlab.com/galtzo-floss/debug_logging"><img src="https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&amp;logo=Gitlab&amp;logoColor=orange" alt="Source on GitLab.com"></a> <a href="https://codeberg.org/galtzo-floss/debug_logging"><img src="https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&amp;logo=CodeBerg&amp;logoColor=blue" alt="Source on CodeBerg.org"></a> <a href="https://github.com/galtzo-floss/debug_logging"><img src="https://img.shields.io/badge/GitHub-238636?style=for-the-badge&amp;logo=Github&amp;logoColor=green" alt="Source on Github.com"></a> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://img.shields.io/badge/KLOC-5.053-FFDD67.svg?style=for-the-badge&amp;logo=YouTube&amp;logoColor=blue" alt="The best SHA: dQw4w9WgXcQ!"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Documentation</td>
+      <td>
+<a href="http://rubydoc.info/gems/debug_logging"><img src="https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="Current release on RubyDoc.info"></a> <a href="https://debug-logging.galtzo.com"><img src="https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="YARD on Galtzo.com"></a> <a href="http://www.railsbling.com/tags/debug_logging"><img src="https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&amp;logo=rubyonrails&amp;logoColor=orange" alt="Maintainer Blog"></a> <a href="https://gitlab.com/galtzo-floss/debug_logging/-/wikis/home"><img src="https://img.shields.io/badge/wiki-gitlab-943CD2.svg?style=for-the-badge&amp;logo=gitlab&amp;logoColor=white" alt="GitLab Wiki"></a> <a href="https://github.com/galtzo-floss/debug_logging/wiki"><img src="https://img.shields.io/badge/wiki-github-943CD2.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub Wiki"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Compliance</td>
+      <td>
+<a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-259D6C.svg" alt="License: MIT"></a> <a href="https://www.apache.org/legal/resolved.html#category-a"><img src="https://img.shields.io/badge/Apache_Compatible:_Category_A-%E2%9C%93-259D6C.svg?style=flat&amp;logo=Apache" alt="Apache license compatibility: Category A"></a> <a href="https://www.ilo.org/declaration/lang--en/index.htm"><img src="https://img.shields.io/badge/ILO_Fundamental_Principles-%E2%9C%93-259D6C.svg?style=flat" alt="📄ilo-declaration-img"></a> <a href="https://github.com/galtzo-floss/debug_logging/blob/main/SECURITY.md"><img src="https://img.shields.io/badge/security-policy-259D6C.svg?style=flat" alt="Security Policy"></a> <a href="https://github.com/galtzo-floss/debug_logging/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg" alt="Contributor Covenant 2.1"></a> <a href="https://semver.org/spec/v2.0.0.html"><img src="https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat" alt="SemVer 2.0.0"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Style</td>
+      <td>
+<a href="https://github.com/rubocop-lts/rubocop-lts"><img src="https://img.shields.io/badge/code_style_&amp;_linting-rubocop--lts-34495e.svg?plastic&amp;logo=ruby&amp;logoColor=white" alt="Enforced Code Style Linter"></a> <a href="https://keepachangelog.com/en/1.0.0/"><img src="https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat" alt="Keep-A-Changelog 1.0.0"></a> <a href="https://gitmoji.dev"><img src="https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square" alt="Gitmoji Commits"></a> <a href="https://github.com/appraisal-rb/appraisal2"><img src="https://img.shields.io/badge/appraised_by-appraisal2-34495e.svg?plastic&amp;logo=ruby&amp;logoColor=white" alt="Compatibility appraised by: appraisal2"></a>
+</td>
+    </tr>
+    <tr>
+      <td>Maintainer 🎖️</td>
+      <td>
+<a href="http://www.linkedin.com/in/peterboling"><img src="https://img.shields.io/badge/LinkedIn-Profile-0B66C2?style=flat&amp;logo=newjapanprowrestling" alt="Follow Me on LinkedIn"></a> <a href="https://ruby.social/@galtzo"><img src="https://img.shields.io/mastodon/follow/109447111526622197?domain=https://ruby.social&amp;style=flat&amp;logo=mastodon&amp;label=Ruby%20@galtzo" alt="Follow Me on Ruby.Social"></a> <a href="https://bsky.app/profile/galtzo.com"><img src="https://img.shields.io/badge/@galtzo.com-0285FF?style=flat&amp;logo=bluesky&amp;logoColor=white" alt="Follow Me on Bluesky"></a> <a href="http://www.railsbling.com/contact"><img src="https://img.shields.io/badge/Contact-Maintainer-0093D0.svg?style=flat&amp;logo=rubyonrails&amp;logoColor=red" alt="Contact Maintainer"></a> <a href="https://dev.to/galtzo"><img src="https://img.shields.io/badge/dev.to-0A0A0A?style=flat&amp;logo=devdotto&amp;logoColor=white" alt="My technical writing"></a>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code>...</code> 💖</td>
+      <td>
+<a href="https://wellfound.com/u/peter-boling"><img src="https://img.shields.io/badge/peter--boling-orange?style=flat&amp;logo=wellfound" alt="Find Me on WellFound:"></a> <a href="https://www.crunchbase.com/person/peter-boling"><img src="https://img.shields.io/badge/peter--boling-purple?style=flat&amp;logo=crunchbase" alt="Find Me on CrunchBase"></a> <a href="https://linktr.ee/galtzo"><img src="https://img.shields.io/badge/galtzo-purple?style=flat&amp;logo=linktree" alt="My LinkTree"></a> <a href="https://about.me/peter.boling"><img src="https://img.shields.io/badge/about.me-0A0A0A?style=flat&amp;logo=aboutme&amp;logoColor=white" alt="More About Me"></a> <a href="https://codeberg.org/pboling">🧊</a> <a href="https://github.org/pboling">🐙</a> <a href="https://sr.ht/~galtzo/">🛖</a> <a href="https://gitlab.com/pboling">🧪</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="compatibility">Compatibility</h3>
+
+<p>Compatible with MRI Ruby 3.1+, and concordant releases of JRuby, and TruffleRuby.<br>
+CI workflows and Appraisals are generated for MRI Ruby 3.1+.<br>
+This test floor is configured by <code>ruby.test_minimum</code> in <code>.kettle-jem.yml</code> and<br>
+may be higher than the gem’s runtime compatibility floor when legacy Rubies are<br>
+not practical for the current toolchain.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>🚚 <em>Amazing</em> test matrix was brought to you by</th>
+      <th>🔎 appraisal2 🔎 and the color 💚 green 💚</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>👟 Check it out!</td>
+      <td>✨ <a href="https://github.com/appraisal-rb/appraisal2">github.com/appraisal-rb/appraisal2</a> ✨</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="federated-dvcs">Federated DVCS</h3>
+
+<details>
+  <summary>Find this repo on federated forges (Coming soon!)</summary>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Federated <a href="https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/">DVCS</a> Repository</th>
+        <th>Status</th>
+        <th>Issues</th>
+        <th>PRs</th>
+        <th>Wiki</th>
+        <th>CI</th>
+        <th>Discussions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🧪 <a href="https://gitlab.com/galtzo-floss/debug_logging">galtzo-floss/debug_logging on GitLab</a>
+</td>
+        <td>The Truth</td>
+        <td><a href="https://gitlab.com/galtzo-floss/debug_logging/-/issues">💚</a></td>
+        <td><a href="https://gitlab.com/galtzo-floss/debug_logging/-/merge_requests">💚</a></td>
+        <td><a href="https://gitlab.com/galtzo-floss/debug_logging/-/wikis/home">💚</a></td>
+        <td>🐭 Tiny Matrix</td>
+        <td>➖</td>
+      </tr>
+      <tr>
+        <td>🧊 <a href="https://codeberg.org/galtzo-floss/debug_logging">galtzo-floss/debug_logging on CodeBerg</a>
+</td>
+        <td>An Ethical Mirror (<a href="https://donate.codeberg.org/">Donate</a>)</td>
+        <td><a href="https://codeberg.org/galtzo-floss/debug_logging/issues">💚</a></td>
+        <td><a href="https://codeberg.org/galtzo-floss/debug_logging/pulls">💚</a></td>
+        <td>➖</td>
+        <td>⭕️ No Matrix</td>
+        <td>➖</td>
+      </tr>
+      <tr>
+        <td>🐙 <a href="https://github.com/galtzo-floss/debug_logging">galtzo-floss/debug_logging on GitHub</a>
+</td>
+        <td>Another Mirror</td>
+        <td><a href="https://github.com/galtzo-floss/debug_logging/issues">💚</a></td>
+        <td><a href="https://github.com/galtzo-floss/debug_logging/pulls">💚</a></td>
+        <td><a href="https://github.com/galtzo-floss/debug_logging/wiki">💚</a></td>
+        <td>💯 Full Matrix</td>
+        <td><a href="https://github.com/galtzo-floss/debug_logging/discussions">💚</a></td>
+      </tr>
+      <tr>
+        <td>🎮️ <a href="https://discord.gg/3qme4XHNKN">Discord Server</a>
+</td>
+        <td><a href="https://discord.gg/3qme4XHNKN"><img src="https://img.shields.io/discord/1373797679469170758?style=for-the-badge&amp;logo=discord" alt="Live Chat on Discord"></a></td>
+        <td><a href="https://discord.gg/3qme4XHNKN">Let’s</a></td>
+        <td><a href="https://discord.gg/3qme4XHNKN">talk</a></td>
+        <td><a href="https://discord.gg/3qme4XHNKN">about</a></td>
+        <td><a href="https://discord.gg/3qme4XHNKN">this</a></td>
+        <td><a href="https://discord.gg/3qme4XHNKN">library!</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</details>
+
+<h3 id="enterprise-support-">Enterprise Support <a href="https://tidelift.com/subscription/pkg/rubygems-debug_logging?utm_source=rubygems-debug_logging&amp;utm_medium=referral&amp;utm_campaign=readme"><img src="https://tidelift.com/badges/package/rubygems/debug_logging" alt="Tidelift"></a>
+</h3>
+
+<p>Available as part of the Tidelift Subscription.</p>
+
+<details>
+  <summary>Need enterprise-level guarantees?</summary>
+
+  <p>The maintainers of this and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use.</p>
+
+  <p><a href="https://tidelift.com/subscription/pkg/rubygems-debug_logging?utm_source=rubygems-debug_logging&amp;utm_medium=referral&amp;utm_campaign=readme"><img src="https://img.shields.io/badge/Tidelift_and_Sonar-Enterprise_Support-FD3456?style=for-the-badge&amp;logo=sonar&amp;logoColor=white" alt="Get help from me on Tidelift"></a></p>
+
+  <ul>
+    <li>💡Subscribe for support guarantees covering <em>all</em> your FLOSS dependencies</li>
+    <li>💡Tidelift is part of <a href="https://blog.tidelift.com/tidelift-joins-sonar">Sonar</a>
+</li>
+    <li>💡Tidelift pays maintainers to maintain the software you depend on!<br>📊<code>@</code>Pointy Haired Boss: An <a href="https://tidelift.com/subscription/pkg/rubygems-debug_logging?utm_source=rubygems-debug_logging&amp;utm_medium=referral&amp;utm_campaign=readme">enterprise support</a> subscription is “<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">never gonna let you down</a>”, and <em>supports</em> open source maintainers</li>
+  </ul>
+
+  <p>Alternatively:</p>
+
+  <ul>
+    <li><a href="https://discord.gg/3qme4XHNKN"><img src="https://img.shields.io/discord/1373797679469170758?style=for-the-badge&amp;logo=discord" alt="Live Chat on Discord"></a></li>
+    <li><a href="https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share"><img src="https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&amp;logo=Upwork&amp;logoColor=white" alt="Get help from me on Upwork"></a></li>
+    <li><a href="https://www.codementor.io/peterboling?utm_source=github&amp;utm_medium=button&amp;utm_term=peterboling&amp;utm_campaign=github"><img src="https://img.shields.io/badge/CodeMentor-Get_Help-1abc9c?style=for-the-badge&amp;logo=CodeMentor&amp;logoColor=white" alt="Get help from me on Codementor"></a></li>
+  </ul>
+
+</details>
+
+<h2 id="-installation">✨ Installation</h2>
+
+<p>Install the gem and add to the application’s Gemfile by executing:</p>
+
+<pre class="code language-console"><code class="language-console">bundle add debug_logging
+</code></pre>
+
+<p>If bundler is not being used to manage dependencies, install the gem by executing:</p>
+
+<pre class="code language-console"><code class="language-console">gem install debug_logging
+</code></pre>
+
+<h2 id="️-configuration">⚙️ Configuration</h2>
+
+<h2 id="-basic-usage">🔧 Basic Usage</h2>
+
+<p>Crack open the specs for more complex usage examples than the ones below.</p>
+
+<h3 id="first-how-do-i-turn-it-off-when-i-need-some-silence">First, how do I turn it off when I need some silence?</h3>
+
+<p>For example, in your test suite, before you <code>require "config/environment"</code> or equivalent, do this:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">require &quot;logger&quot;
+require &quot;debug_logging&quot;
+
+logger = Logger.new($stdout)
+logger.level = Logger::UNKNOWN # for silence!
+DebugLogging.configuration.logger = logger
+</code></pre>
+
+<p>It will silence all of the places that have <code>extend DebugLogger</code>, <em>unless</em> those places have overridden the logger config they inherited from the global config.</p>
+
+<h3 id="without-rails">Without Rails</h3>
+
+<p>It just works. ;)<br>
+Configuration can go anywhere you want.  Configuration is the same regardless; see below.</p>
+
+<h3 id="with-rails">With Rails</h3>
+
+<p>Recommend creating <code>config/initializers/debug_logging.rb</code>, or adding to <code>config/application.rb</code> with:</p>
+
+<pre class="code language-ruby"><code class="language-ruby"># Showing the defaults
+DebugLogging.configuration.logger = Logger.new($stdout) # you probably want to override to be the Rails.logger, and if so you can&#39;t set it in the initializer, as it needs to be set after Rails.logger is set.
+DebugLogging.configuration.log_level = :debug # at what level are the messages created by this gem sent at?
+DebugLogging.configuration.multiple_last_hashes = false # pass every hash argument to last_hash_to_s_proc?
+DebugLogging.configuration.last_hash_to_s_proc = nil # e.g. -&gt;(hash) { &quot;keys: #{hash.keys}&quot; }
+DebugLogging.configuration.last_hash_max_length = 1_000
+DebugLogging.configuration.args_to_s_proc = nil # e.g. -&gt;(*record) { &quot;record id: #{record.first.id}&quot; }
+DebugLogging.configuration.args_max_length = 1_000
+DebugLogging.configuration.instance_benchmarks = false
+DebugLogging.configuration.class_benchmarks = false
+DebugLogging.configuration.active_support_notifications = false
+DebugLogging.configuration.colorized_chain_for_method = false # e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }
+DebugLogging.configuration.colorized_chain_for_class = false # e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }
+DebugLogging.configuration.add_invocation_id = true # identify a method call uniquely in a log, pass a proc for colorization, e.g. -&gt;(colorized_string) { colorized_string.light_black }
+DebugLogging.configuration.time_formatter_proc = DebugLogging::Constants::DEFAULT_TIME_FORMATTER
+DebugLogging.configuration.add_timestamp = false
+DebugLogging.configuration.ellipsis = &quot; ✂️ …&quot;.freeze
+DebugLogging.configuration.mark_scope_exit = true # Only has an effect if benchmarking is off, since benchmarking always marks the scope exit
+DebugLogging.configuration.add_payload = false # or a proc which will be called to print the payload
+DebugLogging.configuration.payload_max_length = 1000
+DebugLogging.configuration.error_handler_proc = nil # e.g. -&gt;(error, config, obj, method_name, *args, **kwargs) { config.log { &quot;#{error.class}: #{error.message} in #{method_name}\nargs: #{args.inspect}&quot; } }
+</code></pre>
+
+<p>If you prefer to use the block style:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">DebugLogging.configure do |config|
+  config.logger = Logger.new($stdout) # probably want to override to be the Rails.logger, and if so you can&#39;t set it in the initializer, as it needs to be set after Rails.logger is set.
+  config.log_level = :debug # at what level do the messages created by this gem sent at?
+  config.multiple_last_hashes = false # pass every hash argument to last_hash_to_s_proc?
+  config.last_hash_to_s_proc = nil # e.g. -&gt;(hash) { &quot;keys: #{hash.keys}&quot; }
+  config.last_hash_max_length = 1_000
+  config.args_to_s_proc = nil # e.g. -&gt;(*record) { &quot;record id: #{record.first.id}&quot; }
+  config.args_max_length = 1_000
+  config.instance_benchmarks = false
+  config.class_benchmarks = false
+  config.active_support_notifications = false
+  config.colorized_chain_for_method = false # e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }
+  config.colorized_chain_for_class = false # e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }
+  config.time_formatter_proc = DebugLogging::Constants::DEFAULT_TIME_FORMATTER
+  config.add_timestamp = false
+  config.add_invocation_id = true # identify a method call uniquely in a log, pass a proc for colorization, e.g. -&gt;(colorized_string) { colorized_string.light_black }
+  config.ellipsis = &quot; ✂️ …&quot;.freeze
+  config.mark_scope_exit = true # Only has an effect if benchmarking is off, since benchmarking always marks the scope exit
+  config.add_payload = false # or a proc which will be called to print the payload
+  config.payload_max_length = 1000
+  config.error_handler_proc = nil # e.g. -&gt;(error, config, obj, method_name, *args, **kwargs) { config.log { &quot;#{error.class}: #{error.message} in #{method_name}\nargs: #{args.inspect}&quot; } }
+end
+</code></pre>
+
+<p><strong>All</strong> of the above <strong>config</strong> is <strong>inheritable</strong> and <strong>configurable</strong> at the <strong>per-class</strong> level as well!<br>
+Just prepend <code>debug_</code> to any config value you want to override in a class.</p>
+
+<p><strong>All</strong> of the above <strong>config</strong> is <strong>inheritable</strong> and <strong>configurable</strong> at the <strong>per-instance</strong> level as well!<br>
+Just prepend <code>debug_</code> to any config value you want to override on an instance of a class.</p>
+
+<p><strong>All</strong> of the above <strong>config</strong> is <strong>inheritable</strong> and <strong>configurable</strong> at the <strong>per-method</strong> level as well!<br>
+Just send along a hash of the config options, similar to the following:</p>
+
+<ul>
+  <li><code>logged :drive, { ellipsis: " ✂️ it out" }</code></li>
+  <li><code>i_logged [:drive, :stop], { ellipsis: " ✂️ 2 much" }</code></li>
+  <li><code>notified :drive, { ellipsis: " ✂️ it out" }</code></li>
+  <li><code>i_notified [:drive, :stop], { ellipsis: " ✂️ 2 much" }</code></li>
+</ul>
+
+<p>See the example class below, and the specs.</p>
+
+<p><strong>NOTE ON</strong> <code>Rails.logger</code> - It will probably be nil in your initializer, so setting the <code>config.logger</code> to <code>Rails.logger</code> there will result in setting it to <code>nil</code>, which means the default will end up being used: <code>Logger.new($stdout)</code>. Instead just config the logger in your application.rb, or anytime later, but <em>before your classes get loaded</em> and start inheriting the config:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">DebugLogging.configuration.logger = Rails.logger
+</code></pre>
+
+<p>Every time a method is called, you can now get logs, optionally with arguments, a benchmark, and a unique invocation identifier:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">class Car
+  # Adds the helper methods to the class.
+  #   All helpers prefixed with debug_*,
+  #   except for the *logged* decorator, which comes from extending DebugLogging::ClassLogger
+  extend DebugLogging
+
+  # per class configuration overrides!
+  self.debug_class_benchmarks = true
+  self.debug_instance_benchmarks = true
+
+  # For class methods
+  #   Provides the versatile `logged` method decorator / macro
+  extend DebugLogging::ClassLogger
+  # For instance methods
+  #   Provides the versatile `i_logged` method decorator / macro
+  extend DebugLogging::InstanceLogger
+
+  # == BEGIN CLASS METHODS ==
+  # For class methods:
+  # Option 1: Use *logged* as a method decorator
+  class &lt;&lt; self
+    def make
+      new
+    end
+
+    def design(*_args)
+      new
+    end
+
+    def safety(*_args)
+      new
+    end
+
+    def dealer_options(*_args)
+      new
+    end
+
+    def will_not_be_logged
+      false
+    end
+  end
+  logged :make
+
+  # Option 2: Use *logged* as a macro
+  logged :design, :safety
+  # Override configuration options for any class method(s), by passing a hash as the last argument
+  # In the last hash any non-Configuration keys will be data that gets logged,
+  #     and also made available to last_hash_to_s_proc
+  logged :dealer_options, {
+    something: &quot;here&quot;, # &lt;= will be logged, and available to last_hash_to_s_proc
+    multiple_last_hashes: true, # &lt;= Overrides config
+    error_handler_proc: nil, # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
+  }
+  # == END CLASS METHODS ==
+
+  # == BEGIN INSTANCE METHODS ==
+  # For instance methods:
+  # Option 1: specify the exact method(s) to add logging to, and optionally customize
+  i_notified [
+    :drive,
+    :stop,
+    [:turn, {instance_variables: %i[direction angle]}],
+  ]
+
+  def drive(speed)
+    speed
+  end
+
+  def stop(**_opts)
+    0
+  end
+
+  # For instance methods:
+  # Option 2: add logging to all instance methods defined above (but *not* defined below)
+  i_logged instance_methods(false)
+
+  def faster(**_opts)
+    5
+  end
+
+  # Override configuration options for any instance method(s), by passing a hash as the last argument
+  # In the last hash any non-Configuration keys will be data that gets logged,
+  #     and also made available to last_hash_to_s_proc
+  # Here&#39;s an example that sets every possible option, while also showing what the default values are!
+  i_logged [:faster], {
+    logger: Logger.new($stdout), # probably want to override to be the Rails.logger
+    log_level: :debug, # at what level do the messages created by this gem sent at?
+    multiple_last_hashes: false,
+    last_hash_to_s_proc: nil, # e.g. -&gt;(hash) { &quot;keys: #{hash.keys}&quot; }
+    last_hash_max_length: 1_000,
+    args_to_s_proc: nil, # e.g. -&gt;(*record) { &quot;record id: #{record.first.id}&quot; }
+    args_max_length: 1_000,
+    colorized_chain_for_method: false, # e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }
+    colorized_chain_for_class: false,  # e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }
+    add_invocation_id: true, # allows unique identification of method call; association of entry and exit log lines
+    ellipsis: &quot; ✂️ …&quot;.freeze,
+    mark_scope_exit: false,
+    add_payload: true, # Can also be a proc returning a string, which will be called when printing the payload
+    payload_max_length: 1_000,
+    error_handler_proc: nil, # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the instance of the class the method was called on!
+    time_formatter_proc: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,
+    add_timestamp: false,
+    instance_benchmarks: false,
+    class_benchmarks: false,
+  }
+
+  # You can also use `i_logged` as a true method decorator:
+  i_logged def slower
+    2
+  end
+
+  def will_not_be_logged
+    false
+  end
+  # == END INSTANCE METHODS ==
+end
+</code></pre>
+
+<h3 id="activesupportnotifications-integration">ActiveSupport::Notifications integration</h3>
+
+<p>To use <code>ActiveSupport::Notifications</code> integration, enable <code>active_support_notifications</code> in the config, either single line or block style:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">DebugLogging.configuration.active_support_notifications = true
+</code></pre>
+
+<p>or</p>
+
+<pre class="code language-ruby"><code class="language-ruby">DebugLogging.configure do |config|
+  config.active_support_notifications = true
+end
+</code></pre>
+
+<p>Every time a method is called, class and instance method events are instrumented, consumed and logged:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">class Car
+  # Adds the helper methods to the class.
+  #   All helpers prefixed with debug_*,
+  #   except for the *notified* decorator, which comes from extending DebugLogging::ClassNotifier
+  extend DebugLogging
+  # For instance methods
+  #   Provides the versatile `i_notified` method decorator / macro
+  extend DebugLogging::InstanceNotifier
+  # For class methods
+  #   Provides the versatile `notified` method decorator / macro
+  extend DebugLogging::ClassNotifier
+
+  # For instance methods:
+  # Option 1: specify the exact method(s) to add instrumentation to
+  #   NOTE: You can capture instance variable values as part of the event payload
+  i_notified [
+    :drive,
+    :stop,
+    [:turn, {instance_variables: %i[direction angle]}],
+  ]
+
+  # == BEGIN CLASS METHODS ==
+  # For class methods:
+  # Option 1: Use *notified* as a method decorator
+  class &lt;&lt; self
+    def make
+      new
+    end
+
+    def design(*_args)
+      new
+    end
+
+    def safety(*_args)
+      new
+    end
+
+    def dealer_options(*_args)
+      new
+    end
+
+    def will_not_be_notified
+      false
+    end
+  end
+  notified :make
+
+  # Option 2: Use *logged* as a macro
+  notified :design, :safety
+  # Override configuration options for any class method(s), by passing a hash as the last argument
+  # In the last hash any non-Configuration keys will be data that gets added to the event payload,
+  #     and also made available to last_hash_to_s_proc
+  notified :dealer_options, {
+    something: &quot;here&quot;, # &lt;== will be added to the event payload, and be available to last_hash_to_s_proc
+    add_invocation_id: false, # &lt;== Overrides config
+  }
+  # == END CLASS METHODS ==
+
+  # == BEGIN INSTANCE METHODS ==
+  def drive(speed)
+    speed
+  end
+
+  def stop(**_opts)
+    0
+  end
+
+  # For instance methods:
+  # Option 2: add notification instrumentation to all instance methods defined above (but *not* defined below)
+  i_notified instance_methods(false)
+
+  def faster(**_opts)
+    0
+  end
+
+  # Override options for any instance method(s), by passing a hash as the last argument
+  # In the last hash any non-Configuration keys will be data that gets added to the event payload,
+  #     and also made available to last_hash_to_s_proc
+  i_notified [:faster], {add_invocation_id: false}
+
+  def will_not_be_notified
+    false
+  end
+  # == END INSTANCE METHODS ==
+end
+</code></pre>
+
+<h2 id="-floss-funding">🦷 FLOSS Funding</h2>
+
+<p>While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.<br>
+Raising a monthly budget of… “dollars” would make the project more sustainable.</p>
+
+<p>We welcome both individual and corporate sponsors! We also offer a<br>
+wide array of funding channels to account for your preferences.<br>
+Currently, <a href="https://opencollective.com/galtzo-floss">Open Collective</a> is our preferred funding platform.</p>
+
+<p><strong>If you’re working in a company that’s making significant use of galtzo-floss tools we’d<br>
+appreciate it if you suggest to your company to become a galtzo-floss sponsor.</strong></p>
+
+<p>You can support the development of galtzo-floss tools via<br>
+<a href="https://github.com/sponsors/pboling">GitHub Sponsors</a>,<br>
+<a href="https://liberapay.com/pboling/donate">Liberapay</a>,<br>
+<a href="https://www.paypal.com/paypalme/peterboling">PayPal</a>,<br>
+<a href="https://opencollective.com/galtzo-floss">Open Collective</a><br>
+and <a href="https://tidelift.com/subscription/pkg/rubygems-debug_logging?utm_source=rubygems-debug_logging&amp;utm_medium=referral&amp;utm_campaign=readme">Tidelift</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>📍 NOTE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>If doing a sponsorship in the form of donation is problematic for your company <br> from an accounting standpoint, we’d recommend the use of Tidelift, <br> where you can get a support-like subscription instead.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="open-collective-for-individuals">Open Collective for Individuals</h3>
+
+<p>Support us with a monthly donation and help us continue our activities. [<a href="https://opencollective.com/galtzo-floss#backer">Become a backer</a>]</p>
+
+<p>NOTE: <a href="https://github.com/galtzo-floss/debug_logging/blob/main/exe/kettle-readme-backers">kettle-readme-backers</a> updates this list every day, automatically.</p>
+
+<!-- OPENCOLLECTIVE-INDIVIDUALS:START -->
+<p>No backers yet. Be the first!<br>
+<!-- OPENCOLLECTIVE-INDIVIDUALS:END --></p>
+
+<h3 id="open-collective-for-organizations">Open Collective for Organizations</h3>
+
+<p>Become a sponsor and get your logo on our README on GitHub with a link to your site. [<a href="https://opencollective.com/galtzo-floss#sponsor">Become a sponsor</a>]</p>
+
+<p>NOTE: <a href="https://github.com/galtzo-floss/debug_logging/blob/main/exe/kettle-readme-backers">kettle-readme-backers</a> updates this list every day, automatically.</p>
+
+<!-- OPENCOLLECTIVE-ORGANIZATIONS:START -->
+<p>No sponsors yet. Be the first!<br>
+<!-- OPENCOLLECTIVE-ORGANIZATIONS:END --></p>
+
+<h3 id="another-way-to-support-open-source">Another way to support open-source</h3>
+
+<p>I’m driven by a passion to foster a thriving open-source community – a space where people can tackle complex problems, no matter how small. Revitalizing libraries that have fallen into disrepair, and building new libraries focused on solving real-world challenges, are my passions. I was recently affected by layoffs, and the tech jobs market is unwelcoming. I’m reaching out here because your support would significantly aid my efforts to provide for my family, and my farm (11 🐔 chickens, 2 🐶 dogs, 3 🐰 rabbits, 8 🐈‍ cats).</p>
+
+<p>If you work at a company that uses my work, please encourage them to support me as a corporate sponsor. My work on gems you use might show up in <code>bundle fund</code>.</p>
+
+<p>I’m developing a new library, <a href="https://github.com/galtzo-floss/floss_funding">floss_funding</a>, designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.</p>
+
+<p><strong><a href="https://floss-funding.dev">Floss-Funding.dev</a>: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled nags</strong></p>
+
+<p><a href="https://opencollective.com/galtzo-floss#backer"><img src="https://opencollective.com/galtzo-floss/backers/badge.svg?style=flat" alt="OpenCollective Backers"></a> <a href="https://opencollective.com/galtzo-floss#sponsor"><img src="https://opencollective.com/galtzo-floss/sponsors/badge.svg?style=flat" alt="OpenCollective Sponsors"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&amp;color=a51611&amp;style=flat" alt="Liberapay Goal Progress"></a> <a href="https://www.paypal.com/paypalme/peterboling"><img src="https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&amp;logo=paypal" alt="Donate on PayPal"></a> <a href="https://www.buymeacoffee.com/pboling"><img src="https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat" alt="Buy me a coffee"></a> <a href="https://polar.sh/pboling"><img src="https://img.shields.io/badge/polar-donate-a51611.svg?style=flat" alt="Donate on Polar"></a> <a href="https://ko-fi.com/pboling"><img src="https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat" alt="Donate to my FLOSS efforts at ko-fi.com"></a> <a href="https://patreon.com/galtzo"><img src="https://img.shields.io/badge/patreon-donate-a51611.svg?style=flat" alt="Donate to my FLOSS efforts using Patreon"></a></p>
+
+<h2 id="-security">🔐 Security</h2>
+
+<p>See <a href="https://github.com/galtzo-floss/debug_logging/blob/main/SECURITY.md">SECURITY.md</a>.</p>
+
+<h2 id="-contributing">🤝 Contributing</h2>
+
+<p>If you need some ideas of where to help, you could work on adding more code coverage,<br>
+or if it is already 💯 (see <a href="#code-coverage">below</a>) check <a href="https://github.com/galtzo-floss/debug_logging/issues">issues</a> or <a href="https://github.com/galtzo-floss/debug_logging/pulls">PRs</a>,<br>
+or use the gem and think about how it could be better.</p>
+
+<p>We <a href="https://keepachangelog.com/en/1.0.0/"><img src="https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat" alt="Keep A Changelog"></a> so if you make changes, remember to update it.</p>
+
+<p>See <a href="https://github.com/galtzo-floss/debug_logging/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for more detailed instructions.</p>
+
+<h3 id="-release-instructions">🚀 Release Instructions</h3>
+
+<p>See <a href="https://github.com/galtzo-floss/debug_logging/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+
+<h3 id="code-coverage">Code Coverage</h3>
+
+<details>
+  <summary>Coverage service badges</summary>
+
+  <p><a href="https://codecov.io/gh/galtzo-floss/debug_logging"><img src="https://codecov.io/gh/galtzo-floss/debug_logging/graph/badge.svg" alt="Coverage Graph"></a></p>
+
+  <p><a href="https://coveralls.io/github/galtzo-floss/debug_logging?branch=main"><img src="https://coveralls.io/repos/github/galtzo-floss/debug_logging/badge.svg?branch=main" alt="Coveralls Test Coverage"></a></p>
+
+  <p><a href="https://qlty.sh/gh/galtzo-floss/projects/debug_logging/metrics/code?sort=coverageRating"><img src="https://qlty.sh/gh/galtzo-floss/projects/debug_logging/coverage.svg" alt="QLTY Test Coverage"></a></p>
+
+</details>
+
+<h3 id="-code-of-conduct">🪇 Code of Conduct</h3>
+
+<p>Everyone interacting with this project’s codebases, issue trackers,<br>
+chat rooms and mailing lists agrees to follow the <a href="https://github.com/galtzo-floss/debug_logging/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg" alt="Contributor Covenant 2.1"></a>.</p>
+
+<h2 id="-contributors">🌈 Contributors</h2>
+
+<p><a href="https://github.com/galtzo-floss/debug_logging/graphs/contributors"><img src="https://contrib.rocks/image?repo=galtzo-floss/debug_logging" alt="Contributors"></a></p>
+
+<p>Made with <a href="https://contrib.rocks">contributors-img</a>.</p>
+
+<p>Also see GitLab Contributors: <a href="https://gitlab.com/galtzo-floss/debug_logging/-/graphs/main">https://gitlab.com/galtzo-floss/debug_logging/-/graphs/main</a></p>
+
+<details>
+ <summary>⭐️ Star History</summary>
+
+<a href="https://star-history.com/galtzo-floss/debug_logging&amp;Date">
+ <picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/debug_logging&amp;type=Date&amp;theme=dark"></source>
+ <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/debug_logging&amp;type=Date"></source>
+ <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=galtzo-floss/debug_logging&amp;type=Date">
+ </picture>
+</a>
+
+</details>
+
+<h2 id="-versioning">📌 Versioning</h2>
+
+<p>This library follows <a href="https://semver.org/spec/v2.0.0.html"><img src="https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat" alt="Semantic Versioning 2.0.0"></a> for its public API where practical.<br>
+For most applications, prefer the <a href="http://guides.rubygems.org/patterns/#pessimistic-version-constraint">Pessimistic Version Constraint</a> with two digits of precision.</p>
+
+<p>For example:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">spec.add_dependency(&quot;debug_logging&quot;, &quot;~&gt; 4.0&quot;)
+</code></pre>
+
+<details>
+  <summary>📌 Is "Platform Support" part of the public API? More details inside.</summary>
+
+  <p>Dropping support for a platform can be a breaking change for affected users.
+If a release changes supported platforms, it should be called out clearly in the changelog and versioned with that impact in mind.</p>
+
+  <p>To get a better understanding of how SemVer is intended to work over a project’s lifetime,
+read this article from the creator of SemVer:</p>
+
+  <ul>
+    <li><a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">“Major Version Numbers are Not Sacred”</a></li>
+  </ul>
+
+</details>
+
+<p>See <a href="https://github.com/galtzo-floss/debug_logging/blob/main/CHANGELOG.md">CHANGELOG.md</a> for a list of releases.</p>
+
+<h2 id="-license">📄 License</h2>
+
+<p>The gem is available as open source under the terms of<br>
+the <a href="MIT.md">MIT</a> <a href="MIT.md"><img src="https://img.shields.io/badge/License-MIT-259D6C.svg" alt="License: MIT"></a>.</p>
+
+<h3 id="-copyright">© Copyright</h3>
+
+<p>See <a href="LICENSE.md">LICENSE.md</a> for the official copyright notice.</p>
+
+<details>
+  <summary>Copyright holders</summary>
+
+  <ul>
+    <li>Copyright (c) 2017-2018, 2020-2021, 2023-2024, 2026 Peter H. Boling</li>
+    <li>Copyright (c) 2020 John Gillson</li>
+    <li>Copyright (c) 2024 Aboling0</li>
+  </ul>
+
+</details>
+
+<h2 id="-a-request-for-help">🤑 A request for help</h2>
+
+<p>Maintainers have teeth and need to pay their dentists.<br>
+After getting laid off in an RIF in March, and encountering difficulty finding a new one,<br>
+I began spending most of my time building open source tools.<br>
+I’m hoping to be able to pay for my kids’ health insurance this month,<br>
+so if you value the work I am doing, I need your support.<br>
+Please consider sponsoring me or the project.</p>
+
+<p>To join the community or get help 👇️ Join the Discord.</p>
+
+<p><a href="https://discord.gg/3qme4XHNKN"><img src="https://img.shields.io/discord/1373797679469170758?style=for-the-badge&amp;logo=discord" alt="Live Chat on Discord"></a></p>
+
+<p>To say “thanks!” ☝️ Join the Discord or 👇️ send money.</p>
+
+<p><a href="https://opencollective.com/galtzo-floss"><img src="https://img.shields.io/opencollective/all/galtzo-floss?style=for-the-badge" alt="Sponsor galtzo-floss/debug_logging on Open Source Collective"></a> 💌 <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&amp;logo=github" alt="Sponsor me on GitHub Sponsors"></a> 💌 <a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&amp;logo=liberapay&amp;color=a51611" alt="Sponsor me on Liberapay"></a> 💌 <a href="https://www.paypal.com/paypalme/peterboling"><img src="https://img.shields.io/badge/donate-paypal-a51611.svg?style=for-the-badge&amp;logo=paypal&amp;color=0A0A0A" alt="Donate on PayPal"></a></p>
+
+<h3 id="please-give-the-project-a-star--">Please give the project a star ⭐ ♥.</h3>
+
+<p>Thanks for RTFM. ☺️</p>
+
+<!-- kettle-jem:metadata:start -->
+<p>| Field | Value |<br>
+|—|—|<br>
+| Package | debug_logging |<br>
+| Description | 🪲 Unobtrusive debug logging for Ruby.  NO LITTERING.<br>Automatically log selected methods and their arguments as they are called at runtime! |<br>
+| Homepage | https://github.com/galtzo-floss/debug_logging |<br>
+| Source | https://github.com/galtzo-floss/debug_logging/tree/v4.0.2 |<br>
+| License | <code>MIT</code> |<br>
+| Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/pboling, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/debug_logging, https://www.buymeacoffee.com/pboling |<br>
+<!-- kettle-jem:metadata:end --></p>
+</div></div>
+
+      <div id="footer">
+  Generated on Wed May 27 15:37:30 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.44 (ruby-4.0.5).
+</div>
+
+    </div>
+  </body>
+</html>

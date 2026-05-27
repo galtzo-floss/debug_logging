@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: DebugLogging::Constants
+  
+    &mdash; Documentation by YARD 0.9.44
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "DebugLogging::Constants";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span>
+     &raquo; 
+    <span class="title">Constants</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: DebugLogging::Constants
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="ConfigClassMethods.html" title="DebugLogging::ConfigClassMethods (module)">ConfigClassMethods</a></span>, <span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/debug_logging/constants.rb
+</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DEFAULT_ELLIPSIS-constant" class="">DEFAULT_ELLIPSIS =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ✂️ …</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="DEFAULT_TIME_FORMATTER-constant" class="">DEFAULT_TIME_FORMATTER =
+          
+        </dt>
+        <dd><pre class="code"><span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_time'>time</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d %H:%M:%S</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="EVENT_TIME_FORMATTER-constant" class="">EVENT_TIME_FORMATTER =
+          
+        </dt>
+        <dd><pre class="code"><span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_time'>time</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%F %T %z</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="CONFIG_ATTRS_DEFAULTS-constant" class="">CONFIG_ATTRS_DEFAULTS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>enabled:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>logger:</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='gvar'>$stdout</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='comment'># probably want to override to be the Rails.logger
+</span>  <span class='label'>log_level:</span> <span class='symbol'>:debug</span><span class='comma'>,</span> <span class='comment'># at what level do the messages created by this gem sent at?
+</span>  <span class='label'>multiple_last_hashes:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>last_hash_to_s_proc:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='comment'># e.g. -&gt;(hash) { &quot;keys: #{hash.keys}&quot; }
+</span>  <span class='label'>last_hash_max_length:</span> <span class='int'>1_000</span><span class='comma'>,</span>
+  <span class='label'>args_to_s_proc:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='comment'># e.g. -&gt;(*record) { &quot;record id: #{record.first.id}&quot; }
+</span>  <span class='label'>args_max_length:</span> <span class='int'>1_000</span><span class='comma'>,</span>
+  <span class='label'>colorized_chain_for_method:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='comment'># e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }
+</span>  <span class='label'>colorized_chain_for_class:</span> <span class='kw'>false</span><span class='comma'>,</span>  <span class='comment'># e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }
+</span>  <span class='label'>add_invocation_id:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='comment'># allows unique identification of method call; association of entry and exit log lines
+</span>  <span class='label'>ellipsis:</span> <span class='const'><span class='object_link'><a href="#DEFAULT_ELLIPSIS-constant" title="DebugLogging::Constants::DEFAULT_ELLIPSIS (constant)">DEFAULT_ELLIPSIS</a></span></span><span class='comma'>,</span>
+  <span class='label'>mark_scope_exit:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>add_payload:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='comment'># Can also be a proc returning a string, which will be called when printing the payload
+</span>  <span class='label'>payload_max_length:</span> <span class='int'>1_000</span><span class='comma'>,</span>
+  <span class='label'>error_handler_proc:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>time_formatter_proc:</span> <span class='const'><span class='object_link'><a href="#DEFAULT_TIME_FORMATTER-constant" title="DebugLogging::Constants::DEFAULT_TIME_FORMATTER (constant)">DEFAULT_TIME_FORMATTER</a></span></span><span class='comma'>,</span>
+  <span class='label'>add_timestamp:</span> <span class='kw'>false</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="CONFIG_ATTRS-constant" class="">CONFIG_ATTRS =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#CONFIG_ATTRS_DEFAULTS-constant" title="DebugLogging::Constants::CONFIG_ATTRS_DEFAULTS (constant)">CONFIG_ATTRS_DEFAULTS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span></pre></dd>
+      
+        <dt id="CONFIG_READERS_DEFAULTS-constant" class="">CONFIG_READERS_DEFAULTS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>instance_benchmarks:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>class_benchmarks:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='label'>active_support_notifications:</span> <span class='kw'>false</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="CONFIG_READERS-constant" class="">CONFIG_READERS =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#CONFIG_READERS_DEFAULTS-constant" title="DebugLogging::Constants::CONFIG_READERS_DEFAULTS (constant)">CONFIG_READERS_DEFAULTS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span></pre></dd>
+      
+        <dt id="CONFIG_KEYS-constant" class="">CONFIG_KEYS =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#CONFIG_ATTRS-constant" title="DebugLogging::Constants::CONFIG_ATTRS (constant)">CONFIG_ATTRS</a></span></span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="#CONFIG_READERS-constant" title="DebugLogging::Constants::CONFIG_READERS (constant)">CONFIG_READERS</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Wed May 27 15:37:30 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.44 (ruby-4.0.5).
+</div>
+
+    </div>
+  </body>
+</html>

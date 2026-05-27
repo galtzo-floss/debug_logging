@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: DebugLogging::Util
+  
+    &mdash; Documentation by YARD 0.9.44
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "DebugLogging::Util";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (U)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span>
+     &raquo; 
+    <span class="title">Util</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: DebugLogging::Util
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/debug_logging/util.rb
+</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config_proxy_finder-class_method" title="config_proxy_finder (class method)">.<strong>config_proxy_finder</strong>(scope:, method_name:, proxy_ref:, config_opts: {}) {|proxy| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#debug_time-class_method" title="debug_time (class method)">.<strong>debug_time</strong>(time_or_monotonic)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extract_payload_and_config-class_method" title="extract_payload_and_config (class method)">.<strong>extract_payload_and_config</strong>(method_names:, payload: nil, config: nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>methods_to_log may be an array of a single method name, followed by config options and payload,   or it could be an array of method names followed by config options and payload to be shared by the whole set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payload_instance_variable_hydration-class_method" title="payload_instance_variable_hydration (class method)">.<strong>payload_instance_variable_hydration</strong>(scope:, payload:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="config_proxy_finder-class_method">
+  
+    .<strong>config_proxy_finder</strong>(scope:, method_name:, proxy_ref:, config_opts: {}) {|proxy| ... } &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>proxy</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging/util.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config_proxy_finder'>config_proxy_finder</span><span class='lparen'>(</span><span class='label'>scope:</span><span class='comma'>,</span> <span class='label'>method_name:</span><span class='comma'>,</span> <span class='label'>proxy_ref:</span><span class='comma'>,</span> <span class='label'>config_opts:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_proxy'>proxy</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span>
+    <span class='symbol'>:instance_variable_get</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config_pointer'><span class='object_link'><a href="Configuration.html#config_pointer-class_method" title="DebugLogging::Configuration.config_pointer (method)">config_pointer</a></span></span><span class='lparen'>(</span>
+      <span class='id identifier rubyid_proxy_ref'>proxy_ref</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span>
+    <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+  <span class='comment'># short circuit on subsequent calls is required
+</span>  <span class='comment'>#   so we only register notifications once
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_proxy'>proxy</span> <span class='kw'>if</span> <span class='id identifier rubyid_proxy'>proxy</span>
+
+  <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:debug_config</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_debug_config'>debug_config</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug_logging_configuration'><span class='object_link'><a href="../DebugLogging.html#debug_logging_configuration-class_method" title="DebugLogging.debug_logging_configuration (method)">debug_logging_configuration</a></span></span>
+  <span class='id identifier rubyid_proxy'>proxy</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_config_opts'>config_opts</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_base'>base</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Configuration.html#initialize-instance_method" title="DebugLogging::Configuration#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_config_opts'>config_opts</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span>
+    <span class='symbol'>:instance_variable_set</span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config_pointer'><span class='object_link'><a href="Configuration.html#config_pointer-class_method" title="DebugLogging::Configuration.config_pointer (method)">config_pointer</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_proxy_ref'>proxy_ref</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_proxy'>proxy</span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+  <span class='kw'>yield</span> <span class='id identifier rubyid_proxy'>proxy</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
+  <span class='id identifier rubyid_proxy'>proxy</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="debug_time-class_method">
+  
+    .<strong>debug_time</strong>(time_or_monotonic)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging/util.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_debug_time'>debug_time</span><span class='lparen'>(</span><span class='id identifier rubyid_time_or_monotonic'>time_or_monotonic</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_time_or_monotonic'>time_or_monotonic</span>
+  <span class='kw'>when</span> <span class='const'>Time</span><span class='comma'>,</span> <span class='const'>DateTime</span>
+    <span class='id identifier rubyid_time_or_monotonic'>time_or_monotonic</span>
+  <span class='kw'>when</span> <span class='const'>Numeric</span>
+    <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='id identifier rubyid_time_or_monotonic'>time_or_monotonic</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'>String</span>
+    <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_time_or_monotonic'>time_or_monotonic</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='comment'># Garbage in, Sweet Nourishing Gruel Out
+</span>    <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extract_payload_and_config-class_method">
+  
+    .<strong>extract_payload_and_config</strong>(method_names:, payload: nil, config: nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>methods_to_log may be an array of a single method name, followed by config options and payload,<br />
+  or it could be an array of method names followed by config options and payload to be shared by the whole set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging/util.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extract_payload_and_config'>extract_payload_and_config</span><span class='lparen'>(</span><span class='label'>method_names:</span><span class='comma'>,</span> <span class='label'>payload:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>config:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='comment'># When scoped config is present it will always be a new configuration instance per method
+</span>  <span class='comment'># When scoped config is not present it will reuse the class&#39; configuration object
+</span>  <span class='id identifier rubyid_scoped_payload'>scoped_payload</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span><span class='lparen'>(</span><span class='label'>freeze:</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_payload'>payload</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_payload'>payload</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_scoped_payload'>scoped_payload</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_scoped_payload'>scoped_payload</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_config_opts'>config_opts</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='op'>&amp;.</span><span class='id identifier rubyid_clone'>clone</span><span class='lparen'>(</span><span class='label'>freeze:</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='comment'># puts &quot;[EPAC] config: #{config}, scoped_payload: #{scoped_payload}, payload: #{payload}, config_opts: #{config_opts}&quot;
+</span>  <span class='kw'>unless</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Constants.html#CONFIG_KEYS-constant" title="DebugLogging::Constants::CONFIG_KEYS (constant)">CONFIG_KEYS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_config_opts'>config_opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_method_names'>method_names</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_method_names'>method_names</span>
+    <span class='kw'>when</span> <span class='const'>Symbol</span>
+      <span class='id identifier rubyid_method_names'>method_names</span>
+    <span class='kw'>when</span> <span class='const'>String</span>
+      <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='kw'>when</span> <span class='const'>Array</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+        <span class='comment'># Array of arrays?
+</span>        <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
+        <span class='comment'># when set as i_methods: [[:i_with_dsplat_payload, { tags: %w[blue green] }], ...]
+</span>        <span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+      <span class='kw'>else</span>
+        <span class='comment'># Or an array of method name symbols?
+</span>        <span class='comment'># logged :meth1, :meth2, :meth3 without options is valid
+</span>        <span class='id identifier rubyid_method_names'>method_names</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown type for method_names: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_names'>method_names</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_method_names'>method_names</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_config_opts'>config_opts</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payload_instance_variable_hydration-class_method">
+  
+    .<strong>payload_instance_variable_hydration</strong>(scope:, payload:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging/util.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payload_instance_variable_hydration'>payload_instance_variable_hydration</span><span class='lparen'>(</span><span class='label'>scope:</span><span class='comma'>,</span> <span class='label'>payload:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_paydirt'>paydirt</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='comment'># TODO: Could make instance variable introspection configurable before or after method execution
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:instance_variables</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_paydirt'>paydirt</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span> <span class='op'>==</span> <span class='symbol'>:instance_variables</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:instance_variables</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span>
+      <span class='id identifier rubyid_paydirt'>paydirt</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:instance_variable_get</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:instance_variable_defined?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_paydirt'>paydirt</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_payload'>payload</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_paydirt'>paydirt</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed May 27 15:37:30 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.44 (ruby-4.0.5).
+</div>
+
+    </div>
+  </body>
+</html>
