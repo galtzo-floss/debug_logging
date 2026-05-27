@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/pboling/debug_logging'
+    value: 'https://github.com/galtzo-floss/debug_logging'
     description: "debug_logging"
-repository-code: 'https://github.com/pboling/debug_logging'
+repository-code: 'https://github.com/galtzo-floss/debug_logging'
 abstract: >-
   debug_logging
 license: See license file

@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.description = "🪲 Unobtrusive debug logging for Ruby.  NO LITTERING.
 Automatically log selected methods and their arguments as they are called at runtime!
 "
-  spec.homepage = "https://github.com/pboling/debug_logging"
+  spec.homepage = "https://github.com/galtzo-floss/debug_logging"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 3.1"
 
