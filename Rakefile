@@ -1,21 +1,3 @@
-# kettle-jem:freeze
-# To retain chunks of comments & code during debug_logging templating:
-# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
-# debug_logging will then preserve content between those markers across template runs.
-# kettle-jem:unfreeze
-
-# kettle-jem:freeze
-# To retain chunks of comments & code during debug_logging templating:
-# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
-# debug_logging will then preserve content between those markers across template runs.
-# kettle-jem:unfreeze
-
-# kettle-jem:freeze
-# To retain chunks of comments & code during debug_logging templating:
-# Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
-# debug_logging will then preserve content between those markers across template runs.
-# kettle-jem:unfreeze
-
 # frozen_string_literal: true
 
 # kettle-jem:freeze
@@ -24,16 +6,16 @@
 # debug_logging will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
-# debug_logging Rakefile v1.0.0 - 2026-04-08
+# debug_logging Rakefile v7.0.0 - 2026-05-27
 # Ruby 2.3 (Safe Navigation) or higher required
 #
-# MIT License (see License.txt)
+# See LICENSE.md for license information.
 #
 # Copyright (c) 2026 Peter H. Boling (galtzo.com)
 #
 # Expected to work in any project that uses Bundler.
 #
-# Sets up tasks for appraisal, floss_funding, rspec, minitest, rubocop, reek, yard, and stone_checksums.
+# Sets up tasks for appraisal2, floss_funding, kettle-jem, kettle-dev, rspec, minitest, rubocop_gradual, reek, yard, and stone_checksums.
 #
 # rake appraisal:install                      # Install Appraisal gemfiles (initial setup...
 # rake appraisal:reset                        # Delete Appraisal lockfiles (gemfiles/*.gemfile.lock)
@@ -49,9 +31,9 @@
 # rake default                                # Default tasks aggregator
 # rake install                                # Build and install debug_logging-1.0.0.gem in...
 # rake install:local                          # Build and install debug_logging-1.0.0.gem in...
-# rake kettle:jem:install                     # Install debug_logging GitHub automation and ...
+# rake kettle:jem:install                     # Internal target used by `kettle-jem install`
 # rake kettle:jem:selftest                    # Self-test: template debug_logging against itse...
-# rake kettle:jem:template                    # Template debug_logging files into the curren...
+# rake kettle:jem:template                    # Internal target used by scoped `kettle-jem template --only`
 # rake reek                                   # Check for code smells
 # rake reek:update                            # Run reek and store the output into the RE...
 # rake release[remote]                        # Create tag v1.0.0 and build and push kett...
@@ -74,24 +56,50 @@
 require "bundler/gem_tasks" if !Dir[File.join(__dir__, "*.gemspec")].empty?
 # :nocov:
 
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-
-RSpec::Core::RakeTask.new(:spec)
-desc "alias spec => test"
-task test: :spec
-
-require "rubocop/lts"
-Rubocop::Lts.install_tasks
-
-task default: %i[spec rubocop_gradual]
+# Define a base default task early so other files can enhance it.
+desc "Default tasks aggregator"
+task :default do
+  puts "Default task complete."
+end
 
 # External gems that define tasks - add here!
-require "kettle/dev"
+begin
+  require "kettle/dev"
+
+### DUPLICATE DRIFT TASKS
+begin
+  require "kettle/drift"
+  Kettle::Drift.install_tasks
+rescue LoadError
+  desc("(stub) kettle:drift:check is unavailable")
+  task("kettle:drift:check") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift:update is unavailable")
+  task("kettle:drift:update") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift:force_update is unavailable")
+  task("kettle:drift:force_update") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift is unavailable")
+  task("kettle:drift" => "kettle:drift:update")
+end
+
+  Kettle::Dev.install_tasks unless Kettle::Dev::RUNNING_AS == "rake"
+rescue LoadError
+  warn("NOTE: kettle-dev isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+end
 
 ### TEMPLATING TASKS
+# These tasks are installed for the `kettle-jem` executable. Run full templating
+# through `kettle-jem install`; use `kettle-jem template --only PATH` only for
+# scoped file updates. The executable prepares the environment and then
+# delegates here when rake orchestration is needed.
 begin
   require "kettle/jem"
+  Kettle::Jem.install_tasks
 rescue LoadError
   desc("(stub) kettle:jem:selftest is unavailable")
   task("kettle:jem:selftest") do

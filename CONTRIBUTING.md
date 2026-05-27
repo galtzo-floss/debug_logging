@@ -1,16 +1,22 @@
-## Contributing
-
 # Contributing
 
 Bug reports and pull requests are welcome on [CodeBerg][📜src-cb], [GitLab][📜src-gl], or [GitHub][📜src-gh].
 This project should be a safe, welcoming space for collaboration, so contributors agree to adhere to
 the [code of conduct][🤝conduct].
 
+To submit a patch, please fork the project, create a patch with tests, and send a pull request.
+
 Remember to [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] if you make changes.
+
+## Developer Certificate of Origin
+
+In order to protect users of this project, we require all contributors to comply with the
+[Developer Certificate of Origin](https://developercertificate.org/).
+This ensures that all contributions are properly licensed and attributed.
 
 ## Help out!
 
-Take a look at the `reek` list which is the file called `REEK` and find something to improve.
+Take a look at the open issues and pull requests, or use the gem and find something to improve.
 
 Follow these instructions:
 
@@ -44,65 +50,25 @@ There are many Rake tasks available as well. You can see them by running:
 bin/rake -T
 ```
 
+## Code quality checks
+
+Run the Reek task when you want a smell check that fails on current findings:
+
+```shell
+bin/rake reek
+```
+
+Refresh the checked-in `REEK` backlog through the rake task, not by redirecting
+the raw `reek` executable output. The rake task uses the project bundle and
+avoids stale generated binstubs shadowing the Reek gem executable:
+
+```shell
+bin/rake reek:update
+```
+
 ## Environment Variables for Local Development
 
 Below are the primary environment variables recognized by stone_checksums (and its integrated tools). Unless otherwise noted, set boolean values to the string "true" to enable.
-
-To submit a patch, please fork the project, create a patch with tests, and send a pull request.
-
-## Release
-
-To release a new version:
-
-NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in the environment.
-
-### To release a new version:
-
-#### Automated process
-
-1. Update version.rb to contain the correct version-to-be-released.
-2. Run `bundle exec kettle-changelog`.
-3. Run `bundle exec kettle-release`.
-4. Stay awake and monitor the release process for any errors, and answer any prompts.
-
-#### Manual process
-
-1. Run `bin/setup && bin/rake` as a "test, coverage, & linting" sanity check
-2. Update the version number in `version.rb`, and ensure `CHANGELOG.md` reflects changes
-3. Run `bin/setup && bin/rake` again as a secondary check, and to update `Gemfile.lock`
-4. Run `git commit -am "🔖 Prepare release v<VERSION>"` to commit the changes
-5. Run `git push` to trigger the final CI pipeline before release, and merge PRs
-    - NOTE: Remember to [check the build][🧪build].
-6. Run `export GIT_TRUNK_BRANCH_NAME="$(git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5)" && echo $GIT_TRUNK_BRANCH_NAME`
-7. Run `git checkout $GIT_TRUNK_BRANCH_NAME`
-8. Run `git pull origin $GIT_TRUNK_BRANCH_NAME` to ensure latest trunk code
-9. Optional for older Bundler (< 2.7.0): Set `SOURCE_DATE_EPOCH` so `rake build` and `rake release` use the same timestamp and generate the same checksums
-    - If your Bundler is >= 2.7.0, you can skip this; builds are reproducible by default.
-    - Run `export SOURCE_DATE_EPOCH=$EPOCHSECONDS && echo $SOURCE_DATE_EPOCH`
-    - If the echo above has no output, then it didn't work.
-    - Note: `zsh/datetime` module is needed, if running `zsh`.
-    - In older versions of `bash` you can use `date +%s` instead, i.e. `export SOURCE_DATE_EPOCH=$(date +%s) && echo $SOURCE_DATE_EPOCH`
-10. Run `bundle exec rake build`
-11. Run `bin/gem_checksums` (more context [1][🔒️rubygems-checksums-pr], [2][🔒️rubygems-guides-pr])
-    to create SHA-256 and SHA-512 checksums. This functionality is provided by the `stone_checksums`
-    [gem][💎stone_checksums].
-    - The script automatically commits but does not push the checksums
-12. Sanity check the SHA256, comparing with the output from the `bin/gem_checksums` command:
-    - `sha256sum pkg/<gem name>-<version>.gem`
-13. Run `bundle exec rake release` which will create a git tag for the version,
-    push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
-
-Also see GitLab Contributors: [https://gitlab.com/pboling/debug_logging/-/graphs/main][🚎contributors-gl]
-
-## For Maintainers
-
-### One-time, Per-maintainer, Setup
-
-**IMPORTANT**: To sign a build,
-a public key for signing gems will need to be picked up by the line in the
-`gemspec` defining the `spec.cert_chain` (check the relevant ENV variables there).
-All releases are signed releases.
-See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 
 General/runtime
 - DEBUG: Enable extra internal logging for this library (default: false)
@@ -141,6 +107,11 @@ For a quick starting point, this repository’s `mise.toml` defines the shared d
 ## Appraisals
 
 From time to time the [appraisal2][🚎appraisal2] gemfiles in `gemfiles/` will need to be updated.
+Generated appraisal and CI workflow floors are controlled by `ruby.test_minimum`
+in `.kettle-jem.yml`; this project was templated with `ruby.test_minimum: 3.1`.
+That value describes the lowest Ruby version expected to run the test/development
+toolchain, and it may be higher than the gemspec runtime floor.
+
 They are created and updated with the commands:
 
 ```console
@@ -155,22 +126,20 @@ bin/rake appraisal:reset
 
 When adding an appraisal to CI, check the [runner tool cache][🏃‍♂️runner-tool-cache] to see which runner to use.
 
-## The Reek List
-
-Take a look at the `reek` list which is the file called `REEK` and find something to improve.
-
-To refresh the `reek` list:
-
-```console
-bundle exec reek > REEK
-```
-
 ## Run Tests
 
-To run all tests
+Run tests via `kettle-test` (provided by `kettle-test`). It runs RSpec, writes the full log to
+`tmp/kettle-test/rspec-TIMESTAMP.log`, and prints a compact highlight block with timing, seed,
+pass/fail count, failing example list, and SimpleCov coverage percentages.
 
 ```console
-bundle exec rake test
+bundle exec kettle-test
+```
+
+For targeted runs, disable the hard coverage threshold to avoid false failures:
+
+```console
+K_SOUP_COV_MIN_HARD=false bundle exec kettle-test spec/path/to/spec.rb
 ```
 
 ### Spec organization (required)
@@ -213,21 +182,69 @@ Your picture could be here!
 
 Made with [contributors-img][🖐contrib-rocks].
 
-[📜src-gl]: https://gitlab.com/pboling/debug_logging/
+Also see GitLab Contributors: [https://gitlab.com/pboling/debug_logging/-/graphs/main][🚎contributors-gl]
+
+## For Maintainers
+
+### One-time, Per-maintainer, Setup
+
+**IMPORTANT**: To sign a build,
+a public key for signing gems will need to be picked up by the line in the
+`gemspec` defining the `spec.cert_chain` (check the relevant ENV variables there).
+All releases are signed releases.
+See: [RubyGems Security Guide][🔒️rubygems-security-guide]
+
+NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in the environment.
+
+### To release a new version:
+
+#### Automated process
+
+1. Update version.rb to contain the correct version-to-be-released.
+2. Run `bundle exec kettle-changelog`.
+3. Run `bundle exec kettle-release`.
+4. Stay awake and monitor the release process for any errors, and answer any prompts.
+
+#### Manual process
+
+1. Run `bin/setup && bin/rake` as a "test, coverage, & linting" sanity check
+2. Update the version number in `version.rb`, and ensure `CHANGELOG.md` reflects changes
+3. Run `bin/setup && bin/rake` again as a secondary check, and to update `Gemfile.lock`
+4. Run `bin/rake yard` to regenerate the docs site using the canonical docs task
+5. Run `git commit -am "🔖 Prepare release v<VERSION>"` to commit the changes
+6. Run `git push` to trigger the final CI pipeline before release, and merge PRs
+    - NOTE: Remember to [check the build][🧪build].
+7. Run `export GIT_TRUNK_BRANCH_NAME="$(git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5)" && echo $GIT_TRUNK_BRANCH_NAME`
+8. Run `git checkout $GIT_TRUNK_BRANCH_NAME`
+9. Run `git pull origin $GIT_TRUNK_BRANCH_NAME` to ensure latest trunk code
+10. Optional for older Bundler (< 2.7.0): Set `SOURCE_DATE_EPOCH` so `rake build` and `rake release` use the same timestamp and generate the same checksums
+    - If your Bundler is >= 2.7.0, you can skip this; builds are reproducible by default.
+    - Run `export SOURCE_DATE_EPOCH=$EPOCHSECONDS && echo $SOURCE_DATE_EPOCH`
+    - If the echo above has no output, then it didn't work.
+    - Note: `zsh/datetime` module is needed, if running `zsh`.
+    - In older versions of `bash` you can use `date +%s` instead, i.e. `export SOURCE_DATE_EPOCH=$(date +%s) && echo $SOURCE_DATE_EPOCH`
+11. Run `bundle exec rake build`
+12. Run `bin/gem_checksums` (more context [1][🔒️rubygems-checksums-pr], [2][🔒️rubygems-guides-pr])
+    to create SHA-256 and SHA-512 checksums. This functionality is provided by the `stone_checksums`
+    [gem][💎stone_checksums].
+    - The script automatically commits but does not push the checksums
+13. Sanity check the SHA256, comparing with the output from the `bin/gem_checksums` command:
+    - `sha256sum pkg/<gem name>-<version>.gem`
+14. Run `bundle exec rake release` which will create a git tag for the version,
+    push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
+
+[📜src-gl]: https://gitlab.com/pboling/debug_logging
 [📜src-cb]: https://codeberg.org/pboling/debug_logging
 [📜src-gh]: https://github.com/pboling/debug_logging
 [🧪build]: https://github.com/pboling/debug_logging/actions
-[🏘chat]: https://matrix.to/#/%23pboling_debug_logging:gitter.im
-[🤝conduct]: https://gitlab.com/pboling/debug_logging/-/blob/main/CODE_OF_CONDUCT.md
+[🤝conduct]: https://github.com/pboling/debug_logging/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
 [🖐contributors]: https://github.com/pboling/debug_logging/graphs/contributors
 [🚎contributors-gl]: https://gitlab.com/pboling/debug_logging/-/graphs/main
 [🖐contributors-img]: https://contrib.rocks/image?repo=pboling/debug_logging
-[💎rubygems]: https://rubygems.org
 [💎gem-coop]: https://gem.coop
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022
-[🚎src-main]: https://github.com/pboling/debug_logging
 [🔒️rubygems-guides-pr]: https://github.com/rubygems/guides/pull/325
 [💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/

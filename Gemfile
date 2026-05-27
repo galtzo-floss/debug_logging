@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 # kettle-jem:freeze
 # To retain chunks of comments & code during debug_logging templating:
 # Wrap custom sections with freeze markers (e.g., as above and below this comment chunk).
 # debug_logging will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
-
-# frozen_string_literal: true
 
 source "https://gem.coop"
 
@@ -18,13 +18,8 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from debug_logging.gemspec
 gemspec
 
-platform :mri do
-  # Debugging
-  gem "byebug", ">= 11"
-end
-
-# Templating (env-switched: KETTLE_RB_DEV=true for local paths)
-eval_gemfile "gemfiles/modular/templating.gemfile"
+# Templating (env-switched: SMORG_RB_DEV=/path/to/structuredmerge/ruby/gems for local paths)
+eval_gemfile "gemfiles/modular/templating.gemfile" if ENV.fetch("K_JEM_TEMPLATING", "false").casecmp("true").zero?
 
 # Debugging
 eval_gemfile "gemfiles/modular/debug.gemfile"

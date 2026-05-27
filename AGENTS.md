@@ -2,10 +2,10 @@
 
 ## 🎯 Project Overview
 
-This project is a **RubyGem** managed with the [kettle-rb](https://github.com/kettle-rb) toolchain.
+This project is a **RubyGem** managed with the [StructuredMerge](https://github.com/structuredmerge/structuredmerge-ruby) toolchain.
 
 **Minimum Supported Ruby**: See the gemspec `required_ruby_version` constraint.
-**Local Development Ruby**: See `.tool-versions` for the version used in local development (typically the latest stable Ruby).
+**Local Development Ruby**: See `mise.toml` for the version used in local development (typically the latest stable Ruby).
 
 ### Modular Gemfile Architecture
 
@@ -24,7 +24,7 @@ Gemfiles in the project, including modular ones, can utilize a `*_local.gemfile`
 
 ```bash
 mise trust -C /path/to/project
-mise exec -C /path/to/project -- bundle exec rspec
+mise exec -C /path/to/project -- bundle exec kettle-test
 ```
 
 Do this before spending time on unrelated debugging; in this workspace pattern, silent `mise` commands are usually a trust problem first.
@@ -32,13 +32,13 @@ Do this before spending time on unrelated debugging; in this workspace pattern, 
 ✅ **CORRECT** — Run self-contained commands with `mise exec`:
 
 ```bash
-mise exec -C /path/to/project -- bundle exec rspec
+mise exec -C /path/to/project -- bundle exec kettle-test
 ```
 
 ✅ **CORRECT** — If you need shell syntax first, load the environment in the same command:
 
 ```bash
-eval "$(mise env -C /path/to/project -s bash)" && bundle exec rspec
+eval "$(mise env -C /path/to/project -s bash)" && bundle exec kettle-test
 ```
 
 ❌ **WRONG** — Do not rely on a previous command changing directories:
@@ -70,7 +70,7 @@ cd /path/to/project && bundle exec rspec
 
 Only use terminal for:
 
-- Running tests (`bundle exec rspec`)
+- Running tests (`bundle exec kettle-test`)
 - Installing dependencies (`bundle install`)
 - Simple commands that do not require much shell escaping
 - Running scripts (prefer writing a script over a complicated command with shell escaping)
@@ -81,7 +81,7 @@ When you do run tests, keep the full output visible so you can inspect failures 
 
 ### Toolchain Dependencies
 
-This gem is part of the **kettle-rb** ecosystem. Key development tools:
+This gem is part of the **StructuredMerge** ecosystem. Key development tools:
 
 | Tool | Purpose |
 |------|---------|
@@ -139,37 +139,49 @@ If the command is complicated write a script in local tmp/ and then run the scri
 
 ### Running Tests
 
-Full suite spec runs:
+**Always run specs via `kettle-test`** (provided by `kettle-test`). It runs `bundle exec rspec`,
+captures all output to `tmp/kettle-test/rspec-TIMESTAMP.log`, and prints a structured highlight block:
+timing, seed, pass/fail count, failing examples, and SimpleCov coverage percentages.
+
+Full suite:
 
 ```bash
-mise exec -C /path/to/project -- bundle exec rspec
+mise exec -C /path/to/project -- bundle exec kettle-test
 ```
 
 For single file, targeted, or partial spec runs the coverage threshold **must** be disabled.
 Use the `K_SOUP_COV_MIN_HARD=false` environment variable to disable hard failure:
 
 ```bash
-mise exec -C /path/to/project -- env K_SOUP_COV_MIN_HARD=false bundle exec rspec spec/path/to/spec.rb
+mise exec -C /path/to/project -- env K_SOUP_COV_MIN_HARD=false bundle exec kettle-test spec/path/to/spec.rb
 ```
 
 ### Template Management (kettle-jem)
 
-Run the kettle-jem templater to sync project files with the latest template:
+Run the full kettle-jem installer to sync project files with the latest template
+and regenerate local finishing artifacts such as binstubs:
 
 ```bash
 # Standard run (quiet, non-interactive — the default)
-mise exec -C /path/to/project -- bundle exec rake kettle:jem:install
+mise exec -C /path/to/project -- env K_JEM_TEMPLATING=true bundle exec kettle-jem install
 
 # Verbose output (see per-file detail)
-mise exec -C /path/to/project -- env KETTLE_JEM_VERBOSE=true bundle exec rake kettle:jem:install
+mise exec -C /path/to/project -- env K_JEM_TEMPLATING=true KETTLE_JEM_VERBOSE=true bundle exec kettle-jem install
 
 # Interactive mode (prompt before each change)
-mise exec -C /path/to/project -- bundle exec rake kettle:jem:install force=false
+mise exec -C /path/to/project -- env K_JEM_TEMPLATING=true bundle exec kettle-jem install --interactive
+
+# Scoped file update only; skips install finishing steps
+mise exec -C /path/to/project -- env K_JEM_TEMPLATING=true bundle exec kettle-jem template --only README.md
 ```
+
+Use the `kettle-jem` executable as the public entrypoint. The
+`kettle:jem:*` rake tasks are internal orchestration targets that the
+executable may call after it has prepared the templating environment.
 
 **Current defaults** (no flags needed):
 - **quiet=true** — only phase summary lines shown; use `--verbose` or `KETTLE_JEM_VERBOSE=true` to opt out
-- **force=true** — non-interactive; use `--interactive` or `force=false` to opt out
+- **force=true** — non-interactive; use `--interactive` to opt out
 - **allowed=true** — env file changes auto-accepted; set `allowed=false` to require review
 
 ### Building & Installing Locally
@@ -264,3 +276,9 @@ end
 ## 🚫 Common Pitfalls
 
 1. **NEVER pipe test output through `head`/`tail`** — Run tests without truncation so you can inspect the full output.
+2. **README.md is mostly auto-generated by kettle-jem** — Only the following sections may be edited by hand or by agents:
+   - `## 🌻 Synopsis`
+   - `## ⚙️ Configuration`
+   - `## 🔧 Basic Usage`
+
+   All other sections (badges, installation, FLOSS funding, security, contributing, versioning, license, etc.) are managed by the kettle-jem template and will be overwritten on the next templating run. Do not edit them.
