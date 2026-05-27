@@ -1,11 +1,9 @@
-[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-floss-i]][🖼️galtzo-floss] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang] [![pboling Logo by Aboling0, CC BY-SA 4.0][🖼️pboling-i]][🖼️pboling]
+[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-floss-i]][🖼️galtzo-floss] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang]
 
 [🖼️galtzo-floss-i]: https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg
 [🖼️galtzo-floss]: https://discord.gg/3qme4XHNKN
 [🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
 [🖼️ruby-lang]: https://www.ruby-lang.org/
-[🖼️pboling-i]: https://logos.galtzo.com/assets/images/pboling/avatar-192px.svg
-[🖼️pboling]: https://github.com/pboling
 
 # 🪲 DebugLogging
 
@@ -443,17 +441,17 @@ end
 
 ## 🦷 FLOSS Funding
 
-While pboling tools are free software and will always be, the project would benefit immensely from some funding.
+While galtzo-floss tools are free software and will always be, the project would benefit immensely from some funding.
 Raising a monthly budget of... "dollars" would make the project more sustainable.
 
 We welcome both individual and corporate sponsors! We also offer a
 wide array of funding channels to account for your preferences.
 Currently, [Open Collective][🖇osc] is our preferred funding platform.
 
-**If you're working in a company that's making significant use of pboling tools we'd
-appreciate it if you suggest to your company to become a pboling sponsor.**
+**If you're working in a company that's making significant use of galtzo-floss tools we'd
+appreciate it if you suggest to your company to become a galtzo-floss sponsor.**
 
-You can support the development of pboling tools via
+You can support the development of galtzo-floss tools via
 [GitHub Sponsors][🖇sponsor],
 [Liberapay][⛳liberapay],
 [PayPal][🖇paypal],
@@ -466,7 +464,7 @@ and [Tidelift][🏙️entsup-tidelift].
 
 ### Open Collective for Individuals
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/pboling#backer)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/galtzo-floss#backer)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -476,7 +474,7 @@ No backers yet. Be the first!
 
 ### Open Collective for Organizations
 
-Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/pboling#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/galtzo-floss#sponsor)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -623,17 +621,17 @@ Thanks for RTFM. ☺️
 [⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
 [⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
 [⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇osc-all-img]: https://img.shields.io/opencollective/all/pboling
-[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/pboling
-[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/pboling
-[🖇osc-backers]: https://opencollective.com/pboling#backer
-[🖇osc-backers-i]: https://opencollective.com/pboling/backers/badge.svg?style=flat
-[🖇osc-sponsors]: https://opencollective.com/pboling#sponsor
-[🖇osc-sponsors-i]: https://opencollective.com/pboling/sponsors/badge.svg?style=flat
-[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/pboling?style=for-the-badge
-[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/pboling?style=for-the-badge
-[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/pboling?style=for-the-badge
-[🖇osc]: https://opencollective.com/pboling
+[🖇osc-all-img]: https://img.shields.io/opencollective/all/galtzo-floss
+[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/galtzo-floss
+[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/galtzo-floss
+[🖇osc-backers]: https://opencollective.com/galtzo-floss#backer
+[🖇osc-backers-i]: https://opencollective.com/galtzo-floss/backers/badge.svg?style=flat
+[🖇osc-sponsors]: https://opencollective.com/galtzo-floss#sponsor
+[🖇osc-sponsors-i]: https://opencollective.com/galtzo-floss/sponsors/badge.svg?style=flat
+[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/galtzo-floss?style=for-the-badge
+[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/galtzo-floss?style=for-the-badge
+[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/galtzo-floss?style=for-the-badge
+[🖇osc]: https://opencollective.com/galtzo-floss
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
