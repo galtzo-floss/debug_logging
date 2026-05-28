@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Stabilized logged hash argument and payload rendering across supported Ruby
+  versions.
+
 ### Security
 
 ## [4.0.3] - 2026-05-27

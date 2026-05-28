@@ -445,7 +445,7 @@ RSpec.shared_context "with example classes" do
             instance_benchmarks: true,
             add_invocation_id: true,
             error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
-              config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{args.inspect} and #{kwargs.inspect}. Check this: #{obj.k_without_log}"
+              config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} and #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.k_without_log}"
             },
           },
         ],
@@ -456,7 +456,7 @@ RSpec.shared_context "with example classes" do
             instance_benchmarks: true,
             add_invocation_id: true,
             error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
-              config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{args.inspect} and #{kwargs.inspect}. Check this: #{obj.i_without_log}"
+              config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} and #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.i_without_log}"
             },
           },
         ],
@@ -514,12 +514,12 @@ RSpec.shared_context "with example classes" do
       notified :k_with_ssplat_handled_error,
         class_benchmarks: true,
         error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
-          config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{args.inspect} & #{kwargs.inspect}. Check this: #{obj.k_without_log}"
+          config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} & #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.k_without_log}"
         }
       notified :k_with_dsplat_handled_error,
         class_benchmarks: true,
         error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
-          config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{args.inspect} & #{kwargs.inspect}. Check this: #{obj.k_without_log}"
+          config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} & #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.k_without_log}"
         }
 
       def i

@@ -88,7 +88,7 @@ module DebugLogging
               )
               printed
             else
-              other_args.map(&:inspect).join(", ").tap do |x|
+              debug_args_to_s(other_args).tap do |x|
                 add_other_args_ellipsis = x.length > config_proxy.debug_args_max_length
               end[0..(config_proxy.debug_args_max_length)]
             end
@@ -122,7 +122,7 @@ module DebugLogging
               )
               printed
             else
-              other_args.map(&:inspect).join(", ").tap do |x|
+              debug_args_to_s(other_args).tap do |x|
                 add_other_args_ellipsis = x.length > config_proxy.debug_args_max_length
               end[0..(config_proxy.debug_args_max_length)]
             end
@@ -158,11 +158,11 @@ module DebugLogging
           printed
         elsif args.length == 1 && args[0].is_a?(Hash)
           # handle double splat
-          "**#{args.map(&:inspect).join(", ").tap do |x|
+          "**#{debug_args_to_s(args).tap do |x|
                  add_args_ellipsis = x.length > config_proxy.debug_args_max_length
                end }"[0..(config_proxy.debug_args_max_length)]
         else
-          args.map(&:inspect).join(", ").tap do |x|
+          debug_args_to_s(args).tap do |x|
             add_args_ellipsis = x.length > config_proxy.debug_args_max_length
           end[0..(config_proxy.debug_args_max_length)]
         end
@@ -189,7 +189,7 @@ module DebugLogging
 
       case config_proxy.debug_add_payload
       when true
-        payload.inspect
+        debug_value_to_s(payload)
       else
         printed_payload = ""
         printed, add_payload_ellipsis = debug_safe_proc(
@@ -205,6 +205,25 @@ module DebugLogging
     end
 
     module_function
+
+    def debug_args_to_s(args)
+      args.map { |arg| debug_value_to_s(arg) }.join(", ")
+    end
+
+    def debug_value_to_s(value)
+      case value
+      when Hash
+        "{#{value.map { |key, inner_value| "#{debug_hash_key_to_s(key)}: #{debug_value_to_s(inner_value)}" }.join(", ")}}"
+      when Array
+        "[#{value.map { |inner_value| debug_value_to_s(inner_value) }.join(", ")}]"
+      else
+        value.inspect
+      end
+    end
+
+    def debug_hash_key_to_s(key)
+      key.is_a?(Symbol) ? key.to_s : key.inspect
+    end
 
     def debug_event_name_to_s(decorated_method: nil)
       "#{decorated_method}.log"
