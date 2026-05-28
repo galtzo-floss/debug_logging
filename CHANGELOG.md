@@ -28,17 +28,14 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Stabilized logged hash argument and payload rendering across supported Ruby
-  versions.
-
 ### Security
 
 ## [4.0.3] - 2026-05-27
 
 - TAG: [v4.0.3][4.0.3t]
-- COVERAGE: 97.38% -- 707/726 lines in 28 files
-- BRANCH COVERAGE: 88.04% -- 162/184 branches in 28 files
-- 21.28% documented
+- COVERAGE: 97.41% -- 716/735 lines in 28 files
+- BRANCH COVERAGE: 87.83% -- 166/189 branches in 28 files
+- 20.94% documented
 
 ### Added
 
@@ -62,6 +59,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Restored the `colorize` runtime dependency so fresh installs include the
   colorization support used by debug logging output.
+
+- Stabilized logged hash argument and payload rendering across supported Ruby
+  versions.
 
 ### Removed
 
