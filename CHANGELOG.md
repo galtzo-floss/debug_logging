@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Fixed the TruffleRuby 23.1 CI setup bundle by applying the same JSON
+  constraint before Appraisal runs.
+
 ### Security
 
 ## [4.0.3] - 2026-05-28

@@ -13,4 +13,12 @@ source "https://gem.coop"
 # On CI, we use it for the Appraisal-based builds.
 # We do not load the standard Gemfile, as it is tailored for local development.
 
+# kettle-jem:freeze
+# json 2.19.x currently fails to compile on truffleruby-23.1 during the
+# root bundle install that runs before Appraisal can apply ruby-3-2 constraints.
+if RUBY_ENGINE == "truffleruby" && RUBY_VERSION.start_with?("3.2.")
+  gem "json", "< 2.19"
+end
+# kettle-jem:unfreeze
+
 gemspec
