@@ -8,7 +8,7 @@ require "digest"
 require "version_gem"
 require_relative "debug_logging/version"
 
-require "colorized_string"
+require "debug_logging/colorized_string"
 
 # This gem
 require "debug_logging/constants"

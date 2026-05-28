@@ -98,7 +98,6 @@ Automatically log selected methods and their arguments as they are called at run
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("colorize", ">= 0")
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased

@@ -26,6 +26,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Removed
 
+- Removed the GPL-licensed `colorize` runtime dependency while preserving the
+  existing colorization callback behavior.
+
 ### Fixed
 
 ### Security
