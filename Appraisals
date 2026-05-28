@@ -66,6 +66,9 @@ appraise "ruby-3-1" do
 end
 
 appraise "ruby-3-2" do
+  # json 2.19.x does not build on TruffleRuby 23.1, which targets Ruby 3.2.
+  gem "json", "< 2.19"
+
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
 end
 

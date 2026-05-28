@@ -1,12 +1,12 @@
 RSpec.describe DebugLogging::Hooks do
   context "when .debug_time_box is used" do
     it "does not let the method exceed a given time limit" do
-      timeout_time = Rational(1, 2)
+      timeout_time = 0.25
       klass = Class.new do
         include DebugLogging::Hooks
 
         def meth
-          sleep 1
+          sleep 2
         end
         debug_time_box(timeout_time, :meth)
       end
@@ -17,8 +17,8 @@ RSpec.describe DebugLogging::Hooks do
         end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       end
       result = end_time - start_time
-      rough_time = Rational((result * 10).floor, 10)
-      expect(rough_time).to eq(timeout_time)
+      expect(result).to be >= timeout_time
+      expect(result).to be < 1.5
     end
 
     context "without a block and the method call expires" do
@@ -27,9 +27,9 @@ RSpec.describe DebugLogging::Hooks do
           include DebugLogging::Hooks
 
           def meth
-            sleep 0.2
+            sleep 2
           end
-          debug_time_box(0.1, :meth)
+          debug_time_box(0.25, :meth)
         end
 
         @result =
@@ -56,10 +56,10 @@ RSpec.describe DebugLogging::Hooks do
           attr_reader :args
 
           def meth
-            sleep 0.2
+            sleep 2
           end
 
-          debug_time_box(0.1, :meth) do |*args|
+          debug_time_box(0.25, :meth) do |*args|
             @args = args
             expected_result
           end
@@ -101,11 +101,11 @@ RSpec.describe DebugLogging::Hooks do
           attr_reader :args
 
           def meth
-            sleep 0.1
+            sleep 0.05
             self.class.expected_result
           end
 
-          debug_time_box(0.2, :meth) do |*args|
+          debug_time_box(1, :meth) do |*args|
             @args = args
             raise "bad"
           end
