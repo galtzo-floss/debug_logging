@@ -65,45 +65,54 @@ end
 # External gems that define tasks - add here!
 begin
   require "kettle/dev"
-
-  ### DUPLICATE DRIFT TASKS
-  begin
-    require "kettle/drift"
-    Kettle::Drift.install_tasks
-  rescue LoadError
-    desc("(stub) kettle:drift:check is unavailable")
-    task("kettle:drift:check") do
-      warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
-    end
-    desc("(stub) kettle:drift:update is unavailable")
-    task("kettle:drift:update") do
-      warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
-    end
-    desc("(stub) kettle:drift:force_update is unavailable")
-    task("kettle:drift:force_update") do
-      warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
-    end
-    desc("(stub) kettle:drift is unavailable")
-    task("kettle:drift" => "kettle:drift:update")
-  end
-
   Kettle::Dev.install_tasks unless Kettle::Dev::RUNNING_AS == "rake"
 rescue LoadError
   warn("NOTE: kettle-dev isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
 end
+
+### DUPLICATE DRIFT TASKS
+begin
+  require "kettle/drift"
+  Kettle::Drift.install_tasks
+rescue LoadError
+  desc("(stub) kettle:drift:check is unavailable")
+  task("kettle:drift:check") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift:update is unavailable")
+  task("kettle:drift:update") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift:force_update is unavailable")
+  task("kettle:drift:force_update") do
+    warn("NOTE: kettle-drift isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+  desc("(stub) kettle:drift is unavailable")
+  task("kettle:drift" => "kettle:drift:update")
+end
+
 
 ### TEMPLATING TASKS
 # These tasks are installed for the `kettle-jem` executable. Run full templating
 # through `kettle-jem install`; use `kettle-jem template --only PATH` only for
 # scoped file updates. The executable prepares the environment and then
 # delegates here when rake orchestration is needed.
+kettle_jem_selftest_unavailable_note = nil
 begin
   require "kettle/jem"
-  Kettle::Jem.install_tasks
+  if Kettle::Jem.respond_to?(:install_tasks)
+    Kettle::Jem.install_tasks
+  else
+    kettle_jem_selftest_unavailable_note = "NOTE: kettle-jem #{Kettle::Jem::Version::VERSION} does not provide rake tasks in this environment"
+  end
 rescue LoadError
+  kettle_jem_selftest_unavailable_note = "NOTE: kettle-jem isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
+end
+
+if kettle_jem_selftest_unavailable_note
   desc("(stub) kettle:jem:selftest is unavailable")
   task("kettle:jem:selftest") do
-    warn("NOTE: kettle-jem isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    warn(kettle_jem_selftest_unavailable_note)
   end
 end
 

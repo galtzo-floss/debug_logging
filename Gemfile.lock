@@ -122,13 +122,11 @@ GEM
     lint_roller (1.1.0)
     logger (1.7.0)
     matrix (0.4.3)
-    mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
     mutex_m (0.3.0)
-    nokogiri (1.19.3)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.28.0)
@@ -345,7 +343,7 @@ GEM
     zlib (3.2.3)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   activesupport (>= 5.2.4.4)
@@ -359,7 +357,7 @@ DEPENDENCIES
   gem_bench (~> 2.0, >= 2.0.5)
   gitmoji-regex (~> 2.0, >= 2.0.0)
   irb (~> 1.17)
-  kettle-dev (~> 2.0, >= 2.0.2)
+  kettle-dev (~> 2.0, >= 2.0.4)
   kettle-soup-cover (~> 1.0, >= 1.1.3)
   kettle-test (~> 2.0, >= 2.0.1)
   kramdown (~> 2.5, >= 2.5.1)
