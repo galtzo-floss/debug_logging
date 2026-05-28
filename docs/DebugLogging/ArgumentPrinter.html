@@ -500,7 +500,7 @@
     <span class='kw'>when</span> <span class='kw'>true</span>
       <span class='id identifier rubyid_invocation'>invocation</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_add_invocation_id'>debug_add_invocation_id</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'>ColorizedString</span><span class='lbracket'>[</span><span class='id identifier rubyid_invocation'>invocation</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_add_invocation_id'>debug_add_invocation_id</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ColorizedString.html" title="DebugLogging::ColorizedString (class)">ColorizedString</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_invocation'>invocation</span><span class='rbracket'>]</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -549,12 +549,12 @@
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_config_proxy'>config_proxy</span>
 
   <span class='id identifier rubyid_klass_string'>klass_string</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_class'>debug_colorized_chain_for_class</span>
-    <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_class'>debug_colorized_chain_for_class</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'>ColorizedString</span><span class='lbracket'>[</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_class'>debug_colorized_chain_for_class</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ColorizedString.html" title="DebugLogging::ColorizedString (class)">ColorizedString</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_method_string'>method_string</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_method'>debug_colorized_chain_for_method</span>
-    <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_method'>debug_colorized_chain_for_method</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'>ColorizedString</span><span class='lbracket'>[</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_debug_colorized_chain_for_method'>debug_colorized_chain_for_method</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ColorizedString.html" title="DebugLogging::ColorizedString (class)">ColorizedString</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>end</span>
@@ -991,7 +991,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:30 2026 by
+  Generated on Wed May 27 18:30:52 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

@@ -90,9 +90,9 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 <ul>
   <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.3">v4.0.3</a>
 </li>
-  <li>COVERAGE: 97.31% – 650/668 lines in 27 files</li>
-  <li>BRANCH COVERAGE: 87.95% – 146/166 branches in 27 files</li>
-  <li>21.35% documented</li>
+  <li>COVERAGE: 97.38% – 707/726 lines in 28 files</li>
+  <li>BRANCH COVERAGE: 88.04% – 162/184 branches in 28 files</li>
+  <li>21.28% documented</li>
 </ul>
 
 <h3 id="added-1">Added</h3>
@@ -123,6 +123,13 @@ local certificate is present, improving builds for downstream packagers.</li>
 <ul>
   <li>Restored the <code>colorize</code> runtime dependency so fresh installs include the<br>
 colorization support used by debug logging output.</li>
+</ul>
+
+<h3 id="removed-1">Removed</h3>
+
+<ul>
+  <li>Removed the GPL-licensed <code>colorize</code> runtime dependency while preserving the<br>
+existing colorization callback behavior.</li>
 </ul>
 
 <h2 id="402-tag---2024-05-12">
@@ -190,7 +197,7 @@ colorization support used by debug logging output.</li>
 
 <h3 id="fixed-3">Fixed</h3>
 
-<h3 id="removed-1">Removed</h3>
+<h3 id="removed-2">Removed</h3>
 
 <h2 id="400-tag---2024-02-28">
 <a href="https://gitlab.com/galtzo-floss/debug_logging/-/compare/v3.1.9...v4.0.0">4.0.0</a> (<a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.0">tag</a>) - 2024-02-28</h2>
@@ -246,7 +253,7 @@ colorization support used by debug logging output.</li>
   <li>Per method config for every decorated method</li>
 </ul>
 
-<h3 id="removed-2">Removed</h3>
+<h3 id="removed-3">Removed</h3>
 
 <ul>
   <li>Support for <code>include DebugLogging::InstanceLogger.new(...)</code>
@@ -516,7 +523,7 @@ colorization support used by debug logging output.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Wed May 27 17:40:51 2026 by
+  Generated on Wed May 27 18:30:52 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

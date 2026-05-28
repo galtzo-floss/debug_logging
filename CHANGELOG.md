@@ -26,9 +26,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Removed
 
-- Removed the GPL-licensed `colorize` runtime dependency while preserving the
-  existing colorization callback behavior.
-
 ### Fixed
 
 ### Security
@@ -36,9 +33,9 @@ Please file a bug if you notice a violation of semantic versioning.
 ## [4.0.3] - 2026-05-27
 
 - TAG: [v4.0.3][4.0.3t]
-- COVERAGE: 97.31% -- 650/668 lines in 27 files
-- BRANCH COVERAGE: 87.95% -- 146/166 branches in 27 files
-- 21.35% documented
+- COVERAGE: 97.38% -- 707/726 lines in 28 files
+- BRANCH COVERAGE: 88.04% -- 162/184 branches in 28 files
+- 21.28% documented
 
 ### Added
 
@@ -62,6 +59,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Restored the `colorize` runtime dependency so fresh installs include the
   colorization support used by debug logging output.
+
+### Removed
+
+- Removed the GPL-licensed `colorize` runtime dependency while preserving the
+  existing colorization callback behavior.
 
 ## [4.0.2] ([tag][4.0.2t]) - 2024-05-12
 
