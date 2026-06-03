@@ -1,0 +1,257 @@
+{
+  "README.md:619991807": [
+    [262, 28, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [272, 55, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [314, 28, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [366, 55, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [402, 29, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
+  ],
+  "lib/debug_logging/argument_printer.rb:1607577242": [
+    [87, 63, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [105, 68, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [121, 63, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [135, 66, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [145, 64, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [156, 59, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [182, 7, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [199, 60, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/class_logger.rb:2135416538": [
+    [13, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [19, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [30, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [32, 28, 2, "Style/EmptyLambdaParameter: Omit parentheses for the empty lambda parameters.", 5859076]
+  ],
+  "lib/debug_logging/class_notifier.rb:3752744562": [
+    [13, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [19, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [30, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/colorized_string.rb:1991447123": [
+    [22, 18, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [34, 27, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [62, 40, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/configuration.rb:4111492203": [
+    [46, 9, 86, "Lint/SymbolConversion: Unnecessary symbol conversion; use `:\"@debug_logging_config_#{type}_#{Digest::MD5.hexdigest(decorated_method.to_s)}\"` instead.", 3186994908]
+  ],
+  "lib/debug_logging/constants.rb:907785483": [
+    [24, 27, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [30, 42, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
+  ],
+  "lib/debug_logging/hooks.rb:1892755794": [
+    [43, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729]
+  ],
+  "lib/debug_logging/instance_logger.rb:4089709684": [
+    [35, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [42, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/instance_logger_modulizer.rb:3878892238": [
+    [9, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [15, 34, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [24, 34, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [26, 30, 2, "Style/EmptyLambdaParameter: Omit parentheses for the empty lambda parameters.", 5859076]
+  ],
+  "lib/debug_logging/instance_notifier.rb:395789466": [
+    [13, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [18, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/instance_notifier_modulizer.rb:2110122658": [
+    [9, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [15, 34, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [24, 34, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/lamb_dart/base.rb:830900105": [
+    [20, 22, 13, "Style/KeywordParametersOrder: Place optional keyword parameters at the end of the parameters list.", 375396573],
+    [20, 37, 10, "Style/KeywordParametersOrder: Place optional keyword parameters at the end of the parameters list.", 2878959634],
+    [33, 21, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/lamb_dart/log.rb:4278932930": [
+    [15, 24, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [33, 9, 39, "Lint/SymbolConversion: Unnecessary symbol conversion; use `:\"debug_#{scope_term}_benchmarks\"` instead.", 4199981123]
+  ],
+  "lib/debug_logging/lamb_dart/note.rb:2416252450": [
+    [17, 98, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/lamb_darts/error_handle.rb:3633510925": [
+    [8, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [16, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/lamb_darts/notify.rb:2645786643": [
+    [10, 20, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "lib/debug_logging/log_subscriber.rb:481581982": [
+    [33, 33, 50, "Style/HashExcept: Use `except(*EXCLUDE_FROM_PAYLOAD)` instead.", 453235117],
+    [40, 84, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
+  ],
+  "lib/debug_logging/util.rb:1462229145": [
+    [78, 22, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [79, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [95, 14, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/argument_printer_spec.rb:4202669763": [
+    [39, 83, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [163, 65, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [204, 41, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [223, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [242, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [261, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [292, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [309, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/class_logger_spec.rb:3438293992": [
+    [16, 11, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [33, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [48, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/class_notifier_spec.rb:1962393355": [
+    [18, 40, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [40, 33, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [41, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [57, 27, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [58, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [76, 27, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [77, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [131, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [132, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [141, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [142, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [150, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [151, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [158, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [159, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [166, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [167, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [174, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [175, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [181, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [182, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [188, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [189, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [195, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [196, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [205, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [206, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [215, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [216, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [222, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [223, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [241, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [245, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [249, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [250, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [269, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [278, 67, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [279, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [287, 67, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [288, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [289, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [315, 67, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [316, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [325, 67, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [326, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [330, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [334, 92, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [335, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/configuration_spec.rb:358896621": [
+    [53, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [60, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [82, 38, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [233, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [289, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [296, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [661, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [682, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [689, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [696, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [767, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [785, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [797, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [823, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [842, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [849, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [873, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [880, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [898, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [905, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [932, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [957, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1037, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1146, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1172, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1198, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/hooks_spec.rb:458571137": [
+    [16, 7, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [38, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [72, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [118, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
+    [213, 29, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
+  ],
+  "spec/debug_logging/instance_logger_spec.rb:3949058639": [
+    [66, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [79, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [91, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [151, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [191, 22, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [209, 22, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/debug_logging/instance_notifier_spec.rb:3762224502": [
+    [51, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [52, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [61, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [62, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [70, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [71, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [80, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [81, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [90, 65, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [91, 10, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [103, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [119, 94, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [120, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [141, 69, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [142, 14, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [143, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [153, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [166, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [176, 69, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [177, 14, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [178, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [188, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [219, 94, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [220, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [241, 69, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [242, 14, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [243, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [264, 69, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [265, 14, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [266, 12, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [276, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+  ],
+  "spec/spec_helper.rb:2117418676": [
+    [2, 1, 18, "Lint/RedundantRequireStatement: Remove unnecessary `require` statement.", 1172311658]
+  ],
+  "spec/support/shared_context.rb:474650154": [
+    [211, 37, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [229, 10, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [296, 10, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [318, 10, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [326, 14, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [327, 12, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [334, 14, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [335, 12, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [336, 10, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [400, 10, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [449, 14, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [450, 12, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [460, 14, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [461, 12, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [462, 10, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [591, 10, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [688, 58, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [693, 50, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
+    [694, 10, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545]
+  ]
+}
