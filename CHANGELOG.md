@@ -22,6 +22,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Refreshed generated project metadata, support documentation, CI workflows,
+  and development dependency floors from the current kettle-jem template.
+
 ### Deprecated
 
 ### Removed
