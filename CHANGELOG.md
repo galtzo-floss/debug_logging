@@ -24,6 +24,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Refreshed generated project metadata, support documentation, CI workflows,
   and development dependency floors from the current kettle-jem template.
+- Updated generated OpenCollective funding metadata to use the
+  `galtzo-floss` collective.
 
 ### Deprecated
 

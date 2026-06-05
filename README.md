@@ -811,5 +811,5 @@ Thanks for RTFM. ☺️
 | Homepage | https://github.com/galtzo-floss/debug_logging |
 | Source | https://github.com/galtzo-floss/debug_logging/tree/v4.0.3 |
 | License | `MIT` |
-| Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/pboling, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/debug_logging, https://www.buymeacoffee.com/pboling |
+| Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/galtzo-floss, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/debug_logging, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->
