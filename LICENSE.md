@@ -7,6 +7,6 @@ Choose the option that best fits your use case:
 
 ## Copyright Notice
 
-Copyright (c) 2017-2018, 2020-2021, 2023-2024, 2026 Peter H. Boling
-Copyright (c) 2020 John Gillson
-Copyright (c) 2024 Aboling0
+- Copyright (c) 2017-2018, 2020-2021, 2023-2024, 2026 Peter H. Boling
+- Copyright (c) 2020 John Gillson
+- Copyright (c) 2024 Aboling0
