@@ -94,7 +94,6 @@ Automatically log selected methods and their arguments as they are called at run
   spec.bindir = "exe"
   # Listed files are the relative paths from bindir above.
   spec.executables = []
-
   spec.require_paths = ["lib"]
 
   # Utilities
