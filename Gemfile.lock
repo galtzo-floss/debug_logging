@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     debug_logging (4.0.3)
-      version_gem (~> 1.1, >= 1.1.9)
+      version_gem (~> 1.1, >= 1.1.10)
 
 GEM
   remote: https://gem.coop/
@@ -379,7 +379,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport (>= 5.2.4.4)
   addressable (>= 2.8, < 3)
-  appraisal2 (~> 3.0, >= 3.0.7)
+  appraisal2 (~> 3.0, >= 3.0.8)
   benchmark (~> 0.5, >= 0.5.0)
   bundler-audit (~> 0.9.3)
   debug (>= 1.1)
