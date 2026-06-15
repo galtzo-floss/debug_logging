@@ -12,7 +12,7 @@ module DebugLogging
           klass: klass.to_s,
           separator: is_class ? "::" : "#",
           decorated_method:,
-          config_proxy:,
+          config_proxy:
         )
         @invocation_id = klass.debug_invocation_id_to_s(args:, config_proxy:)
       end
@@ -30,7 +30,7 @@ module DebugLogging
       end
 
       def bench_scope
-        "debug_#{scope_term}_benchmarks".to_sym
+        :"debug_#{scope_term}_benchmarks"
       end
 
       def bench?

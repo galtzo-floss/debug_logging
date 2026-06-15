@@ -1,5 +1,4 @@
 # Std Lib
-require "rational"
 
 # NOTE: Gemfiles for non-coverage appraisals may not have kettle-soup-cover.
 begin

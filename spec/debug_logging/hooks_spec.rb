@@ -13,7 +13,7 @@ RSpec.describe DebugLogging::Hooks do
       start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       begin
         klass.new.meth
-      rescue StandardError
+      rescue
         end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       end
       result = end_time - start_time
@@ -35,7 +35,7 @@ RSpec.describe DebugLogging::Hooks do
         @result =
           begin
             test_class.new.meth
-          rescue StandardError => e
+          rescue => e
             e
           end
       end
@@ -69,7 +69,7 @@ RSpec.describe DebugLogging::Hooks do
         @result =
           begin
             @test_obj.meth
-          rescue StandardError => e
+          rescue => e
             e
           end
       end
@@ -115,7 +115,7 @@ RSpec.describe DebugLogging::Hooks do
         @result =
           begin
             @test_obj.meth
-          rescue StandardError => e
+          rescue => e
             e
           end
       end
@@ -210,7 +210,7 @@ RSpec.describe DebugLogging::Hooks do
         test_data = {
           name: :meth,
           args: [1, 2],
-          blk: -> { "test" },
+          blk: -> { "test" }
         }
         captured_name = nil
         captured_args = nil

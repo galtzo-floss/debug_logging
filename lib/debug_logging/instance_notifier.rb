@@ -10,12 +10,12 @@ module DebugLogging
       method_names, payload, config_opts = DebugLogging::Util.extract_payload_and_config(
         method_names: methods_to_log,
         payload: nil,
-        config: nil,
+        config: nil
       )
       instance_method_notifier = DebugLogging::InstanceNotifierModulizer.to_mod(
         methods_to_notify: Array(method_names),
         payload: payload,
-        config: config_opts,
+        config: config_opts
       )
 
       wrapped_in_notifier = Module.new do

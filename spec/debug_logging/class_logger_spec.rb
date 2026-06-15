@@ -13,7 +13,7 @@ RSpec.describe DebugLogging::ClassLogger do
       # Without an options hash the class config is the same config object as the per method config
       pointer = complete_logged_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
         "kl",
-        :k,
+        :k
       ))
       expect(pointer).to eq(complete_logged_klass.debug_config)
       complete_logged_klass.k
@@ -26,11 +26,11 @@ RSpec.describe DebugLogging::ClassLogger do
       output = capture("stdout") do
         complete_logged_klass.k_with_dsplat_i(a: "a")
       end
-      expect(output).to match(/::k_with_dsplat_i\(LOLiii\)/)
+      expect(output).to include("::k_with_dsplat_i(LOLiii)")
       # Can't set an expectation on the per class method config until after the method has been called once, as that is when the ivar gets set.
       expect(complete_logged_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
         "kl",
-        :k_with_dsplat_i,
+        :k_with_dsplat_i
       ))).to receive(:log).once.and_call_original
       complete_logged_klass.k_with_dsplat_i(a: "a")
     end
@@ -45,7 +45,7 @@ RSpec.describe DebugLogging::ClassLogger do
       # Can't set an expectation on the per class method config until after the method has been called once, as that is when the ivar gets set.
       expect(complete_logged_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
         "kl",
-        :k_with_dsplat_e,
+        :k_with_dsplat_e
       ))).to receive(:log).once.and_call_original
       complete_logged_klass.k_with_dsplat_e(a: "a")
     end
@@ -65,12 +65,12 @@ RSpec.describe DebugLogging::ClassLogger do
         complete_logged_klass.k_with_ssplat
         complete_logged_klass.k_with_dsplat
       end
-      expect(output).to match(/CompleteLoggedKlass#i\(\)/)
-      expect(output).to match(/CompleteLoggedKlass#i_with_ssplat\(\)/)
+      expect(output).to include("CompleteLoggedKlass#i()")
+      expect(output).to include("CompleteLoggedKlass#i_with_ssplat()")
       expect(output).to match(/CompleteLoggedKlass#.*0;31;49mi_with_dsplat.*0m\(\)/)
-      expect(output).to match(/CompleteLoggedKlass::k\(\)/)
-      expect(output).to match(/CompleteLoggedKlass::k_with_ssplat\(\)/)
-      expect(output).to match(/CompleteLoggedKlass::k_with_dsplat\(\)/)
+      expect(output).to include("CompleteLoggedKlass::k()")
+      expect(output).to include("CompleteLoggedKlass::k_with_ssplat()")
+      expect(output).to include("CompleteLoggedKlass::k_with_dsplat()")
     end
 
     it "has correct return value" do

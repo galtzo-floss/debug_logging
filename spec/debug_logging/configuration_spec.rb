@@ -50,14 +50,14 @@ RSpec.describe DebugLogging::Configuration do
               1,
               true,
               ["b", 2, false],
-              {c: :d, e: :f},
+              {c: :d, e: :f}
             )).to eq(50)
             expect(instance_logged_klass_explicit.new.i_with_ssplat(
               "a",
               1,
               true,
               ["b", 2, false],
-              {c: :d, e: :f},
+              {c: :d, e: :f}
             )).to eq(50)
             expect(instance_logged_klass_dynamic.new.i_with_dsplat(c: :d, e: :f)).to eq(60)
             expect(instance_logged_klass_explicit.new.i_with_dsplat(c: :d, e: :f)).to eq(60)
@@ -79,17 +79,17 @@ RSpec.describe DebugLogging::Configuration do
               instance_notified_klass_explicit.new(
                 action: "Update",
                 id: 1,
-                msg: {greeting: "hi"},
+                msg: {greeting: "hi"}
               ).i_with_instance_vars
             end
             expect(output).to match(/i.log/)
             expect(output).to match(Regexp.escape("args=() payload={}"))
             expect(output).to match(/i_with_ssplat.log/)
-            expect(output).to match(/payload={id: 1, first_name: "Joe", last_name: "Schmoe"}/)
+            expect(output).to include('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
             expect(output).to match(/i_with_dsplat.log/)
             expect(output).to match(/payload={salutation: "Mr.", suffix: "Jr."}/)
             expect(output).to match(/i_with_instance_vars.log/)
-            expect(output).to match(/payload={action: "Update", id: 1, msg: {greeting: "hi"}}/)
+            expect(output).to include('payload={action: "Update", id: 1, msg: {greeting: "hi"}}')
           end
         end
 
@@ -149,15 +149,15 @@ RSpec.describe DebugLogging::Configuration do
             expect(output).to match(/i.log/)
             expect(output).to match(Regexp.escape("args=() payload={}"))
             expect(output).to match(/i_with_ssplat.log/)
-            expect(output).to match(/payload=\{id: 1, first_name: "Joe", last_name: "Schmoe"}/)
+            expect(output).to include('payload={id: 1, first_name: "Joe", last_name: "Schmoe"}')
             expect(output).to match(/i_with_dsplat.log/)
-            expect(output).to match(/payload=\{salutation: "Mr\.", suffix: "Jr\."}/)
+            expect(output).to include('payload={salutation: "Mr.", suffix: "Jr."}')
             expect(output).to match(/k.log/)
-            expect(output).to match(/payload=\{}/)
+            expect(output).to include("payload={}")
             expect(output).to match(/k_with_ssplat.log/)
-            expect(output).to match(/payload=\{}/)
+            expect(output).to include("payload={}")
             expect(output).to match(/k_with_dsplat.log/)
-            expect(output).to match(/payload=\{}/)
+            expect(output).to include("payload={}")
           end
         end
       end
@@ -230,7 +230,7 @@ RSpec.describe DebugLogging::Configuration do
               4,
               true,
               ["u", 2, false],
-              {a: :b, c: :d},
+              {a: :b, c: :d}
             )).to eq(43)
           end
           expect(output).not_to match("ParentSingletonClass")
@@ -274,7 +274,7 @@ RSpec.describe DebugLogging::Configuration do
             instance_logged_klass_dynamic.new.i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f})
             instance_logged_klass_explicit.new.i_with_ssplat("z", 1, true, ["y", 2, false], {c: :d, e: :f})
           end
-          expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat\("a", 1, true, \["b", 2, false\], \{c: :d, e: :f}\) debug: \{}/)
+          expect(output).to include('InstanceLoggedKlassDynamic#i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f}) debug: {}')
           expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat #{bench_tail_match_src}/)
           expect(output).to match(/SingletonLoggedKlassExplicit#i_with_ssplat\("z", 1, true, \["y", 2, false\], \{c: :d, e: :f}\) #{enter_tail_match_src}\Z/)
           expect(output).not_to match(/SingletonLoggedKlassExplicit#i_with_ssplat #{bench_tail_inv_match_src}/)
@@ -286,14 +286,14 @@ RSpec.describe DebugLogging::Configuration do
             1,
             true,
             ["b", 2, false],
-            {c: :d, e: :f},
+            {c: :d, e: :f}
           )).to eq(50)
           expect(instance_logged_klass_explicit.new.i_with_ssplat(
             "a",
             1,
             true,
             ["b", 2, false],
-            {c: :d, e: :f},
+            {c: :d, e: :f}
           )).to eq(50)
         end
       end
@@ -658,7 +658,7 @@ RSpec.describe DebugLogging::Configuration do
               b: 1,
               c: true,
               d: ["b", 2, false],
-              e: {c: :d, e: :f},
+              e: {c: :d, e: :f}
             )
             instance_logged_klass_dynamic.new.i_with_ssplat("z", 1, true, ["y", 2, false], {c: :d, e: :f})
           end
@@ -679,21 +679,21 @@ RSpec.describe DebugLogging::Configuration do
             1,
             true,
             ["b", 2, false],
-            {c: :d, e: :f},
+            {c: :d, e: :f}
           )).to eq(50)
           expect(instance_logged_klass_explicit.new.i_with_dsplat(
             a: "a",
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(60)
           expect(instance_logged_klass_dynamic.new.i_with_ssplat(
             "a",
             1,
             true,
             ["b", 2, false],
-            {c: :d, e: :f},
+            {c: :d, e: :f}
           )).to eq(50)
         end
       end
@@ -764,7 +764,7 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(30)
         end
       end
@@ -782,10 +782,10 @@ RSpec.describe DebugLogging::Configuration do
               b: 1,
               c: true,
               d: ["b", 2, false],
-              e: {c: :d, e: :f},
+              e: {c: :d, e: :f}
             )
           end
-          expect(output).to match(/#i_with_dsplat\(\[:a, :b, :c, :d, :e\]\) ~/)
+          expect(output).to include("#i_with_dsplat([:a, :b, :c, :d, :e]) ~")
         end
 
         it "has correct return value" do
@@ -794,7 +794,7 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(60)
         end
       end
@@ -820,7 +820,7 @@ RSpec.describe DebugLogging::Configuration do
               b: 1,
               c: true,
               d: ["b", 2, false],
-              e: {c: :d, e: :f},
+              e: {c: :d, e: :f}
             )
             singleton_logged_klass.k_with_dsplat(a: "a", b: 1, c: true, d: ["b", 2, false], e: {c: :d, e: :f})
           end
@@ -839,14 +839,14 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(20)
           expect(singleton_logged_klass.k_with_dsplat(
             a: "a",
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(30)
         end
       end
@@ -870,18 +870,18 @@ RSpec.describe DebugLogging::Configuration do
               b: 1,
               c: true,
               d: ["b", 2, false],
-              e: {c: :d, e: :f},
+              e: {c: :d, e: :f}
             )
             instance_logged_klass_dynamic.new.i_with_dsplat(
               a: "a",
               b: 1,
               c: true,
               d: ["b", 2, false],
-              e: {c: :d, e: :f},
+              e: {c: :d, e: :f}
             )
           end
-          expect(output).to match(/#i_with_ssplat\("a", 1, true, \["b", 2, false\], \[:c, :e\], \[:a, :b, :c, :d, :e\]\) ~/)
-          expect(output).to match(/#i_with_dsplat\(\[:a, :b, :c, :d, :e\]\) ~/)
+          expect(output).to include('#i_with_ssplat("a", 1, true, ["b", 2, false], [:c, :e], [:a, :b, :c, :d, :e]) ~')
+          expect(output).to include("#i_with_dsplat([:a, :b, :c, :d, :e]) ~")
         end
 
         it "has correct return value" do
@@ -895,14 +895,14 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(50)
           expect(instance_logged_klass_dynamic.new.i_with_dsplat(
             a: "a",
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(60)
         end
       end
@@ -929,7 +929,7 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(30)
         end
       end
@@ -954,7 +954,7 @@ RSpec.describe DebugLogging::Configuration do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )).to eq(30)
         end
       end
@@ -1024,7 +1024,7 @@ RSpec.describe DebugLogging::Configuration do
         output = capture("stdout") do
           instance_logged_klass_dynamic.new.i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f})
         end
-        expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat\("a", 1, true, \["b", 2, false\], {c: :d, e: :f}\) ~/)
+        expect(output).to include('InstanceLoggedKlassDynamic#i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f}) ~')
         expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat #{bench_tail_inv_match_src}/)
       end
 
@@ -1034,7 +1034,7 @@ RSpec.describe DebugLogging::Configuration do
           1,
           true,
           ["b", 2, false],
-          {c: :d, e: :f},
+          {c: :d, e: :f}
         )).to eq(50)
       end
     end
@@ -1143,7 +1143,7 @@ RSpec.describe DebugLogging::Configuration do
               1,
               true,
               ["b", 2, false],
-              {c: :d, e: :f},
+              {c: :d, e: :f}
             )).to eq(50)
           end
         end
@@ -1159,7 +1159,7 @@ RSpec.describe DebugLogging::Configuration do
             output = capture("stdout") do
               instance_logged_klass_dynamic.new.i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f})
             end
-            expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat\("a", 1, true, \["b", 2, false\], {c: :d, e: :f}\)/)
+            expect(output).to include('InstanceLoggedKlassDynamic#i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f})')
             expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat #{bench_tail_match_src}\Z/)
           end
 
@@ -1169,7 +1169,7 @@ RSpec.describe DebugLogging::Configuration do
               1,
               true,
               ["b", 2, false],
-              {c: :d, e: :f},
+              {c: :d, e: :f}
             )).to eq(50)
           end
         end
@@ -1195,7 +1195,7 @@ RSpec.describe DebugLogging::Configuration do
               1,
               true,
               ["b", 2, false],
-              {c: :d, e: :f},
+              {c: :d, e: :f}
             )).to eq(50)
           end
         end

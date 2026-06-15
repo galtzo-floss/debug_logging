@@ -30,14 +30,14 @@ module DebugLogging
       def event_to_format_options(event)
         args = event.payload[:debug_args]
         config_proxy = event.payload[:config_proxy]
-        payload = event.payload.reject { |k, _| EXCLUDE_FROM_PAYLOAD.include?(k) }
+        payload = event.payload.except(*EXCLUDE_FROM_PAYLOAD)
         {
           name: event.name,
           duration: Rational(event.duration, 1000).to_f,
           time: debug_event_time_to_s(event.time),
           end: debug_event_time_to_s(event.end),
           args: debug_signature_to_s(args: args, config_proxy: config_proxy),
-          payload: debug_payload_to_s(payload: payload, config_proxy: config_proxy),
+          payload: debug_payload_to_s(payload: payload, config_proxy: config_proxy)
         }
       end
     end

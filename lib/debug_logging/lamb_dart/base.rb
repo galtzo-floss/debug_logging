@@ -17,7 +17,7 @@ module DebugLogging
 
       def_delegator :@config_proxy, :error_handler_proc
 
-      def initialize(instance: nil, klass: nil, method_config_opts:, method_payload:, args:, kwargs:, decorated_method:)
+      def initialize(method_config_opts:, method_payload:, args:, kwargs:, decorated_method:, instance: nil, klass: nil)
         @instance = instance || klass
         @klass = klass || instance.class
         @method_payload = method_payload
@@ -30,7 +30,7 @@ module DebugLogging
           scope: self.klass,
           config_opts: method_config_opts,
           method_name: self.decorated_method,
-          proxy_ref:,
+          proxy_ref:
         ) do |proxy|
           yield proxy if block_given?
         end

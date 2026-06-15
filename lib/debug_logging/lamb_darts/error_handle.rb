@@ -5,7 +5,7 @@ module DebugLogging
         if ld.config_proxy.error_handler_proc
           begin
             yield
-          rescue StandardError => e
+          rescue => e
             if ld.error_handler_proc
               ld.error_handler_proc.call(
                 ld.config_proxy,
@@ -13,7 +13,7 @@ module DebugLogging
                 self,
                 ld.decorated_method,
                 *ld.args,
-                **ld.kwargs,
+                **ld.kwargs
               )
             else
               raise e

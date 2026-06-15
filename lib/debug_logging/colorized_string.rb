@@ -19,7 +19,7 @@ module DebugLogging
       light_magenta: 95,
       light_cyan: 96,
       light_white: 97,
-      default: 39,
+      default: 39
     }.freeze
     BACKGROUND_CODES = FOREGROUND_CODES.transform_values { |code| code + 10 }.merge(default: 49).freeze
     FORMAT_CODES = {
@@ -31,7 +31,7 @@ module DebugLogging
       conceal: 8,
       hide: 8,
       strikethrough: 9,
-      double_underline: 21,
+      double_underline: 21
     }.freeze
 
     class << self
@@ -59,7 +59,7 @@ module DebugLogging
         @raw,
         foreground: foreground ? normalized_color(foreground) : @foreground,
         background: background ? normalized_color(background) : @background,
-        formats: merge_formats(formats),
+        formats: merge_formats(formats)
       )
     end
 

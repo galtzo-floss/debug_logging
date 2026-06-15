@@ -36,7 +36,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
       instance_double(
         DebugLogging::Configuration,
         debug_add_timestamp: true,
-        debug_time_formatter_proc: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,
+        debug_time_formatter_proc: DebugLogging::Constants::DEFAULT_TIME_FORMATTER
       )
     }
 
@@ -160,7 +160,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
         instance_double(
           DebugLogging::Configuration,
           debug_colorized_chain_for_class: ->(str) { str.blue },
-          debug_colorized_chain_for_method: ->(str) { str.blue },
+          debug_colorized_chain_for_method: ->(str) { str.blue }
         )
       }
       let(:klass) do
@@ -201,7 +201,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           debug_args_to_s_proc: ->(args) { args.to_s[0..9] },
           debug_args_max_length: 10,
           debug_multiple_last_hashes: false,
-          debug_last_hash_max_length: 15,
+          debug_last_hash_max_length: 15
         )
       }
       let(:args) { [1, 2, 3, {zz: :top}] }
@@ -220,7 +220,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           debug_args_max_length: 3,
           debug_multiple_last_hashes: false,
           debug_last_hash_max_length: 5,
-          debug_ellipsis: ".•.",
+          debug_ellipsis: ".•."
         )
       }
       let(:args) { [1, 2, 3, {zz_yy_xx: :top}] }
@@ -239,7 +239,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           debug_args_max_length: 10,
           debug_multiple_last_hashes: true,
           debug_last_hash_max_length: 15,
-          debug_ellipsis: "...",
+          debug_ellipsis: "..."
         )
       }
       let(:args) { [1, 2, 3, {zz: :top}, {def: :leopard}] }
@@ -258,7 +258,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           debug_args_max_length: 5,
           debug_multiple_last_hashes: true,
           debug_last_hash_max_length: 7,
-          debug_ellipsis: ".~.",
+          debug_ellipsis: ".~."
         )
       }
       let(:args) { [1, 2, 3, {zz: :top}, {def_leopard_pours_sugar: :on_me}] }
@@ -289,7 +289,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           DebugLogging::Configuration,
           debug_add_payload: ->(args) { "pppaaayyylllo #{args}" },
           debug_payload_max_length: payload_max_length,
-          debug_ellipsis: "^^^",
+          debug_ellipsis: "^^^"
         )
       }
 
@@ -306,7 +306,7 @@ RSpec.describe DebugLogging::ArgumentPrinter do
           DebugLogging::Configuration,
           debug_add_payload: ->(args) { "pppaaayyy #{args}" },
           debug_payload_max_length: payload_max_length,
-          debug_ellipsis: "^^^",
+          debug_ellipsis: "^^^"
         )
       }
 

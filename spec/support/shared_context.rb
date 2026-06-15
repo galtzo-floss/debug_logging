@@ -208,7 +208,7 @@ RSpec.shared_context "with example classes" do
                              },
         colorized_chain_for_class: lambda { |colorized_string|
                                      colorized_string.red
-                                   },
+                                   }
       }
 
       def i
@@ -226,7 +226,7 @@ RSpec.shared_context "with example classes" do
       i_logged [:i_with_dsplat], {
         colorized_chain_for_method: lambda { |colorized_string|
           colorized_string.red
-        },
+        }
       }
 
       def i_without_log
@@ -293,7 +293,7 @@ RSpec.shared_context "with example classes" do
         },
         colorized_chain_for_class: lambda { |colorized_string|
           colorized_string.red
-        },
+        }
       }
       def i
         40
@@ -315,7 +315,7 @@ RSpec.shared_context "with example classes" do
       i_logged [:i_with_dsplat], {
         colorized_chain_for_method: lambda { |colorized_string|
           colorized_string.red
-        },
+        }
       }
       i_logged [
         [
@@ -323,17 +323,17 @@ RSpec.shared_context "with example classes" do
             log_level: :debug,
             colorized_chain_for_method: lambda { |colorized_string|
               colorized_string.red
-            },
-          },
+            }
+          }
         ],
         [
           :rattle, {
             log_level: :debug,
             colorized_chain_for_method: lambda { |colorized_string|
               colorized_string.blue
-            },
-          },
-        ],
+            }
+          }
+        ]
       ]
     end
   end
@@ -397,7 +397,7 @@ RSpec.shared_context "with example classes" do
         },
         colorized_chain_for_class: lambda { |colorized_string|
           colorized_string.red
-        },
+        }
       }
       def i
         40
@@ -446,8 +446,8 @@ RSpec.shared_context "with example classes" do
             add_invocation_id: true,
             error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
               config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} and #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.k_without_log}"
-            },
-          },
+            }
+          }
         ],
         [
           :i_with_dsplat_handled_error,
@@ -457,9 +457,9 @@ RSpec.shared_context "with example classes" do
             add_invocation_id: true,
             error_handler_proc: lambda { |config, error, obj, method_name, *args, **kwargs|
               config.log "There was an error like #{error.class}: #{error.message} when calling #{method_name} with #{DebugLogging::ArgumentPrinter.debug_value_to_s(args)} and #{DebugLogging::ArgumentPrinter.debug_value_to_s(kwargs)}. Check this: #{obj.i_without_log}"
-            },
-          },
-        ],
+            }
+          }
+        ]
       ]
 
       class << self
@@ -588,7 +588,7 @@ RSpec.shared_context "with example classes" do
         class_benchmarks: true,
         colorized_chain_for_method: ->(colorized_string) {
           colorized_string.yellow
-        },
+        }
       }
     end
   end
@@ -685,13 +685,13 @@ RSpec.shared_context "with example classes" do
         :i,
         [
           :i_with_ssplat,
-          {id: 1, first_name: "Joe", last_name: "Schmoe"},
+          {id: 1, first_name: "Joe", last_name: "Schmoe"}
         ],
         [:i_with_dsplat, {salutation: "Mr.", suffix: "Jr."}],
         [
           :i_with_instance_vars,
-          {instance_variables: %i[action id msg]},
-        ],
+          {instance_variables: %i[action id msg]}
+        ]
       ]
 
       def i

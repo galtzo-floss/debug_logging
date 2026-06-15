@@ -40,7 +40,7 @@ module DebugLogging
           meth = instance_method(name)
           define_method(name) do |*args, &block|
             meth.bind_call(self, *args, &block)
-          rescue StandardError => e
+          rescue => e
             instance_exec(e, &blk)
           end
         end

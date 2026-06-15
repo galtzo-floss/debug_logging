@@ -32,14 +32,14 @@ module DebugLogging
       methods_to_log, payload, config_opts = DebugLogging::Util.extract_payload_and_config(
         method_names: methods_to_log,
         payload: nil,
-        config: nil,
+        config: nil
       )
       instance_method_modules =
         Array(methods_to_log).map do |decorated_method|
           DebugLogging::InstanceLoggerModulizer.to_mod(
             methods_to_log: Array(decorated_method),
             payload: payload,
-            config: config_opts,
+            config: config_opts
           )
         end
       wrapped_in_logs = Module.new do

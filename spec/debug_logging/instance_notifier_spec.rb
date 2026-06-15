@@ -48,8 +48,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
         name: "i.log",
         payload: {
           debug_args: [],
-          config_proxy: instance_of(DebugLogging::Configuration),
-        },
+          config_proxy: instance_of(DebugLogging::Configuration)
+        }
       )
       expect(@events[1]).to have_attributes(
         name: "i_with_ssplat.log",
@@ -58,8 +58,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
           id: 1,
           first_name: "Joe",
           last_name: "Schmoe",
-          config_proxy: instance_of(DebugLogging::Configuration),
-        },
+          config_proxy: instance_of(DebugLogging::Configuration)
+        }
       )
       expect(@events[2]).to have_attributes(
         name: "i_with_dsplat.log",
@@ -67,8 +67,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
           debug_args: [],
           salutation: "Mr.",
           suffix: "Jr.",
-          config_proxy: instance_of(DebugLogging::Configuration),
-        },
+          config_proxy: instance_of(DebugLogging::Configuration)
+        }
       )
       expect(@events[3]).to have_attributes(
         name: "i_with_instance_vars.log",
@@ -77,8 +77,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
           action: "Update",
           id: 1,
           msg: {greeting: "hi"},
-          config_proxy: instance_of(DebugLogging::Configuration),
-        },
+          config_proxy: instance_of(DebugLogging::Configuration)
+        }
       )
       expect(@events[4]).to have_attributes(
         name: "i_with_instance_vars.log",
@@ -87,8 +87,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
           action: "Create",
           id: 2,
           msg: {greeting: "bye"},
-          config_proxy: instance_of(DebugLogging::Configuration),
-        },
+          config_proxy: instance_of(DebugLogging::Configuration)
+        }
       )
       expect(@events.length).to eq(5)
     end
@@ -100,7 +100,7 @@ RSpec.describe DebugLogging::InstanceNotifier do
       expect(instance_notified_klass_explicit.new(
         action: "Update",
         id: 1,
-        msg: {greeting: "hi"},
+        msg: {greeting: "hi"}
       ).i_with_instance_vars).to eq(70)
     end
   end
@@ -116,8 +116,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
         expect(@events).to contain_exactly(
           have_attributes(
             name: "i.log",
-            payload: {debug_args: [], config_proxy: instance_of(DebugLogging::Configuration)},
-          ),
+            payload: {debug_args: [], config_proxy: instance_of(DebugLogging::Configuration)}
+          )
         )
       end
 
@@ -138,9 +138,9 @@ RSpec.describe DebugLogging::InstanceNotifier do
             name: "i_with_ssplat.log",
             payload: {
               debug_args: ["a", 1, true, ["b", 2, false], {c: :d, e: :f}],
-              config_proxy: instance_of(DebugLogging::Configuration),
-            },
-          ),
+              config_proxy: instance_of(DebugLogging::Configuration)
+            }
+          )
         )
       end
 
@@ -150,7 +150,7 @@ RSpec.describe DebugLogging::InstanceNotifier do
           1,
           true,
           ["b", 2, false],
-          {c: :d, e: :f},
+          {c: :d, e: :f}
         )).to eq(50)
       end
     end
@@ -163,7 +163,7 @@ RSpec.describe DebugLogging::InstanceNotifier do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )
         end
         expect(output).to match("i_with_dsplat.log")
@@ -173,9 +173,9 @@ RSpec.describe DebugLogging::InstanceNotifier do
             name: "i_with_dsplat.log",
             payload: {
               debug_args: [{a: "a", b: 1, c: true, d: ["b", 2, false], e: {c: :d, e: :f}}],
-              config_proxy: instance_of(DebugLogging::Configuration),
-            },
-          ),
+              config_proxy: instance_of(DebugLogging::Configuration)
+            }
+          )
         )
       end
 
@@ -185,7 +185,7 @@ RSpec.describe DebugLogging::InstanceNotifier do
           b: 1,
           c: true,
           d: ["b", 2, false],
-          e: {c: :d, e: :f},
+          e: {c: :d, e: :f}
         )).to eq(60)
       end
     end
@@ -216,8 +216,8 @@ RSpec.describe DebugLogging::InstanceNotifier do
         expect(@events).to contain_exactly(
           have_attributes(
             name: "k.log",
-            payload: {debug_args: [], config_proxy: instance_of(DebugLogging::Configuration)},
-          ),
+            payload: {debug_args: [], config_proxy: instance_of(DebugLogging::Configuration)}
+          )
         )
       end
 
@@ -238,9 +238,9 @@ RSpec.describe DebugLogging::InstanceNotifier do
             name: "k_with_ssplat.log",
             payload: {
               debug_args: ["a", 1, true, ["b", 2, false], {c: :d, e: :f}],
-              config_proxy: instance_of(DebugLogging::Configuration),
-            },
-          ),
+              config_proxy: instance_of(DebugLogging::Configuration)
+            }
+          )
         )
       end
 
@@ -261,9 +261,9 @@ RSpec.describe DebugLogging::InstanceNotifier do
             name: "k_with_dsplat.log",
             payload: {
               debug_args: [{a: "a", b: 1, c: true, d: ["b", 2, false], e: {c: :d, e: :f}}],
-              config_proxy: instance_of(DebugLogging::Configuration),
-            },
-          ),
+              config_proxy: instance_of(DebugLogging::Configuration)
+            }
+          )
         )
       end
 
@@ -273,7 +273,7 @@ RSpec.describe DebugLogging::InstanceNotifier do
           b: 1,
           c: true,
           d: ["b", 2, false],
-          e: {c: :d, e: :f},
+          e: {c: :d, e: :f}
         )).to eq(30)
       end
     end

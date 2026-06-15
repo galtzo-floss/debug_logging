@@ -10,13 +10,13 @@ module DebugLogging
       methods_to_log, payload, config_opts = DebugLogging::Util.extract_payload_and_config(
         method_names: methods_to_log,
         payload: nil,
-        config: nil,
+        config: nil
       )
       Array(methods_to_log).each do |decorated_method|
         decorated_method, method_payload, method_config_opts = DebugLogging::Util.extract_payload_and_config(
           method_names: decorated_method,
           payload: payload,
-          config: config_opts,
+          config: config_opts
         )
         original_method = method(decorated_method)
         (class << self; self; end).class_eval do
@@ -27,9 +27,9 @@ module DebugLogging
               method_payload:,
               args:,
               kwargs:,
-              decorated_method:,
+              decorated_method:
             )
-            real_mccoy = ->() {
+            real_mccoy = -> {
               original_method.call(*args, **kwargs, &block)
             }
             _dl_ld_enter_log(lamb_dart) do

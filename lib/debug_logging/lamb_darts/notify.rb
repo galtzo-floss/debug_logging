@@ -7,7 +7,7 @@ module DebugLogging
           DebugLogging::ArgumentPrinter.debug_event_name_to_s(decorated_method: ld.decorated_method),
           debug_args: ld.debug_args,
           config_proxy: ld.config_proxy,
-          **paydirt,
+          **paydirt
         ) do
           yield
         end

@@ -25,9 +25,9 @@ RSpec.describe DebugLogging::InstanceLogger do
         instance_logged_klass_explicit.new.i_with_ssplat
         instance_logged_klass_explicit.new.i_with_dsplat
       end
-      expect(output).to match(/SingletonLoggedKlassExplicit#i\(\)/)
-      expect(output).to match(/SingletonLoggedKlassExplicit#i_with_ssplat\(\)/)
-      expect(output).to match(/SingletonLoggedKlassExplicit#i_with_dsplat\(\)/)
+      expect(output).to include("SingletonLoggedKlassExplicit#i()")
+      expect(output).to include("SingletonLoggedKlassExplicit#i_with_ssplat()")
+      expect(output).to include("SingletonLoggedKlassExplicit#i_with_dsplat()")
     end
 
     it "has correct return value" do
@@ -41,7 +41,7 @@ RSpec.describe DebugLogging::InstanceLogger do
         output = capture("stdout") do
           instance_logged_klass_dynamic.new.i
         end
-        expect(output).to match(/InstanceLoggedKlassDynamic#i\(\)/)
+        expect(output).to include("InstanceLoggedKlassDynamic#i()")
       end
 
       it "has correct return value" do
@@ -54,7 +54,7 @@ RSpec.describe DebugLogging::InstanceLogger do
         output = capture("stdout") do
           instance_logged_klass_dynamic.new.i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f})
         end
-        expect(output).to match(/InstanceLoggedKlassDynamic#i_with_ssplat\("a", 1, true, \["b", 2, false\], \{c: :d, e: :f}\) ~/)
+        expect(output).to include('InstanceLoggedKlassDynamic#i_with_ssplat("a", 1, true, ["b", 2, false], {c: :d, e: :f}) ~')
       end
 
       it "has correct return value" do
@@ -63,7 +63,7 @@ RSpec.describe DebugLogging::InstanceLogger do
           1,
           true,
           ["b", 2, false],
-          {c: :d, e: :f},
+          {c: :d, e: :f}
         )).to eq(50)
       end
     end
@@ -76,10 +76,10 @@ RSpec.describe DebugLogging::InstanceLogger do
             b: 1,
             c: true,
             d: ["b", 2, false],
-            e: {c: :d, e: :f},
+            e: {c: :d, e: :f}
           )
         end
-        expect(output).to match(/#i_with_dsplat\(\*\*{a: "a", b: 1, c: true, d: \["b", 2, false\], e: {c: :d, e: :f}}\) ~/)
+        expect(output).to include('#i_with_dsplat(**{a: "a", b: 1, c: true, d: ["b", 2, false], e: {c: :d, e: :f}}) ~')
       end
 
       it "has correct return value" do
@@ -88,7 +88,7 @@ RSpec.describe DebugLogging::InstanceLogger do
           b: 1,
           c: true,
           d: ["b", 2, false],
-          e: {c: :d, e: :f},
+          e: {c: :d, e: :f}
         )).to eq(60)
       end
     end
@@ -113,7 +113,7 @@ RSpec.describe DebugLogging::InstanceLogger do
         output = capture("stdout") do
           singleton_logged_klass.k
         end
-        expect(output).to match(/SingletonLoggedKlass::k\(\)/)
+        expect(output).to include("SingletonLoggedKlass::k()")
       end
 
       it "has correct return value" do
@@ -148,7 +148,7 @@ RSpec.describe DebugLogging::InstanceLogger do
           b: 1,
           c: true,
           d: ["b", 2, false],
-          e: {c: :d, e: :f},
+          e: {c: :d, e: :f}
         )).to eq(30)
       end
     end
@@ -188,7 +188,7 @@ RSpec.describe DebugLogging::InstanceLogger do
         simple_klass.new
         config_proxy = simple_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
           "ilm",
-          :initialize,
+          :initialize
         ))
         expect(config_proxy).to be_a(DebugLogging::Configuration)
         expect(logger.level).to eq(Logger::INFO)
@@ -206,7 +206,7 @@ RSpec.describe DebugLogging::InstanceLogger do
         simple_klass.new
         config_proxy = simple_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
           "ilm",
-          :initialize,
+          :initialize
         ))
         expect(config_proxy).to be_a(DebugLogging::Configuration)
         expect(simple_klass.debug_logger.level).to eq(Logger::DEBUG)

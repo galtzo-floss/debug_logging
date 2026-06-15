@@ -14,7 +14,7 @@ module DebugLogging
 
       def subscribe(proxy)
         ActiveSupport::Notifications.subscribe(
-          DebugLogging::ArgumentPrinter.debug_event_name_to_s(decorated_method: decorated_method),
+          DebugLogging::ArgumentPrinter.debug_event_name_to_s(decorated_method: decorated_method)
         ) do |*subscribe_args|
           proxy.log do
             DebugLogging::LogSubscriber.log_event(ActiveSupport::Notifications::Event.new(*subscribe_args))

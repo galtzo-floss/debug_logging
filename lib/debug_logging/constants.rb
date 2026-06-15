@@ -21,13 +21,13 @@ module DebugLogging
       payload_max_length: 1_000,
       error_handler_proc: nil,
       time_formatter_proc: DEFAULT_TIME_FORMATTER,
-      add_timestamp: false,
+      add_timestamp: false
     }.freeze
     CONFIG_ATTRS = CONFIG_ATTRS_DEFAULTS.keys
     CONFIG_READERS_DEFAULTS = {
       instance_benchmarks: false,
       class_benchmarks: false,
-      active_support_notifications: false,
+      active_support_notifications: false
     }.freeze
     CONFIG_READERS = CONFIG_READERS_DEFAULTS.keys
     CONFIG_KEYS = CONFIG_ATTRS + CONFIG_READERS

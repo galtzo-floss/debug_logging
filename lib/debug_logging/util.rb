@@ -75,8 +75,8 @@ module DebugLogging
         :instance_variable_get,
         DebugLogging::Configuration.config_pointer(
           proxy_ref,
-          method_name,
-        ),
+          method_name
+        )
       )
       # short circuit on subsequent calls is required
       #   so we only register notifications once
@@ -92,7 +92,7 @@ module DebugLogging
       scope.send(
         :instance_variable_set,
         DebugLogging::Configuration.config_pointer(proxy_ref, method_name),
-        proxy,
+        proxy
       )
       yield proxy if block
       proxy

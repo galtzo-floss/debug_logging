@@ -84,7 +84,7 @@ module DebugLogging
                 proc_name: "args_to_s_proc",
                 proc: config_proxy.debug_args_to_s_proc,
                 args: other_args,
-                max_length: config_proxy.debug_args_max_length,
+                max_length: config_proxy.debug_args_max_length
               )
               printed
             else
@@ -102,7 +102,7 @@ module DebugLogging
                 proc_name: "last_hash_to_s_proc",
                 proc: config_proxy.debug_last_hash_to_s_proc,
                 args: arg,
-                max_length: config_proxy.debug_last_hash_max_length,
+                max_length: config_proxy.debug_last_hash_max_length
               )
               printed += config_proxy.debug_ellipsis if add_last_hash_ellipsis
               arr << printed
@@ -118,7 +118,7 @@ module DebugLogging
                 proc_name: "args_to_s_proc",
                 proc: config_proxy.debug_args_to_s_proc,
                 args: other_args,
-                max_length: config_proxy.debug_args_max_length,
+                max_length: config_proxy.debug_args_max_length
               )
               printed
             else
@@ -132,7 +132,7 @@ module DebugLogging
               proc_name: "last_hash_to_s_proc",
               proc: config_proxy.debug_last_hash_to_s_proc,
               args: args[-1],
-              max_length: config_proxy.debug_last_hash_max_length,
+              max_length: config_proxy.debug_last_hash_max_length
             )
             printed_args += ", #{printed}"
             printed_args += config_proxy.debug_ellipsis if add_last_hash_ellipsis
@@ -142,7 +142,7 @@ module DebugLogging
             proc_name: "last_hash_to_s_proc",
             proc: config_proxy.debug_last_hash_to_s_proc,
             args: args[0],
-            max_length: config_proxy.debug_last_hash_max_length,
+            max_length: config_proxy.debug_last_hash_max_length
           )
           printed_args += printed
           printed_args += config_proxy.debug_ellipsis if add_last_hash_ellipsis
@@ -153,7 +153,7 @@ module DebugLogging
             proc_name: "args_to_s_proc",
             proc: config_proxy.debug_args_to_s_proc,
             args: args,
-            max_length: config_proxy.debug_args_max_length,
+            max_length: config_proxy.debug_args_max_length
           )
           printed
         elsif args.length == 1 && args[0].is_a?(Hash)
@@ -179,7 +179,7 @@ module DebugLogging
           add_ellipsis = x.length > max_length
         end[0..max_length]
         [printed, add_ellipsis]
-      rescue StandardError => e
+      rescue => e
         ["#{e.class}: #{e.message}\nPlease check that your #{proc_name} is able to handle #{args}", false]
       end
     end
@@ -196,7 +196,7 @@ module DebugLogging
           proc_name: "add_payload",
           proc: config_proxy.debug_add_payload,
           args: payload,
-          max_length: config_proxy.debug_payload_max_length,
+          max_length: config_proxy.debug_payload_max_length
         )
         printed_payload += printed
         printed_payload += config_proxy.debug_ellipsis if add_payload_ellipsis
