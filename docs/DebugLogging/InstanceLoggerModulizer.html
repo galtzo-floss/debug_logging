@@ -194,13 +194,13 @@
     <span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_config_opts'>config_opts</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="DebugLogging::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_extract_payload_and_config'><span class='object_link'><a href="Util.html#extract_payload_and_config-class_method" title="DebugLogging::Util.extract_payload_and_config (method)">extract_payload_and_config</a></span></span><span class='lparen'>(</span>
       <span class='label'>method_names:</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='rparen'>)</span><span class='comma'>,</span>
       <span class='label'>payload:</span><span class='comma'>,</span>
-      <span class='label'>config:</span><span class='comma'>,</span>
+      <span class='label'>config:</span>
     <span class='rparen'>)</span>
     <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='op'>|</span>
       <span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='comma'>,</span> <span class='id identifier rubyid_method_payload'>method_payload</span><span class='comma'>,</span> <span class='id identifier rubyid_method_config_opts'>method_config_opts</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="DebugLogging::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_extract_payload_and_config'><span class='object_link'><a href="Util.html#extract_payload_and_config-class_method" title="DebugLogging::Util.extract_payload_and_config (method)">extract_payload_and_config</a></span></span><span class='lparen'>(</span>
         <span class='label'>method_names:</span> <span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='comma'>,</span>
         <span class='label'>payload:</span><span class='comma'>,</span>
-        <span class='label'>config:</span> <span class='id identifier rubyid_config_opts'>config_opts</span><span class='comma'>,</span>
+        <span class='label'>config:</span> <span class='id identifier rubyid_config_opts'>config_opts</span>
       <span class='rparen'>)</span>
       <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
         <span class='id identifier rubyid_lamb_dart'>lamb_dart</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LambDart.html" title="DebugLogging::LambDart (module)">LambDart</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="LambDart/Log.html" title="DebugLogging::LambDart::Log (class)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LambDart/Log.html#initialize-instance_method" title="DebugLogging::LambDart::Log#initialize (method)">new</a></span></span><span class='lparen'>(</span>
@@ -209,9 +209,9 @@
           <span class='label'>method_payload:</span><span class='comma'>,</span>
           <span class='label'>args:</span><span class='comma'>,</span>
           <span class='label'>kwargs:</span><span class='comma'>,</span>
-          <span class='label'>decorated_method:</span><span class='comma'>,</span>
+          <span class='label'>decorated_method:</span>
         <span class='rparen'>)</span>
-        <span class='id identifier rubyid_real_mccoy'>real_mccoy</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+        <span class='id identifier rubyid_real_mccoy'>real_mccoy</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span>
           <span class='kw'>super</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
         <span class='rbrace'>}</span>
         <span class='id identifier rubyid__dl_ld_enter_log'>_dl_ld_enter_log</span><span class='lparen'>(</span><span class='id identifier rubyid_lamb_dart'>lamb_dart</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -235,7 +235,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:30 2026 by
+  Generated on Sun Jun 14 19:19:53 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

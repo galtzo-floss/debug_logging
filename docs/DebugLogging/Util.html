@@ -277,8 +277,8 @@
     <span class='symbol'>:instance_variable_get</span><span class='comma'>,</span>
     <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config_pointer'><span class='object_link'><a href="Configuration.html#config_pointer-class_method" title="DebugLogging::Configuration.config_pointer (method)">config_pointer</a></span></span><span class='lparen'>(</span>
       <span class='id identifier rubyid_proxy_ref'>proxy_ref</span><span class='comma'>,</span>
-      <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span>
-    <span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_method_name'>method_name</span>
+    <span class='rparen'>)</span>
   <span class='rparen'>)</span>
   <span class='comment'># short circuit on subsequent calls is required
 </span>  <span class='comment'>#   so we only register notifications once
@@ -294,7 +294,7 @@
   <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span>
     <span class='symbol'>:instance_variable_set</span><span class='comma'>,</span>
     <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config_pointer'><span class='object_link'><a href="Configuration.html#config_pointer-class_method" title="DebugLogging::Configuration.config_pointer (method)">config_pointer</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_proxy_ref'>proxy_ref</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_proxy'>proxy</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_proxy'>proxy</span>
   <span class='rparen'>)</span>
   <span class='kw'>yield</span> <span class='id identifier rubyid_proxy'>proxy</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_proxy'>proxy</span>
@@ -518,7 +518,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:30 2026 by
+  Generated on Sun Jun 14 19:19:52 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

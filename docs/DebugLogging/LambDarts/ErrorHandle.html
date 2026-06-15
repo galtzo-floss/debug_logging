@@ -179,7 +179,7 @@
   <span class='kw'>if</span> <span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='period'>.</span><span class='id identifier rubyid_error_handler_proc'>error_handler_proc</span>
     <span class='kw'>begin</span>
       <span class='kw'>yield</span>
-    <span class='kw'>rescue</span> <span class='const'>StandardError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
       <span class='kw'>if</span> <span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_error_handler_proc'>error_handler_proc</span>
         <span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_error_handler_proc'>error_handler_proc</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span>
           <span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_config_proxy'>config_proxy</span><span class='comma'>,</span>
@@ -187,7 +187,7 @@
           <span class='kw'>self</span><span class='comma'>,</span>
           <span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='comma'>,</span>
           <span class='op'>*</span><span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span>
-          <span class='op'>**</span><span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span>
+          <span class='op'>**</span><span class='id identifier rubyid_ld'>ld</span><span class='period'>.</span><span class='id identifier rubyid_kwargs'>kwargs</span>
         <span class='rparen'>)</span>
       <span class='kw'>else</span>
         <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
@@ -207,7 +207,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:30 2026 by
+  Generated on Sun Jun 14 19:19:53 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

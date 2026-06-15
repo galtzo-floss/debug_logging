@@ -386,7 +386,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(instance: nil, klass: nil, method_config_opts:, method_payload:, args:, kwargs:, decorated_method:)  &#x21d2; Base </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(method_config_opts:, method_payload:, args:, kwargs:, decorated_method:, instance: nil, klass: nil)  &#x21d2; Base </a>
     
 
     
@@ -419,7 +419,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(instance: nil, klass: nil, method_config_opts:, method_payload:, args:, kwargs:, decorated_method:)  &#x21d2; <tt><span class='object_link'><a href="" title="DebugLogging::LambDart::Base (class)">Base</a></span></tt> 
+    #<strong>initialize</strong>(method_config_opts:, method_payload:, args:, kwargs:, decorated_method:, instance: nil, klass: nil)  &#x21d2; <tt><span class='object_link'><a href="" title="DebugLogging::LambDart::Base (class)">Base</a></span></tt> 
   
 
   
@@ -463,7 +463,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/debug_logging/lamb_dart/base.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>instance:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>klass:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>method_config_opts:</span><span class='comma'>,</span> <span class='label'>method_payload:</span><span class='comma'>,</span> <span class='label'>args:</span><span class='comma'>,</span> <span class='label'>kwargs:</span><span class='comma'>,</span> <span class='label'>decorated_method:</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>method_config_opts:</span><span class='comma'>,</span> <span class='label'>method_payload:</span><span class='comma'>,</span> <span class='label'>args:</span><span class='comma'>,</span> <span class='label'>kwargs:</span><span class='comma'>,</span> <span class='label'>decorated_method:</span><span class='comma'>,</span> <span class='label'>instance:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>klass:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@instance</span> <span class='op'>=</span> <span class='id identifier rubyid_instance'>instance</span> <span class='op'>||</span> <span class='id identifier rubyid_klass'>klass</span>
   <span class='ivar'>@klass</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span> <span class='op'>||</span> <span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
   <span class='ivar'>@method_payload</span> <span class='op'>=</span> <span class='id identifier rubyid_method_payload'>method_payload</span>
@@ -476,7 +476,7 @@
     <span class='label'>scope:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span>
     <span class='label'>config_opts:</span> <span class='id identifier rubyid_method_config_opts'>method_config_opts</span><span class='comma'>,</span>
     <span class='label'>method_name:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='comma'>,</span>
-    <span class='label'>proxy_ref:</span><span class='comma'>,</span>
+    <span class='label'>proxy_ref:</span>
   <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_proxy'>proxy</span><span class='op'>|</span>
     <span class='kw'>yield</span> <span class='id identifier rubyid_proxy'>proxy</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='kw'>end</span>
@@ -875,7 +875,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:31 2026 by
+  Generated on Sun Jun 14 19:19:53 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

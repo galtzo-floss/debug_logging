@@ -415,7 +415,7 @@
     <span class='label'>klass:</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
     <span class='label'>separator:</span> <span class='id identifier rubyid_is_class'>is_class</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='label'>decorated_method:</span><span class='comma'>,</span>
-    <span class='label'>config_proxy:</span><span class='comma'>,</span>
+    <span class='label'>config_proxy:</span>
   <span class='rparen'>)</span>
   <span class='ivar'>@invocation_id</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_debug_invocation_id_to_s'>debug_invocation_id_to_s</span><span class='lparen'>(</span><span class='label'>args:</span><span class='comma'>,</span> <span class='label'>config_proxy:</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -638,7 +638,7 @@
       <pre class="code"><span class="info file"># File 'lib/debug_logging/lamb_dart/log.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bench_scope'>bench_scope</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>debug_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope_term'>scope_term</span><span class='embexpr_end'>}</span><span class='tstring_content'>_benchmarks</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='symbol'>:&quot;debug_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope_term'>scope_term</span><span class='embexpr_end'>}</span><span class='tstring_content'>_benchmarks</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -763,7 +763,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May 27 15:37:31 2026 by
+  Generated on Sun Jun 14 19:19:53 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

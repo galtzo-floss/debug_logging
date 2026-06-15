@@ -446,7 +446,7 @@ Just send along a hash of the config options, similar to the following:</p>
   logged :dealer_options, {
     something: &quot;here&quot;, # &lt;= will be logged, and available to last_hash_to_s_proc
     multiple_last_hashes: true, # &lt;= Overrides config
-    error_handler_proc: nil, # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
+    error_handler_proc: nil # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
   }
   # == END CLASS METHODS ==
 
@@ -456,7 +456,7 @@ Just send along a hash of the config options, similar to the following:</p>
   i_notified [
     :drive,
     :stop,
-    [:turn, {instance_variables: %i[direction angle]}],
+    [:turn, {instance_variables: %i[direction angle]}]
   ]
 
   def drive(speed)
@@ -498,7 +498,7 @@ Just send along a hash of the config options, similar to the following:</p>
     time_formatter_proc: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,
     add_timestamp: false,
     instance_benchmarks: false,
-    class_benchmarks: false,
+    class_benchmarks: false
   }
 
   # You can also use `i_logged` as a true method decorator:
@@ -547,7 +547,7 @@ end
   i_notified [
     :drive,
     :stop,
-    [:turn, {instance_variables: %i[direction angle]}],
+    [:turn, {instance_variables: %i[direction angle]}]
   ]
 
   # == BEGIN CLASS METHODS ==
@@ -583,7 +583,7 @@ end
   #     and also made available to last_hash_to_s_proc
   notified :dealer_options, {
     something: &quot;here&quot;, # &lt;== will be added to the event payload, and be available to last_hash_to_s_proc
-    add_invocation_id: false, # &lt;== Overrides config
+    add_invocation_id: false # &lt;== Overrides config
   }
   # == END CLASS METHODS ==
 
@@ -820,7 +820,7 @@ Please consider sponsoring me or the project.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Sun Jun 14 19:09:24 2026 by
+  Generated on Sun Jun 14 19:19:52 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

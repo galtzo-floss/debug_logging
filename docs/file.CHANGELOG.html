@@ -70,11 +70,32 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
 Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...HEAD">Unreleased</a></h2>
 
 <h3 id="added">Added</h3>
 
 <h3 id="changed">Changed</h3>
+
+<h3 id="deprecated">Deprecated</h3>
+
+<h3 id="removed">Removed</h3>
+
+<h3 id="fixed">Fixed</h3>
+
+<h3 id="security">Security</h3>
+
+<h2 id="404---2026-06-14">
+<a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...v4.0.4">4.0.4</a> - 2026-06-14</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.4">v4.0.4</a>
+</li>
+  <li>COVERAGE: 97.41% – 716/735 lines in 28 files</li>
+  <li>BRANCH COVERAGE: 87.83% – 166/189 branches in 28 files</li>
+  <li>20.94% documented</li>
+</ul>
+
+<h3 id="changed-1">Changed</h3>
 
 <ul>
   <li>Raised generated <code>version_gem</code> and <code>appraisal2</code> dependency floors to<br>
@@ -86,19 +107,13 @@ and dependency floors from the latest <code>kettle-jem</code> template, includin
 <code>galtzo-floss</code> collective.</li>
 </ul>
 
-<h3 id="deprecated">Deprecated</h3>
-
-<h3 id="removed">Removed</h3>
-
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 
 <ul>
   <li>Restored <code>docs/CNAME</code> so the generated documentation site keeps its custom domain.</li>
   <li>Fixed the TruffleRuby 23.1 CI setup bundle by applying the same JSON<br>
 constraint before Appraisal runs.</li>
 </ul>
-
-<h3 id="security">Security</h3>
 
 <h2 id="403---2026-05-28">
 <a href="https://github.com/galtzo-floss/debug_logging/compare/v4.0.2...v4.0.3">4.0.3</a> - 2026-05-28</h2>
@@ -122,7 +137,7 @@ symbol-key <code>Hash#inspect</code> formatting.</li>
   <li>RBS signature coverage for the version constants.</li>
 </ul>
 
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 
 <ul>
   <li>Refreshed published README, project metadata, funding links, support links,<br>
@@ -134,7 +149,7 @@ and executable support files are consistently included where applicable.</li>
 local certificate is present, improving builds for downstream packagers.</li>
 </ul>
 
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 
 <ul>
   <li>
@@ -168,7 +183,7 @@ existing colorization callback behavior.</li>
   <li>More documentation</li>
 </ul>
 
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 
 <ul>
   <li>DRY logic for <code>DebugLogging::ClassLogger</code> &amp; <code>DebugLogging::InstanceLogger</code> via <code>LambDart</code>
@@ -177,7 +192,7 @@ existing colorization callback behavior.</li>
   <li>Refactored ActiveSupport::Notification integration (DRY)</li>
 </ul>
 
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 
 <ul>
   <li>Add undeclared runtime dependency <code>version_gem</code>
@@ -209,7 +224,7 @@ existing colorization callback behavior.</li>
 <code>add_timestamp</code> - Add timestamp to front of each log line</li>
 </ul>
 
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 
 <ul>
   <li>
@@ -217,7 +232,7 @@ existing colorization callback behavior.</li>
 </li>
 </ul>
 
-<h3 id="fixed-3">Fixed</h3>
+<h3 id="fixed-4">Fixed</h3>
 
 <h3 id="removed-2">Removed</h3>
 
@@ -244,7 +259,7 @@ existing colorization callback behavior.</li>
   </li>
 </ul>
 
-<h3 id="changed-4">Changed</h3>
+<h3 id="changed-5">Changed</h3>
 
 <ul>
   <li>Class method DSL renamed:
@@ -269,7 +284,7 @@ existing colorization callback behavior.</li>
   </li>
 </ul>
 
-<h3 id="fixed-4">Fixed</h3>
+<h3 id="fixed-5">Fixed</h3>
 
 <ul>
   <li>Per method config for every decorated method</li>
@@ -292,7 +307,7 @@ existing colorization callback behavior.</li>
 </li>
 </ul>
 
-<h3 id="fixed-5">Fixed</h3>
+<h3 id="fixed-6">Fixed</h3>
 
 <ul>
   <li>Maximum Ruby version is 2.7. Versions 3.x are not compatible with Ruby &gt;= 3</li>
@@ -545,7 +560,7 @@ existing colorization callback behavior.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Sun Jun 14 19:09:24 2026 by
+  Generated on Sun Jun 14 19:19:52 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>
