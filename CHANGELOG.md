@@ -24,11 +24,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Raised generated `version_gem` and `appraisal2` dependency floors to
   `version_gem` >= 1.1.10 and `appraisal2` >= 3.0.9.
-- Refreshed generated project metadata, support documentation, CI workflows,
-  and development dependency floors from the current kettle-jem template.
-- Retemplated project metadata, workflow pins, and dependency floors with the
-  latest `kettle-jem` template, including the `yard-fence` 0.9.4 documentation
-  floor and resilient templating bootstrap updates.
+- Refreshed generated project metadata, support documentation, workflow pins,
+  and dependency floors from the latest `kettle-jem` template, including the
+  `yard-fence` 0.9.4 documentation floor and resilient templating bootstrap.
 - Updated generated OpenCollective funding metadata to use the
   `galtzo-floss` collective.
 
