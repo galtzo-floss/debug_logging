@@ -12,7 +12,7 @@ RSpec.describe DebugLogging do
       output = capture("stdout") do
         simple_klass.debug_log(message)
       end
-      expect(output).to match(/Marty McFly/)
+      expect(output).to include("Marty McFly")
     end
 
     it "does not log not when a logger is not set" do

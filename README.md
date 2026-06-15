@@ -259,7 +259,7 @@ class Car
   logged :dealer_options, {
     something: "here", # <= will be logged, and available to last_hash_to_s_proc
     multiple_last_hashes: true, # <= Overrides config
-    error_handler_proc: nil, # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
+    error_handler_proc: nil # NOTE: if you define the error_handler_proc inside a class like this you can use self inside the proc to refer to the class the method was called on!
   }
   # == END CLASS METHODS ==
 
@@ -269,7 +269,7 @@ class Car
   i_notified [
     :drive,
     :stop,
-    [:turn, {instance_variables: %i[direction angle]}],
+    [:turn, {instance_variables: %i[direction angle]}]
   ]
 
   def drive(speed)
@@ -311,7 +311,7 @@ class Car
     time_formatter_proc: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,
     add_timestamp: false,
     instance_benchmarks: false,
-    class_benchmarks: false,
+    class_benchmarks: false
   }
 
   # You can also use `i_logged` as a true method decorator:
@@ -363,7 +363,7 @@ class Car
   i_notified [
     :drive,
     :stop,
-    [:turn, {instance_variables: %i[direction angle]}],
+    [:turn, {instance_variables: %i[direction angle]}]
   ]
 
   # == BEGIN CLASS METHODS ==
@@ -399,7 +399,7 @@ class Car
   #     and also made available to last_hash_to_s_proc
   notified :dealer_options, {
     something: "here", # <== will be added to the event payload, and be available to last_hash_to_s_proc
-    add_invocation_id: false, # <== Overrides config
+    add_invocation_id: false # <== Overrides config
   }
   # == END CLASS METHODS ==
 
@@ -789,7 +789,7 @@ Thanks for RTFM. ☺️
 [📄license-ref]: MIT.md
 [📄license-img]: https://img.shields.io/badge/License-MIT-259D6C.svg
 [📄license-compat]: https://www.apache.org/legal/resolved.html#category-a
-[📄license-compat-img]: https://img.shields.io/badge/Apache_Compatible:_Category_A-✓-259D6C.svg?style=flat&logo=Apache
+[📄license-compat-img]: https://img.shields.io/badge/Apache_Compatible:_Category_A-%E2%9C%93-259D6C.svg?style=flat&logo=Apache
 
 [📄ilo-declaration]: https://www.ilo.org/declaration/lang--en/index.htm
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-259D6C.svg?style=flat

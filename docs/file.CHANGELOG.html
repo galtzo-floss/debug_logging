@@ -76,6 +76,16 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 
 <h3 id="changed">Changed</h3>
 
+<ul>
+  <li>Raised generated <code>version_gem</code> and <code>appraisal2</code> dependency floors to<br>
+<code>version_gem</code> &gt;= 1.1.10 and <code>appraisal2</code> &gt;= 3.0.9.</li>
+  <li>Refreshed generated project metadata, support documentation, workflow pins,<br>
+and dependency floors from the latest <code>kettle-jem</code> template, including the<br>
+<code>yard-fence</code> 0.9.4 documentation floor and resilient templating bootstrap.</li>
+  <li>Updated generated OpenCollective funding metadata to use the<br>
+<code>galtzo-floss</code> collective.</li>
+</ul>
+
 <h3 id="deprecated">Deprecated</h3>
 
 <h3 id="removed">Removed</h3>
@@ -83,6 +93,7 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 <h3 id="fixed">Fixed</h3>
 
 <ul>
+  <li>Restored <code>docs/CNAME</code> so the generated documentation site keeps its custom domain.</li>
   <li>Fixed the TruffleRuby 23.1 CI setup bundle by applying the same JSON<br>
 constraint before Appraisal runs.</li>
 </ul>
@@ -534,7 +545,7 @@ existing colorization callback behavior.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Thu May 28 02:21:55 2026 by
+  Generated on Sun Jun 14 19:09:24 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

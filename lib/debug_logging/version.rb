@@ -2,7 +2,7 @@
 
 module DebugLogging
   module Version
-    VERSION = "4.0.3"
+    VERSION = "4.0.4"
   end
   VERSION = Version::VERSION # Traditional Constant Location
 end

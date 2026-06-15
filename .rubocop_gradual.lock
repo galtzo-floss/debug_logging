@@ -1,11 +1,4 @@
 {
-  "README.md:619991807": [
-    [262, 28, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
-    [272, 55, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
-    [314, 28, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
-    [366, 55, 1, "Style/TrailingCommaInArrayLiteral: Avoid comma after the last item of an array.", 177545],
-    [402, 29, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
-  ],
   "lib/debug_logging/argument_printer.rb:1607577242": [
     [87, 63, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [105, 68, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
@@ -101,8 +94,14 @@
   ],
   "spec/debug_logging/class_logger_spec.rb:3438293992": [
     [16, 11, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [29, 25, 36, "RSpec/MatchWithSimpleRegex: Prefer using `include('::k_with_dsplat_i(LOLiii)')` when the regex is a simple string literal.", 1520468945],
     [33, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
-    [48, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
+    [48, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [68, 25, 34, "RSpec/MatchWithSimpleRegex: Prefer using `include('CompleteLoggedKlass#i()')` when the regex is a simple string literal.", 1976780337],
+    [69, 25, 46, "RSpec/MatchWithSimpleRegex: Prefer using `include('CompleteLoggedKlass#i_with_ssplat()')` when the regex is a simple string literal.", 21366522],
+    [71, 25, 35, "RSpec/MatchWithSimpleRegex: Prefer using `include('CompleteLoggedKlass::k()')` when the regex is a simple string literal.", 757958512],
+    [72, 25, 47, "RSpec/MatchWithSimpleRegex: Prefer using `include('CompleteLoggedKlass::k_with_ssplat()')` when the regex is a simple string literal.", 1796576891],
+    [73, 25, 47, "RSpec/MatchWithSimpleRegex: Prefer using `include('CompleteLoggedKlass::k_with_dsplat()')` when the regex is a simple string literal.", 1011893260]
   ],
   "spec/debug_logging/class_notifier_spec.rb:1962393355": [
     [18, 40, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
@@ -158,7 +157,15 @@
     [53, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [60, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [82, 38, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [88, 31, 64, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={id: 1, first_name: \"Joe\", last_name: \"Schmoe\"}')` when the regex is a simple string literal.", 272466571],
+    [92, 31, 65, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={action: \"Update\", id: 1, msg: {greeting: \"hi\"}}')` when the regex is a simple string literal.", 2347009166],
+    [152, 31, 65, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={id: 1, first_name: \"Joe\", last_name: \"Schmoe\"}')` when the regex is a simple string literal.", 2549374743],
+    [154, 31, 54, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={salutation: \"Mr.\", suffix: \"Jr.\"}')` when the regex is a simple string literal.", 3616106048],
+    [156, 31, 20, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={}')` when the regex is a simple string literal.", 3904509534],
+    [158, 31, 20, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={}')` when the regex is a simple string literal.", 3904509534],
+    [160, 31, 20, "RSpec/MatchWithSimpleRegex: Prefer using `include('payload={}')` when the regex is a simple string literal.", 3904509534],
     [233, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [277, 29, 112, "RSpec/MatchWithSimpleRegex: Prefer using `include('InstanceLoggedKlassDynamic#i_with_ssplat(\"a\", 1, true, [\"b\", 2, false], {c: :d, e: :f}) debug: {}')` when the regex is a simple string literal.", 2299606081],
     [289, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [296, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [661, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
@@ -167,18 +174,23 @@
     [696, 27, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [767, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [785, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [788, 29, 51, "RSpec/MatchWithSimpleRegex: Prefer using `include('#i_with_dsplat([:a, :b, :c, :d, :e]) ~')` when the regex is a simple string literal.", 2988655907],
     [797, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [823, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [842, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [849, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [873, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [880, 32, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [883, 29, 96, "RSpec/MatchWithSimpleRegex: Prefer using `include('#i_with_ssplat(\"a\", 1, true, [\"b\", 2, false], [:c, :e], [:a, :b, :c, :d, :e]) ~')` when the regex is a simple string literal.", 1314566841],
+    [884, 29, 51, "RSpec/MatchWithSimpleRegex: Prefer using `include('#i_with_dsplat([:a, :b, :c, :d, :e]) ~')` when the regex is a simple string literal.", 2988655907],
     [898, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [905, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [932, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [957, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1027, 27, 102, "RSpec/MatchWithSimpleRegex: Prefer using `include('InstanceLoggedKlassDynamic#i_with_ssplat(\"a\", 1, true, [\"b\", 2, false], {c: :d, e: :f}) ~')` when the regex is a simple string literal.", 2756004466],
     [1037, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [1146, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [1162, 31, 100, "RSpec/MatchWithSimpleRegex: Prefer using `include('InstanceLoggedKlassDynamic#i_with_ssplat(\"a\", 1, true, [\"b\", 2, false], {c: :d, e: :f})')` when the regex is a simple string literal.", 30138284],
     [1172, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [1198, 29, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]
   ],
@@ -187,12 +199,22 @@
     [38, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
     [72, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
     [118, 11, 20, "Style/RescueStandardError: Omit the error class when rescuing `StandardError` by itself.", 3081355729],
-    [213, 29, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545]
+    [161, 13, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:161.", 888633974],
+    [188, 9, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:188.", 888633974],
+    [213, 29, 1, "Style/TrailingCommaInHashLiteral: Avoid comma after the last item of a hash.", 177545],
+    [252, 9, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:252.", 888633974]
   ],
   "spec/debug_logging/instance_logger_spec.rb:3949058639": [
+    [28, 25, 43, "RSpec/MatchWithSimpleRegex: Prefer using `include('SingletonLoggedKlassExplicit#i()')` when the regex is a simple string literal.", 2210053217],
+    [29, 25, 55, "RSpec/MatchWithSimpleRegex: Prefer using `include('SingletonLoggedKlassExplicit#i_with_ssplat()')` when the regex is a simple string literal.", 874045738],
+    [30, 25, 55, "RSpec/MatchWithSimpleRegex: Prefer using `include('SingletonLoggedKlassExplicit#i_with_dsplat()')` when the regex is a simple string literal.", 1456644765],
+    [44, 27, 41, "RSpec/MatchWithSimpleRegex: Prefer using `include('InstanceLoggedKlassDynamic#i()')` when the regex is a simple string literal.", 1909948420],
+    [57, 27, 103, "RSpec/MatchWithSimpleRegex: Prefer using `include('InstanceLoggedKlassDynamic#i_with_ssplat(\"a\", 1, true, [\"b\", 2, false], {c: :d, e: :f}) ~')` when the regex is a simple string literal.", 1918811150],
     [66, 25, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [79, 30, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [82, 27, 97, "RSpec/MatchWithSimpleRegex: Prefer using `include('#i_with_dsplat(**{a: \"a\", b: 1, c: true, d: [\"b\", 2, false], e: {c: :d, e: :f}}) ~')` when the regex is a simple string literal.", 1866141376],
     [91, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
+    [116, 27, 36, "RSpec/MatchWithSimpleRegex: Prefer using `include('SingletonLoggedKlass::k()')` when the regex is a simple string literal.", 1469011574],
     [151, 28, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [191, 22, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545],
     [209, 22, 1, "Style/TrailingCommaInArguments: Avoid comma after the last parameter of a method call.", 177545]

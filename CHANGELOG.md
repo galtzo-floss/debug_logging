@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.0.4] - 2026-06-14
+
+- TAG: [v4.0.4][4.0.4t]
+- COVERAGE: 97.41% -- 716/735 lines in 28 files
+- BRANCH COVERAGE: 87.83% -- 166/189 branches in 28 files
+- 20.94% documented
+
+### Changed
+
 - Raised generated `version_gem` and `appraisal2` dependency floors to
   `version_gem` >= 1.1.10 and `appraisal2` >= 3.0.9.
 - Refreshed generated project metadata, support documentation, workflow pins,
@@ -30,17 +47,11 @@ Please file a bug if you notice a violation of semantic versioning.
 - Updated generated OpenCollective funding metadata to use the
   `galtzo-floss` collective.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
 - Fixed the TruffleRuby 23.1 CI setup bundle by applying the same JSON
   constraint before Appraisal runs.
-
-### Security
 
 ## [4.0.3] - 2026-05-28
 
@@ -278,7 +289,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...HEAD
+[4.0.4]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...v4.0.4
+[4.0.4t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.4
 [4.0.3]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.2...v4.0.3
 [4.0.3t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.3
 [4.0.2]: https://gitlab.com/galtzo-floss/debug_logging/-/compare/v4.0.1...v4.0.2
