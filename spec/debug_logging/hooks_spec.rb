@@ -158,7 +158,7 @@ RSpec.describe DebugLogging::Hooks do
           Class.new do
             include DebugLogging::Hooks
 
-            def meth
+            define_method(:meth) do
               raise StandardError, "fart sound"
             end
 
@@ -185,7 +185,7 @@ RSpec.describe DebugLogging::Hooks do
         # require 'rspec/expectations'
         include DebugLogging::Hooks
 
-        def meth(*_args, &_blk)
+        define_method(:meth) do |*_args, &_blk|
           nil
         end
       end
@@ -249,7 +249,7 @@ RSpec.describe DebugLogging::Hooks do
         # require 'rspec/expectations'
         include DebugLogging::Hooks
 
-        def meth(*_args, &_blk)
+        define_method(:meth) do |*_args, &_blk|
           nil
         end
       end

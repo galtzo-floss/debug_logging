@@ -1,7 +1,0 @@
-{
-  "spec/debug_logging/hooks_spec.rb:3810846477": [
-    [161, 13, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:161.", 888633974],
-    [188, 9, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:188.", 888633974],
-    [252, 9, 8, "Lint/DuplicateMethods: Method `::Object#meth` is defined at both spec/debug_logging/hooks_spec.rb:137 and spec/debug_logging/hooks_spec.rb:252.", 888633974]
-  ]
-}
