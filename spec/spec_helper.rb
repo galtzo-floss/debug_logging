@@ -3,6 +3,10 @@
 # NOTE: Gemfiles for non-coverage appraisals may not have kettle-soup-cover.
 begin
   require "kettle-soup-cover"
+  if Kettle::Soup::Cover::DO_COV
+    require "simplecov"
+    SimpleCov.start
+  end
   require "simplecov" if Kettle::Soup::Cover::DO_COV
 rescue LoadError => error
   raise error unless error.message.include?("kettle")
