@@ -5,9 +5,9 @@ begin
   require "kettle-soup-cover"
   if Kettle::Soup::Cover::DO_COV
     require "simplecov"
+    require "kettle/soup/cover/config"
     SimpleCov.start
   end
-  require "simplecov" if Kettle::Soup::Cover::DO_COV
 rescue LoadError => error
   raise error unless error.message.include?("kettle")
 end
