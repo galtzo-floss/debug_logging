@@ -116,7 +116,7 @@ Automatically log selected methods and their arguments as they are called at run
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.24")     # ruby >= 3.1
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.25")     # ruby >= 3.1
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -129,7 +129,7 @@ Automatically log selected methods and their arguments as they are called at run
 
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.3")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.8")             # ruby >= 3.1
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.9")             # ruby >= 3.1
   spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.5")            # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
