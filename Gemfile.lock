@@ -439,4 +439,4 @@ DEPENDENCIES
   yard-yaml (~> 0.2, >= 0.2.2)
 
 BUNDLED WITH
-  4.0.12
+  4.0.15
