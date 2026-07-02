@@ -18,7 +18,7 @@ module DebugLogging
 
     # methods_to_log may be an array of a single method name, followed by config options and payload,
     #   or it could be an array of method names followed by config options and payload to be shared by the whole set.
-    def extract_payload_and_config(method_names:, payload: nil, config: nil)
+    def extract_payload_and_config(method_names:, payload: nil, config: nil, options: nil)
       # When scoped config is present it will always be a new configuration instance per method
       # When scoped config is not present it will reuse the class' configuration object
       scoped_payload = (method_names.is_a?(Array) && method_names.last.is_a?(Hash) && method_names.pop.clone(freeze: false)) || {}
@@ -31,6 +31,11 @@ module DebugLogging
       # puts "[EPAC] config: #{config}, scoped_payload: #{scoped_payload}, payload: #{payload}, config_opts: #{config_opts}"
       unless payload.empty?
         DebugLogging::Configuration::CONFIG_KEYS.each { |k| config_opts[k] = payload.delete(k) if payload.key?(k) }
+      end
+      if options && !options.empty?
+        scoped_options = options.clone(freeze: false)
+        DebugLogging::Configuration::CONFIG_KEYS.each { |k| config_opts[k] = scoped_options.delete(k) if scoped_options.key?(k) }
+        payload.merge!(scoped_options)
       end
       method_names =
         case method_names

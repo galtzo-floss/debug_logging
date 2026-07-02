@@ -103,6 +103,27 @@ RSpec.describe DebugLogging::InstanceNotifier do
         msg: {greeting: "hi"}
       ).i_with_instance_vars).to eq(70)
     end
+
+    it "accepts Ruby keyword payload and configuration options" do
+      klass = Class.new do
+        def i
+          40
+        end
+
+        extend DebugLogging
+        extend DebugLogging::InstanceNotifier
+
+        i_notified :i, id: 7, log_level: :error
+      end
+
+      output = capture("stdout") do
+        klass.new.i
+      end
+      event = @events.first
+      expect(event.payload).to include(id: 7)
+      expect(event.payload[:config_proxy].log_level).to eq(:error)
+      expect(output).to include("payload={id: 7}")
+    end
   end
 
   context "when an instance notified klass dynamic" do

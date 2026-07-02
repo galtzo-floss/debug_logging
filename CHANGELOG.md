@@ -20,6 +20,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Ruby keyword option support for `logged`, `notified`, `i_logged`, and
+  `i_notified`, while preserving legacy last-hash configuration and payload
+  handling.
+
 ### Changed
 
 ### Deprecated

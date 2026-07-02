@@ -81,6 +81,34 @@ RSpec.describe DebugLogging::ClassNotifier do
       expect(output).to match(Regexp.escape('args=(**{a: "a"})'))
       expect(output).to match(Regexp.escape('payload={id: 3, first_name: "Jae", last_name: "Tae"}'))
     end
+
+    it "accepts Ruby keyword payload and configuration options" do
+      klass = Class.new do
+        class << self
+          def name
+            "KeywordNotifiedKlass"
+          end
+          alias_method :to_s, :name
+
+          def k_with_dsplat(**_args)
+            30
+          end
+        end
+
+        extend DebugLogging
+        extend DebugLogging::ClassNotifier
+
+        notified :k_with_dsplat, id: 7, log_level: :error
+      end
+
+      output = capture("stdout") do
+        klass.k_with_dsplat(a: "a")
+      end
+      event = events.first
+      expect(event.payload).to include(id: 7)
+      expect(event.payload[:config_proxy].log_level).to eq(:error)
+      expect(output).to include("payload={id: 7}")
+    end
   end
 
   context "with a complete notified class" do

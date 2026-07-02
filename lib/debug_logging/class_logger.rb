@@ -6,11 +6,12 @@ module DebugLogging
       end
     end
 
-    def logged(*methods_to_log)
+    def logged(*methods_to_log, **options)
       methods_to_log, payload, config_opts = DebugLogging::Util.extract_payload_and_config(
         method_names: methods_to_log,
         payload: nil,
-        config: nil
+        config: nil,
+        options:
       )
       Array(methods_to_log).each do |decorated_method|
         decorated_method, method_payload, method_config_opts = DebugLogging::Util.extract_payload_and_config(

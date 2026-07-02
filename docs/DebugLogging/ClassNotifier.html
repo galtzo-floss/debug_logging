@@ -137,7 +137,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#notified-instance_method" title="#notified (instance method)">#<strong>notified</strong>(*methods_to_notify)  &#x21d2; Object </a>
+      <a href="#notified-instance_method" title="#notified (instance method)">#<strong>notified</strong>(*methods_to_notify, **options)  &#x21d2; Object </a>
     
 
     
@@ -206,7 +206,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="notified-instance_method">
   
-    #<strong>notified</strong>(*methods_to_notify)  &#x21d2; <tt>Object</tt> 
+    #<strong>notified</strong>(*methods_to_notify, **options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -251,16 +251,18 @@
 39
 40
 41
-42</pre>
+42
+43</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/debug_logging/class_notifier.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_notified'>notified</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods_to_notify'>methods_to_notify</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_notified'>notified</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods_to_notify'>methods_to_notify</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_methods_to_notify'>methods_to_notify</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_config_opts'>config_opts</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="DebugLogging::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_extract_payload_and_config'><span class='object_link'><a href="Util.html#extract_payload_and_config-class_method" title="DebugLogging::Util.extract_payload_and_config (method)">extract_payload_and_config</a></span></span><span class='lparen'>(</span>
     <span class='label'>method_names:</span> <span class='id identifier rubyid_methods_to_notify'>methods_to_notify</span><span class='comma'>,</span>
     <span class='label'>payload:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-    <span class='label'>config:</span> <span class='kw'>nil</span>
+    <span class='label'>config:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>options:</span>
   <span class='rparen'>)</span>
   <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_methods_to_notify'>methods_to_notify</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='op'>|</span>
     <span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='comma'>,</span> <span class='id identifier rubyid_method_payload'>method_payload</span><span class='comma'>,</span> <span class='id identifier rubyid_method_config_opts'>method_config_opts</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="DebugLogging::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_extract_payload_and_config'><span class='object_link'><a href="Util.html#extract_payload_and_config-class_method" title="DebugLogging::Util.extract_payload_and_config (method)">extract_payload_and_config</a></span></span><span class='lparen'>(</span>
@@ -300,7 +302,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jul  2 09:10:21 2026 by
+  Generated on Thu Jul  2 11:16:22 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

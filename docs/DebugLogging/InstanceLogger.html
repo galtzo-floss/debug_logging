@@ -137,7 +137,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#i_logged-instance_method" title="#i_logged (instance method)">#<strong>i_logged</strong>(*methods_to_log)  &#x21d2; Object </a>
+      <a href="#i_logged-instance_method" title="#i_logged (instance method)">#<strong>i_logged</strong>(*methods_to_log, **options)  &#x21d2; Object </a>
     
 
     
@@ -151,7 +151,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>NOTE: These params can be passed in / hidden in a last hash of *args NOTE: They can also be passed in discretely for each method, by passing *args as an array of arrays TODO: Refactor to use modern Ruby 3 *args, **kwargs instead.</p>
+    <span class="summary_desc"><div class='inline'><p>NOTE: These options can also be passed in / hidden in a last hash of *args NOTE: They can also be passed in discretely for each method, by passing *args as an array of arrays.</p>
 </div></span>
   
 </li>
@@ -206,7 +206,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="i_logged-instance_method">
   
-    #<strong>i_logged</strong>(*methods_to_log)  &#x21d2; <tt>Object</tt> 
+    #<strong>i_logged</strong>(*methods_to_log, **options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -214,9 +214,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>NOTE: These params can be passed in / hidden in a last hash of *args<br />
-NOTE: They can also be passed in discretely for each method, by passing *args as an array of arrays<br />
-TODO: Refactor to use modern Ruby 3 *args, **kwargs instead</p>
+    <p>NOTE: These options can also be passed in / hidden in a last hash of *args<br />
+NOTE: They can also be passed in discretely for each method, by passing *args as an array of arrays</p>
 
 
   </div>
@@ -227,290 +226,259 @@ TODO: Refactor to use modern Ruby 3 *args, **kwargs instead</p>
   
     <li>
       
-        <span class='name'>logger</span>
+        <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>Logger</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Logger.new($stdout), # probably want to override to be the Rails.logger</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>log_level</span>
-      
-      
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt>Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>default: :debug, at what level do the messages created by this gem sent at?</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>multiple_last_hashes</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>last_hash_to_s_proc</span>
-      
-      
-        <span class='type'>(<tt>nil</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: nil, e.g. -&gt;(hash) { “keys: #DebugLogging::InstanceLogger.hashhash.keys” }</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>last_hash_max_length</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: 1_000,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>args_to_s_proc</span>
-      
-      
-        <span class='type'>(<tt>nil</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: nil, e.g. -&gt;(*record) { “record id: #DebugLogging::InstanceLogger.recordrecord.firstrecord.first.id” }</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>args_max_length</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: 1_000,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>colorized_chain_for_method</span>
-      
-      
-        <span class='type'>(<tt>false</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false, e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>colorized_chain_for_class</span>
-      
-      
-        <span class='type'>(<tt>false</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false, e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>add_invocation_id</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: true, allows unique identification of method call; association of entry and exit log lines</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>ellipsis</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: “ ✂️ …”.freeze,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>mark_scope_exit</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>add_payload</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: true, # Can also be a proc returning a string, which will be called when printing the payload</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>payload_max_length</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: 1_000,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>error_handler_proc</span>
-      
-      
-        <span class='type'>(<tt>nil</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: nil,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>time_formatter_proc</span>
-      
-      
-        <span class='type'>(<tt>nil</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>add_timestamp</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>instance_benchmarks</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false,</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>class_benchmarks</span>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>default: false,</p>
+        <div class='inline'><p>a customizable set of options</p>
 </div>
       
     </li>
   
 </ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>**options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:logger</span>
+          <span class="type">(<tt>Logger</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Logger.new($stdout), # probably want to override to be the Rails.logger</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:log_level</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: :debug, at what level do the messages created by this gem sent at?</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:multiple_last_hashes</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:last_hash_to_s_proc</span>
+          <span class="type">(<tt>nil</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: nil, e.g. -&gt;(hash) { “keys: #DebugLogging::InstanceLogger.hashhash.keys” }</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:last_hash_max_length</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: 1_000,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:args_to_s_proc</span>
+          <span class="type">(<tt>nil</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: nil, e.g. -&gt;(*record) { “record id: #DebugLogging::InstanceLogger.recordrecord.firstrecord.first.id” }</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:args_max_length</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: 1_000,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:colorized_chain_for_method</span>
+          <span class="type">(<tt>false</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false, e.g. -&gt;(colorized_string) { colorized_string.red.on_blue.underline }</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:colorized_chain_for_class</span>
+          <span class="type">(<tt>false</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false, e.g. -&gt;(colorized_string) { colorized_string.colorize(:light_blue ).colorize( :background =&gt; :red) }</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:add_invocation_id</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: true, allows unique identification of method call; association of entry and exit log lines</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:ellipsis</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: “ ✂️ …”.freeze,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mark_scope_exit</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:add_payload</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: true, # Can also be a proc returning a string, which will be called when printing the payload</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:payload_max_length</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: 1_000,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:error_handler_proc</span>
+          <span class="type">(<tt>nil</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: nil,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:time_formatter_proc</span>
+          <span class="type">(<tt>nil</tt>, <tt>Proc</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: DebugLogging::Constants::DEFAULT_TIME_FORMATTER,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:add_timestamp</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:instance_benchmarks</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false,</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:class_benchmarks</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>default: false,</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
 
 
 </div><table class="source_code">
@@ -519,6 +487,7 @@ TODO: Refactor to use modern Ruby 3 *args, **kwargs instead</p>
       <pre class="lines">
 
 
+30
 31
 32
 33
@@ -545,13 +514,14 @@ TODO: Refactor to use modern Ruby 3 *args, **kwargs instead</p>
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging/instance_logger.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging/instance_logger.rb', line 30</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_i_logged'>i_logged</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_i_logged'>i_logged</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='id identifier rubyid_config_opts'>config_opts</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DebugLogging.html" title="DebugLogging (module)">DebugLogging</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="DebugLogging::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_extract_payload_and_config'><span class='object_link'><a href="Util.html#extract_payload_and_config-class_method" title="DebugLogging::Util.extract_payload_and_config (method)">extract_payload_and_config</a></span></span><span class='lparen'>(</span>
     <span class='label'>method_names:</span> <span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='comma'>,</span>
     <span class='label'>payload:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-    <span class='label'>config:</span> <span class='kw'>nil</span>
+    <span class='label'>config:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>options:</span>
   <span class='rparen'>)</span>
   <span class='id identifier rubyid_instance_method_modules'>instance_method_modules</span> <span class='op'>=</span>
     <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_methods_to_log'>methods_to_log</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='op'>|</span>
@@ -581,7 +551,7 @@ TODO: Refactor to use modern Ruby 3 *args, **kwargs instead</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 14 19:19:52 2026 by
+  Generated on Thu Jul  2 11:16:22 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

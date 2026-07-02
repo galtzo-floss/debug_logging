@@ -213,6 +213,19 @@ RSpec.describe DebugLogging::InstanceLogger do
         expect(config_proxy.logger.level).to eq(Logger::INFO)
         expect(config_proxy.log_level).to eq(:debug)
       end
+
+      it "accepts Ruby keyword configuration options" do
+        simple_klass.send(:extend, described_class)
+        simple_klass.send(:i_logged, :initialize, logger:, log_level: :debug)
+        simple_klass.new
+        config_proxy = simple_klass.instance_variable_get(DebugLogging::Configuration.config_pointer(
+          "ilm",
+          :initialize
+        ))
+        expect(config_proxy).to be_a(DebugLogging::Configuration)
+        expect(config_proxy.logger).to eq(logger)
+        expect(config_proxy.log_level).to eq(:debug)
+      end
     end
   end
 

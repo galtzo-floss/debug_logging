@@ -6,11 +6,12 @@ module DebugLogging
       end
     end
 
-    def notified(*methods_to_notify)
+    def notified(*methods_to_notify, **options)
       methods_to_notify, payload, config_opts = DebugLogging::Util.extract_payload_and_config(
         method_names: methods_to_notify,
         payload: nil,
-        config: nil
+        config: nil,
+        options:
       )
       Array(methods_to_notify).each do |decorated_method|
         decorated_method, method_payload, method_config_opts = DebugLogging::Util.extract_payload_and_config(

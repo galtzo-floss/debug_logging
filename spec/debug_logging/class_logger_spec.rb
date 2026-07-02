@@ -49,6 +49,32 @@ RSpec.describe DebugLogging::ClassLogger do
       ))).to receive(:log).once.and_call_original
       complete_logged_klass.k_with_dsplat_e(a: "a")
     end
+
+    it "works with Ruby keyword configuration options" do
+      klass = Class.new do
+        class << self
+          def name
+            "KeywordLoggedKlass"
+          end
+          alias_method :to_s, :name
+
+          def k
+            10
+          end
+        end
+
+        extend DebugLogging
+        extend DebugLogging::ClassLogger
+
+        logged :k, add_invocation_id: false
+      end
+
+      output = capture("stdout") do
+        klass.k
+      end
+      expect(output).to include("KeywordLoggedKlass::k() debug: {}")
+      expect(output).not_to include("~")
+    end
   end
 
   context "with a complete logged class" do
