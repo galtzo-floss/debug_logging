@@ -20,10 +20,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Ruby keyword option support for `logged`, `notified`, `i_logged`, and
-  `i_notified`, while preserving legacy last-hash configuration and payload
-  handling.
-
 ### Changed
 
 ### Deprecated
@@ -33,6 +29,19 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [4.1.0] - 2026-07-02
+
+- TAG: [v4.1.0][4.1.0t]
+- COVERAGE: 97.46% -- 730/749 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 20.94% documented
+
+### Added
+
+- Ruby keyword option support for `logged`, `notified`, `i_logged`, and
+  `i_notified`, while preserving legacy last-hash configuration and payload
+  handling.
 
 ## [4.0.5] - 2026-07-02
 
@@ -316,7 +325,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.5...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.5...v4.1.0
+[4.1.0t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.0
 [4.0.5]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...v4.0.5
 [4.0.5t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.5
 [4.0.4]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...v4.0.4

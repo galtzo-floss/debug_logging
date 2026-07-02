@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    debug_logging (4.0.5)
+    debug_logging (4.1.0)
       version_gem (~> 1.1, >= 1.1.13)
 
 GEM
