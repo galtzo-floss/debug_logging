@@ -28,17 +28,13 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Avoid runtime warnings from ActiveSupport loading, method decoration, and
-  invocation ID formatting, and update the SimpleCov test setup for the current
-  filtering API.
-
 ### Security
 
 ## [4.0.5] - 2026-07-02
 
 - TAG: [v4.0.5][4.0.5t]
-- COVERAGE: 97.41% -- 716/735 lines in 28 files
-- BRANCH COVERAGE: 87.83% -- 166/189 branches in 28 files
+- COVERAGE: 97.45% -- 726/745 lines in 28 files
+- BRANCH COVERAGE: 86.07% -- 173/201 branches in 28 files
 - 20.94% documented
 
 ### Added
@@ -52,6 +48,10 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 - Package configured license files in gem release file lists.
+
+- Avoid runtime warnings from ActiveSupport loading, method decoration, and
+  invocation ID formatting, and update the SimpleCov test setup for the current
+  filtering API.
 
 ## [4.0.4] - 2026-06-14
 
