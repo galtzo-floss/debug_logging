@@ -110,9 +110,9 @@ RSpec.describe DebugLogging::ClassNotifier do
       expect(output).to match("i_with_dsplat.log")
       expect(output).to match('payload={salutation: "Mr.", suffix: "Jr."}')
       expect(output).to match("i_with_dsplat_payload.log")
-      expect(output).to match('["blue", "green"]')
+      expect(output).to include('["blue", "green"]')
       expect(output).to match("i_with_dsplat_payload_and_config.log")
-      expect(output).to match('["yellow", "red"]')
+      expect(output).to include('["yellow", "red"]')
       # Config options do not bleed through
       expect(output).not_to match("add_invocation_id")
       expect(output).to match("k.log")

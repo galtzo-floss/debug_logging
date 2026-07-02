@@ -28,6 +28,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Avoid runtime warnings from ActiveSupport loading, method decoration, and
+  invocation ID formatting, and update the SimpleCov test setup for the current
+  filtering API.
+
 ### Security
 
 ## [4.0.5] - 2026-07-02

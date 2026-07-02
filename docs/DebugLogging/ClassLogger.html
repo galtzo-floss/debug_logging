@@ -254,7 +254,9 @@
 42
 43
 44
-45</pre>
+45
+46
+47</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/debug_logging/class_logger.rb', line 9</span>
@@ -272,7 +274,9 @@
       <span class='label'>config:</span> <span class='id identifier rubyid_config_opts'>config_opts</span>
     <span class='rparen'>)</span>
     <span class='id identifier rubyid_original_method'>original_method</span> <span class='op'>=</span> <span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='rparen'>)</span>
-    <span class='lparen'>(</span><span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>end</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_singleton_class'>singleton_class</span> <span class='op'>=</span> <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>end</span>
+    <span class='id identifier rubyid_singleton_class'>singleton_class</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:remove_method</span><span class='comma'>,</span> <span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_original_method'>original_method</span><span class='period'>.</span><span class='id identifier rubyid_owner'>owner</span><span class='period'>.</span><span class='id identifier rubyid_equal?'>equal?</span><span class='lparen'>(</span><span class='id identifier rubyid_singleton_class'>singleton_class</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_singleton_class'>singleton_class</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='kw'>do</span>
       <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_decorated_method'>decorated_method</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
         <span class='id identifier rubyid_lamb_dart'>lamb_dart</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="LambDart.html" title="DebugLogging::LambDart (module)">LambDart</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="LambDart/Log.html" title="DebugLogging::LambDart::Log (class)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="LambDart/Log.html#initialize-instance_method" title="DebugLogging::LambDart::Log#initialize (method)">new</a></span></span><span class='lparen'>(</span>
           <span class='label'>klass:</span> <span class='kw'>self</span><span class='comma'>,</span>
@@ -306,7 +310,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 14 19:19:52 2026 by
+  Generated on Thu Jul  2 09:10:21 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

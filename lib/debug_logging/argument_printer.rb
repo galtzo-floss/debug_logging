@@ -13,7 +13,7 @@ module DebugLogging
 
       if config_proxy.debug_add_invocation_id
         time = start_at ? Util.debug_time(start_at) : Time.now
-        unique_id = (time.to_f.to_s % "%#-21a")[4..-4]
+        unique_id = time.to_f.to_s[4..-4]
         invocation = " ~#{args.object_id}|#{kwargs.object_id}@#{unique_id}~"
         case config_proxy.debug_add_invocation_id
         when true

@@ -230,6 +230,7 @@ RSpec.describe DebugLogging::Hooks do
     it "the block is called before the method" do
       value = nil
       @test_class.instance_exec(self) do |_slf|
+        remove_method(:meth)
         define_method(:meth) do
           value = "in method"
         end
@@ -258,6 +259,7 @@ RSpec.describe DebugLogging::Hooks do
     it "the block is called after the method" do
       value = nil
       @test_class.instance_exec(self) do |_slf|
+        remove_method(:meth)
         define_method(:meth) do
           value = "in method"
         end

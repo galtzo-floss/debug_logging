@@ -1,4 +1,6 @@
-require "active_support"
+require "active_support/notifications"
+require "active_support/isolated_execution_state"
+require "active_support/core_ext/hash/except"
 require "active_support/log_subscriber"
 
 module DebugLogging
@@ -25,7 +27,7 @@ module DebugLogging
         end
       end
 
-      # @param [ActiveSupport::Notifications::Event]
+      # @param event [ActiveSupport::Notifications::Event]
       # @return [Hash]
       def event_to_format_options(event)
         args = event.payload[:debug_args]

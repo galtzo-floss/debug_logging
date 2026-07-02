@@ -17,6 +17,7 @@ module DebugLogging
       def debug_time_box(time, *names, &blk)
         names.each do |name|
           meth = instance_method(name)
+          remove_method(name) if meth.owner.equal?(self)
           define_method(name) do |*args, &block|
             Timeout.timeout(time) do
               meth.bind_call(self, *args, &block)
@@ -38,6 +39,7 @@ module DebugLogging
         end
         names.each do |name|
           meth = instance_method(name)
+          remove_method(name) if meth.owner.equal?(self)
           define_method(name) do |*args, &block|
             meth.bind_call(self, *args, &block)
           rescue => e
@@ -54,6 +56,7 @@ module DebugLogging
         end
         names.each do |name|
           meth = instance_method(name)
+          remove_method(name) if meth.owner.equal?(self)
           define_method(name) do |*args, &block|
             instance_exec(name, *args, block, &blk)
             meth.bind_call(self, *args, &block)
@@ -69,6 +72,7 @@ module DebugLogging
         end
         names.each do |name|
           meth = instance_method(name)
+          remove_method(name) if meth.owner.equal?(self)
           define_method(name) do |*args, &block|
             result = meth.bind_call(self, *args, &block)
             instance_exec(result, &blk)

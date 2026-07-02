@@ -19,7 +19,9 @@ module DebugLogging
           config: config_opts
         )
         original_method = method(decorated_method)
-        (class << self; self; end).class_eval do
+        singleton_class = class << self; self; end
+        singleton_class.send(:remove_method, decorated_method) if original_method.owner.equal?(singleton_class)
+        singleton_class.class_eval do
           define_method(decorated_method) do |*args, **kwargs, &block|
             lamb_dart = LambDart::Note.new(
               klass: self,

@@ -12,4 +12,8 @@
 SimpleCov.configure do
   cover "lib/**/*.rb", "lib/**/*.rake", "exe/*.rb"
 end
-SimpleCov.add_filter("/lib/simple_debug_logging.rb")
+if SimpleCov.respond_to?(:skip)
+  SimpleCov.skip("/lib/simple_debug_logging.rb")
+else
+  SimpleCov.add_filter("/lib/simple_debug_logging.rb")
+end
