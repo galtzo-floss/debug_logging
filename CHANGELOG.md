@@ -20,11 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added support for JRuby 10.1 and TruffleRuby 34.0.
-
 ### Changed
-
-- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
 
 ### Deprecated
 
@@ -32,9 +28,26 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Package configured license files in gem release file lists.
-
 ### Security
+
+## [4.0.5] - 2026-07-02
+
+- TAG: [v4.0.5][4.0.5t]
+- COVERAGE: 97.41% -- 716/735 lines in 28 files
+- BRANCH COVERAGE: 87.83% -- 166/189 branches in 28 files
+- 20.94% documented
+
+### Added
+
+- Added support for JRuby 10.1 and TruffleRuby 34.0.
+
+### Changed
+
+- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
+
+### Fixed
+
+- Package configured license files in gem release file lists.
 
 ## [4.0.4] - 2026-06-14
 
@@ -295,7 +308,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.5...HEAD
+[4.0.5]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...v4.0.5
+[4.0.5t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.5
 [4.0.4]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.3...v4.0.4
 [4.0.4t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.0.4
 [4.0.3]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.2...v4.0.3
