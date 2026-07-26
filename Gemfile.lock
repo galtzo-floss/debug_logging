@@ -104,7 +104,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.21.1)
-    kettle-dev (2.4.5)
+    kettle-dev (2.4.6)
       emoji_regex (>= 15.0)
       kettle-gha-pins (~> 0.3, >= 0.3.1)
       kettle-ndjson (~> 0.1, >= 0.1.1)
@@ -119,14 +119,14 @@ GEM
     kettle-ndjson (0.1.1)
       version_gem (~> 1.1, >= 1.1.14)
     kettle-rb (0.1.5)
-    kettle-soup-cover (3.0.5)
+    kettle-soup-cover (3.0.6)
       kettle-wash (~> 0.1, >= 0.1.0)
       simplecov (>= 1.0)
       simplecov-cobertura (>= 4.0)
       simplecov-console (~> 0.9, >= 0.9.5)
       simplecov-rcov (~> 0.3, >= 0.3.7)
       simplecov_lcov_formatter (~> 0.9, >= 0.9.0)
-    kettle-test (2.0.15)
+    kettle-test (2.0.16)
       appraisal2 (~> 3.0, >= 3.0.6)
       backports (~> 3.0)
       rspec (~> 3.0)
@@ -152,7 +152,7 @@ GEM
     mutex_m (0.3.0)
     nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
-    nomono (1.1.0)
+    nomono (1.1.1)
     openssl (4.0.2)
     ostruct (0.6.3)
     parallel (1.28.0)
@@ -205,7 +205,7 @@ GEM
     rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-pending_for (0.1.21)
+    rspec-pending_for (0.1.22)
       rspec-core (~> 3.0)
       ruby_engine (~> 2.0)
       ruby_version (~> 1.0)
@@ -493,12 +493,12 @@ CHECKSUMS
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
   json (2.21.1) sha256=13a43df75d95641443f5702dff350f237164a9d811ff0f2c2800d4d980220583
-  kettle-dev (2.4.5) sha256=3a451940796a671b7adc910db7c3da87899ebec7c5274921ca598345549ae7eb
+  kettle-dev (2.4.6)
   kettle-gha-pins (0.3.1) sha256=b13a82a403af31880288fe65f85f2a24a93ae4740c0c7cbc15a35044d27aaa51
   kettle-ndjson (0.1.1) sha256=2d84314e8c911d6f560f2736e8f72019df6d811829674788ff33b3bbf518ed66
   kettle-rb (0.1.5) sha256=0322a569860c86e70f90d5ebe72353b8720b7054c7efa9f9044857f5c972d29f
-  kettle-soup-cover (3.0.5) sha256=80abb42eb294fa5d3c8632c259a297c554fbc01902714461f3bf99a65190f5d0
-  kettle-test (2.0.15) sha256=993b132ffec17fe82cc81c69f876e15d6eb610a4831df08dc01c0cce5c070caa
+  kettle-soup-cover (3.0.6)
+  kettle-test (2.0.16)
   kettle-wash (0.1.1) sha256=ae2e08b64c72c46ceed5ffa197ed859e85352f38ed0412fca2e18ce29b2dc4f9
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
@@ -508,7 +508,7 @@ CHECKSUMS
   minitest (6.0.6) sha256=153ea36d1d987a62942382b61075745042a2b3123b1cd48f4c3675af9cc7d6f1
   mutex_m (0.3.0) sha256=cfcb04ac16b69c4813777022fdceda24e9f798e48092a2b817eb4c0a782b0751
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
-  nomono (1.1.0) sha256=463dd4c79da02a855739a1b5483190d527b7868688be905e84abdb3449b32c88
+  nomono (1.1.1)
   openssl (4.0.2) sha256=1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
@@ -534,7 +534,7 @@ CHECKSUMS
   rspec-core (3.13.6) sha256=a8823c6411667b60a8bca135364351dda34cd55e44ff94c4be4633b37d828b2d
   rspec-expectations (3.13.5) sha256=33a4d3a1d95060aea4c94e9f237030a8f9eae5615e9bd85718fe3a09e4b58836
   rspec-mocks (3.13.8) sha256=086ad3d3d17533f4237643de0b5c42f04b66348c28bf6b9c2d3f4a3b01af1d47
-  rspec-pending_for (0.1.21) sha256=c87fda50c20f8faca72d9cfa6a936abffd37860343f14aced95bbb29b8ae96bf
+  rspec-pending_for (0.1.22) sha256=49dc647473f8c8ea4ccc1a33813537dd94b913ef7ec5a8689896101eaacb71cf
   rspec-stubbed_env (1.0.8) sha256=b23c4dd5e5d6a0cf0c5b4f6ed3f3678d78e4be9ec247ea9abf0669d20b490535
   rspec-support (3.13.7) sha256=0640e5570872aafefd79867901deeeeb40b0c9875a36b983d85f54fb7381c47c
   rspec_junit_formatter (0.6.0) sha256=40dde674e6ae4e6cc0ff560da25497677e34fefd2338cc467a8972f602b62b15
