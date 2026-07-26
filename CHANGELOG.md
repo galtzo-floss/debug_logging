@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.1.1] - 2026-07-25
+
+- TAG: [v4.1.1][4.1.1t]
+- COVERAGE: 97.46% -- 730/749 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 20.94% documented
+
+### Changed
+
 - kettle-jem-template-20260716-001 - Shim gemspec manifests now include
   `LICENSE.md` instead of nonexistent `LICENSE.txt`.
 - kettle-jem-template-20260716-002 - Generated gemspec manifests now ship fewer
@@ -46,14 +63,6 @@ Please file a bug if you notice a violation of semantic versioning.
   execute generated `version.rb` files for coverage without redefining package
   constants. Managed version specs are removed when `version_gem` is disabled
   or incompatible with the project's runtime Ruby floor.
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [4.1.0] - 2026-07-02
 
@@ -350,7 +359,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.1...HEAD
+[4.1.1]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.0...v4.1.1
+[4.1.1t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.1
 [4.1.0]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.5...v4.1.0
 [4.1.0t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.0
 [4.0.5]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.4...v4.0.5
