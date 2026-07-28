@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    debug_logging (4.1.1)
+    debug_logging (4.1.2)
       version_gem (~> 1.1, >= 1.1.14)
 
 GEM
@@ -98,7 +98,7 @@ GEM
       bundler (>= 1.14)
       version_gem (~> 1.1, >= 1.1.4)
     geom2d (0.4.1)
-    gitmoji-regex (2.0.6)
+    gitmoji-regex (2.0.7)
       version_gem (~> 1.1, >= 1.1.14)
     hexapdf (1.9.1)
       cmdparse (~> 3.0, >= 3.0.3)
@@ -449,7 +449,7 @@ DEPENDENCIES
   debug_logging!
   erb (~> 6.0, >= 6.0.6)
   gem_bench (~> 2.0, >= 2.0.5)
-  gitmoji-regex (~> 2.0, >= 2.0.6)
+  gitmoji-regex (~> 2.0, >= 2.0.7)
   irb (~> 1.17)
   kettle-dev (~> 2.3, >= 2.3.7)
   kettle-family (~> 1.2, >= 1.2.0)
@@ -510,7 +510,7 @@ CHECKSUMS
   connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
   date (3.5.1) sha256=750d06384d7b9c15d562c76291407d89e368dda4d4fff957eb94962d325a0dc0
   debug (1.11.1) sha256=2e0b0ac6119f2207a6f8ac7d4a73ca8eb4e440f64da0a3136c30343146e952b6
-  debug_logging (4.1.1)
+  debug_logging (4.1.2)
   delegate (0.6.1) sha256=54cf946cacfe05b1c23114edd8fbd8d54e9cea7abf36b95130ab53cc88b8f7e4
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
   diffy (3.4.4) sha256=79384ab5ca82d0e115b2771f0961e27c164c456074bd2ec46b637ebf7b6e47e3
@@ -527,7 +527,7 @@ CHECKSUMS
   erb (6.0.6) sha256=a9b24986700f5bf127c4f297c5403c3ca41b83b0a316c0cd09a096b56e644ae5
   gem_bench (2.0.5) sha256=0dc0fb44a5a5eb7b2f5c1c68a5b0164d72007132822c012bac3abe976b199ead
   geom2d (0.4.1) sha256=ea0998ea90c4f2752e24fe13d85a4f89bee689d151316140ebcc6369bf634ed9
-  gitmoji-regex (2.0.6) sha256=d50649caccc8ad1b080f01e869f0909b135206d8b3ece2313ca31a9b0e39f14b
+  gitmoji-regex (2.0.7) sha256=7124a3c95818514d8ccbfa15c094fe528bc92ee42485642781a8bbf4ea40dd97
   hexapdf (1.9.1) sha256=2d1f6a3622e6bc2a70a707d4c3f3fa44f5552ecd9d899f6283abb07398a84884
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
