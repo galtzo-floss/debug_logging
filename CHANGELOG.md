@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.1.2] - 2026-07-31
+
+- TAG: [v4.1.2][4.1.2t]
+- COVERAGE: 97.46% -- 730/749 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 21.99% documented
+
+### Added
+
 - Documentation linting now has its generated `yard-lint` dependency and severity config available in the local bundle.
 
 - kettle-jem-template-20260726-001 - Projects now include YARD lint
@@ -38,10 +57,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260728-001 - Generated Ruby workflows now use clearer
   setup-ruby-flash planning and can prepare appraisal-only jobs without
   installing the main Gemfile bundle.
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -81,8 +96,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs
   relative to the gemspec directory, so packaged template assets are included
   even when the gemspec is loaded from another working directory.
-
-### Security
 
 ## [4.1.1] - 2026-07-25
 
@@ -413,7 +426,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.1...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.2...HEAD
+[4.1.2]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.1...v4.1.2
+[4.1.2t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.2
 [4.1.1]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.0...v4.1.1
 [4.1.1t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.1
 [4.1.0]: https://github.com/galtzo-floss/debug_logging/compare/v4.0.5...v4.1.0
