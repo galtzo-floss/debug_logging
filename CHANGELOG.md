@@ -28,9 +28,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Benchmark log specs now accept TruffleRuby invocation IDs whose time-derived
-  suffix has no decimal component.
-
 ### Security
 
 ## [4.1.2] - 2026-07-31
@@ -99,6 +96,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs
   relative to the gemspec directory, so packaged template assets are included
   even when the gemspec is loaded from another working directory.
+
+- Benchmark log specs now accept TruffleRuby invocation IDs whose time-derived
+  suffix has no decimal component.
 
 ## [4.1.1] - 2026-07-25
 

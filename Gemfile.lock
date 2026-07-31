@@ -122,7 +122,7 @@ GEM
       kettle-test (~> 2.0, >= 2.0.12)
       ruby-progressbar (~> 1.13)
       tty-progressbar (~> 0.18)
-    kettle-family (1.2.14)
+    kettle-family (1.2.15)
       command_kit (~> 0.6)
       command_kit-completion (~> 0.1)
       kettle-dev (~> 2.3, >= 2.5.13)
@@ -542,7 +542,7 @@ CHECKSUMS
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
   json (2.21.2) sha256=1f1d3b7cf2b3ba1a69beca0bb6db13d5438b80bff3cd54cdaaa620b9b07c1c6a
   kettle-dev (2.5.13) sha256=56a48fb548d2c2a2684bfbf647921f7d7a903cf11eb8f6be6ea6296cdf1f4869
-  kettle-family (1.2.14) sha256=beea5ca863c606e847b97c4d503b800d6ff53109287b503a6df506ef1e571dd3
+  kettle-family (1.2.15) sha256=d28ef135e6f135f73f27993c40fcb4f91f55a43644fb19112634582ce8fccab6
   kettle-gha-pins (0.3.4) sha256=270319d8bf282a77c2f7c2f0767a2721d42d12909744b05e8d78e52f0ffab1e4
   kettle-ndjson (0.1.9) sha256=dd78559bfadebbcd6076ae2c11d5d9f55aa6467fbe2f2fc4a8100fe9bcfbff27
   kettle-rb (0.1.7) sha256=eb1da06569bc05a372b8414e37ae09611d649b19e1ebc5347af7af0fff143181

@@ -82,11 +82,6 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 
 <h3 id="fixed">Fixed</h3>
 
-<ul>
-  <li>Benchmark log specs now accept TruffleRuby invocation IDs whose time-derived<br>
-suffix has no decimal component.</li>
-</ul>
-
 <h3 id="security">Security</h3>
 
 <h2 id="412---2026-07-31">
@@ -172,9 +167,13 @@ cover both <code>version.rb</code> and <code>version_gem.rb</code>.</p>
   <li>kettle-jem-template-20260729-003 - Old-Ruby gems below the VersionGem runtime<br>
 floor now get managed minimal <code>version.rb</code> files and anonymous-loader version<br>
 specs without adding <code>version_gem</code>.</li>
-  <li>kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs<br>
+  <li>
+    <p>kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs<br>
 relative to the gemspec directory, so packaged template assets are included<br>
-even when the gemspec is loaded from another working directory.</li>
+even when the gemspec is loaded from another working directory.</p>
+  </li>
+  <li>Benchmark log specs now accept TruffleRuby invocation IDs whose time-derived<br>
+suffix has no decimal component.</li>
 </ul>
 
 <h2 id="411---2026-07-25">
