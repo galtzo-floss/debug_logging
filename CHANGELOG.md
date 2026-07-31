@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Benchmark log specs now accept TruffleRuby invocation IDs whose time-derived
+  suffix has no decimal component.
+
 ### Security
 
 ## [4.1.2] - 2026-07-31
