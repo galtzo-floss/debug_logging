@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Remove duplicate loading of the version file from the public entrypoint.
+
 ### Security
 
 ## [4.1.2] - 2026-07-31

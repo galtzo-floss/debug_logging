@@ -6,7 +6,6 @@ require "digest"
 
 # External gems
 require "version_gem"
-require_relative "debug_logging/version"
 
 require "debug_logging/colorized_string"
 
