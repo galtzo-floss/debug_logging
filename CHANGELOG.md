@@ -43,6 +43,9 @@ Please file a bug if you notice a violation of semantic versioning.
   use GitHub's stable organization avatar endpoint instead of assuming a
   matching Galtzo-hosted asset exists.
 
+- kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
+  preserving comments and trailing commas during template updates.
+
 ### Security
 
 ## [4.1.2] - 2026-07-31
