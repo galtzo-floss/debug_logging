@@ -17,7 +17,7 @@ require "kettle/test/rspec"
 # `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 
 # RSpec Configs
-require "config/byebug"
+require "debug"
 require "config/rspec/rspec_block_is_expected"
 require "config/rspec/rspec_core"
 require "config/rspec/silent_stream"
