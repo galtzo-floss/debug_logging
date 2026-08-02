@@ -11,7 +11,6 @@ require "debug_logging/colorized_string"
 
 # This gem
 require "debug_logging/constants"
-require "debug_logging/version"
 require "debug_logging/errors"
 require "debug_logging/configuration"
 require "debug_logging/util"
@@ -23,6 +22,7 @@ require "debug_logging/lamb_dartable"
 require "debug_logging/instance_logger_modulizer"
 require "debug_logging/instance_logger"
 require "debug_logging/class_logger"
+require_relative "debug_logging/version"
 
 ####################
 #                  #
