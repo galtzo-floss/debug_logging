@@ -17,7 +17,7 @@ require "kettle/test/rspec"
 # `kettle/test/rspec` installs harness helpers documented in spec/README.md.
 
 # RSpec Configs
-require "debug"
+require "debug" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.7")
 require "config/rspec/rspec_block_is_expected"
 require "config/rspec/rspec_core"
 require "config/rspec/silent_stream"
