@@ -118,6 +118,24 @@ gem install debug_logging
 
 ## ⚙️ Configuration
 
+Configuration is process-global by default and can be set after requiring the
+gem. In Rails, put application-wide settings in an initializer only when the
+required logger is available; otherwise configure the logger after Rails has
+finished booting. Configuration is inherited by decorated classes, instances,
+and methods, so local overrides should be used when a logger or verbosity
+level differs.
+
+```ruby
+require "debug_logging"
+
+DebugLogging.configure do |config|
+  config.logger = Logger.new($stdout)
+  config.log_level = :debug
+  config.add_timestamp = true
+  config.add_payload = false
+end
+```
+
 ## 🔧 Basic Usage
 
 Crack open the specs for more complex usage examples than the ones below.
