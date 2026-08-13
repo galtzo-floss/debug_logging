@@ -319,12 +319,12 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
       <pre class="lines">
 
 
+91
 92
-93
-94</pre>
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_configuration'>configuration</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_debug_logging_configuration'>debug_logging_configuration</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="DebugLogging/Configuration.html" title="DebugLogging::Configuration (class)">Configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="DebugLogging/Configuration.html#initialize-instance_method" title="DebugLogging::Configuration#initialize (method)">new</a></span></span>
@@ -372,12 +372,12 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
       <pre class="lines">
 
 
+96
 97
-98
-99</pre>
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
@@ -402,12 +402,12 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
       <pre class="lines">
 
 
+122
 123
-124
-125</pre>
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_debug_logging_configuration'>debug_logging_configuration</span>
   <span class='cvar'>@@debug_logging_configuration</span>
@@ -432,12 +432,12 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
       <pre class="lines">
 
 
+126
 127
-128
-129</pre>
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_debug_logging_configuration='>debug_logging_configuration=</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
   <span class='cvar'>@@debug_logging_configuration</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span>
@@ -462,6 +462,7 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
       <pre class="lines">
 
 
+74
 75
 76
 77
@@ -472,11 +473,10 @@ e.g. DebugLogging.configuration.ellipsis = “…”</p>
 82
 83
 84
-85
-86</pre>
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/debug_logging.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extended'>extended</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:extend</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="DebugLogging/ArgumentPrinter.html" title="DebugLogging::ArgumentPrinter (module)">ArgumentPrinter</a></span></span><span class='rparen'>)</span>

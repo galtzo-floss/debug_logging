@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.1.3] - 2026-08-13
+
+- TAG: [v4.1.3][4.1.3t]
+- COVERAGE: 97.46% -- 729/748 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 21.99% documented
+
+### Changed
+
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
@@ -34,10 +51,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (1)
   - documentation (1)
   - other (3)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -55,8 +68,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
   preserving comments and trailing commas during template updates.
-
-### Security
 
 ## [4.1.2] - 2026-07-31
 
@@ -439,7 +450,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.2...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.3...HEAD
+[4.1.3]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.2...v4.1.3
+[4.1.3t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.3
 [4.1.2]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.1...v4.1.2
 [4.1.2t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.2
 [4.1.1]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.0...v4.1.1
