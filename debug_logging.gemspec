@@ -9,7 +9,7 @@
 Gem::Specification.new do |spec|
   spec.name = "debug_logging"
   spec.version = Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/debug_logging/version.rb", mod) }::DebugLogging::Version::VERSION
-  spec.authors = ["Peter H. Boling", "John Gillson", "Aboling0"]
+  spec.authors = ["Peter H. Boling", "John Gillson", "Annibelle Boling"]
   spec.email = ["floss@galtzo.com"]
 
   spec.summary = "🪲 Drop-in debug logging useful when a call stack gets unruly"
@@ -113,7 +113,7 @@ Automatically log selected methods and their arguments as they are called at run
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 3.0", ">= 3.0.6")             # ruby >= 3.1
+  spec.add_development_dependency("kettle-dev", "~> 3.0", ">= 3.0.13")             # ruby >= 3.1
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -128,7 +128,7 @@ Automatically log selected methods and their arguments as they are called at run
   # Loads version files in anonymous namespaces for coverage without constant redefinition warnings.
   spec.add_development_dependency("anonymous_loader", "~> 0.1", ">= 0.1.3")         # ruby >= 2.2.0
   spec.add_development_dependency("appraisal2", "~> 3.2", ">= 3.2.2")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.19")            # ruby >= 3.1
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.20")            # ruby >= 3.1
   spec.add_development_dependency("turbo_tests2", "~> 3.2", ">= 3.2.6")           # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
