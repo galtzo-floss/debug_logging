@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    debug_logging (4.1.3)
+    debug_logging (4.1.4)
       version_gem (~> 1.1, >= 1.1.15)
 
 GEM
@@ -686,7 +686,7 @@ CHECKSUMS
   connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
   date (3.5.1) sha256=750d06384d7b9c15d562c76291407d89e368dda4d4fff957eb94962d325a0dc0
   debug (1.11.1) sha256=2e0b0ac6119f2207a6f8ac7d4a73ca8eb4e440f64da0a3136c30343146e952b6
-  debug_logging (4.1.3)
+  debug_logging (4.1.4)
   delegate (0.6.1) sha256=54cf946cacfe05b1c23114edd8fbd8d54e9cea7abf36b95130ab53cc88b8f7e4
   diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
   diffy (3.4.4) sha256=79384ab5ca82d0e115b2771f0961e27c164c456074bd2ec46b637ebf7b6e47e3

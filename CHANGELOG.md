@@ -27,6 +27,9 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (26)
   - other (3)
 
+- [kc] kettle-jem/template: updated 1 project file:
+  - other (1)
+
 ### Deprecated
 
 ### Removed
