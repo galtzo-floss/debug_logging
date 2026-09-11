@@ -19,6 +19,7 @@ template_state:
     kettle-jem/template:
     - ".simplecov"
     - Gemfile
+    - Rakefile
     - gemfiles/modular/templating.gemfile
   checksums:
     ".aiignore.example": 48a5dfdd93afd1a15fdce39cc28ca9920263f00018b0968ab031fa744521e5ce
