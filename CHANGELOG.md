@@ -22,14 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 8 project files:
-  - dependencies (8)
-
-- [kc] kettle-jem/template: updated 4 project files:
-  - code and tests (1)
-  - dependencies (2)
-  - other (1)
-
 ### Deprecated
 
 ### Removed
@@ -37,6 +29,23 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [4.1.4] - 2026-09-11
+
+- TAG: [v4.1.4][4.1.4t]
+- COVERAGE: 97.46% -- 729/748 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 21.99% documented
+
+### Changed
+
+- [kc] kettle-jem/prepare: updated 8 project files:
+  - dependencies (8)
+
+- [kc] kettle-jem/template: updated 4 project files:
+  - code and tests (1)
+  - dependencies (2)
+  - other (1)
 
 ## [4.1.3] - 2026-08-13
 
@@ -458,7 +467,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.3...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.4...HEAD
+[4.1.4]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.3...v4.1.4
+[4.1.4t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.4
 [4.1.3]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.2...v4.1.3
 [4.1.3t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.3
 [4.1.2]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.1...v4.1.2
