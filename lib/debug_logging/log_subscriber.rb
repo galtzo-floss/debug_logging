@@ -1,6 +1,8 @@
 require "active_support/notifications"
 require "active_support/isolated_execution_state"
 require "active_support/core_ext/hash/except"
+# ActiveSupport 7.1+ components expect the framework (e.g. ActiveSupport.deprecator) to be loaded first.
+require "active_support"
 require "active_support/log_subscriber"
 
 module DebugLogging
