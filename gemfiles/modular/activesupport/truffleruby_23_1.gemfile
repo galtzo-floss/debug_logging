@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+if RUBY_ENGINE == "truffleruby" && RUBY_ENGINE_VERSION.start_with?("23.1")
+  # ActiveSupport >= 7.2 calls Array#to_set while loading, before `set` is required,
+  # which TruffleRuby 23.1 does not autoload.
+  gem "activesupport", "< 7.2"
+end
