@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.1.5] - 2026-09-30
+
+- TAG: [v4.1.5][4.1.5t]
+- COVERAGE: 97.46% -- 730/749 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 21.99% documented
+
+### Added
+
 - kettle-jem-template-20260913-001 - Templating now also surfaces a review
   entry in `dependency_conflicts.resolve` when a direct development
   dependency doesn't support one or more of this project's declared
@@ -37,14 +56,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (2)
   - other (2)
   - workflows (21)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [4.1.4] - 2026-09-11
 
@@ -483,7 +494,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.4...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.5...HEAD
+[4.1.5]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.4...v4.1.5
+[4.1.5t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.5
 [4.1.4]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.3...v4.1.4
 [4.1.4t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.4
 [4.1.3]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.2...v4.1.3
