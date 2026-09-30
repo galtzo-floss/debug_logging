@@ -8,7 +8,7 @@
   "gemfiles/modular/documentation_local.gemfile:1886495639": [
     [23, 41, 4, "Lint/LtsRuby/UnavailableMethod: IO/SyntaxError#path is unavailable before Ruby 3.2.", 2088095368]
   ],
-  "gemfiles/modular/style_local.gemfile:319547300": [
+  "gemfiles/modular/style_local.gemfile:1244685007": [
     [26, 41, 4, "Lint/LtsRuby/UnavailableMethod: IO/SyntaxError#path is unavailable before Ruby 3.2.", 2088095368]
   ],
   "gemfiles/modular/templating_local.gemfile:4283020804": [
