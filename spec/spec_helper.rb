@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Std Lib
 
 # NOTE: Gemfiles for non-coverage appraisals may not have kettle-soup-cover.
