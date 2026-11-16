@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.1.7] - 2026-11-15
+
+- TAG: [v4.1.7][4.1.7t]
+- COVERAGE: 97.46% -- 730/749 lines in 28 files
+- BRANCH COVERAGE: 86.34% -- 177/205 branches in 28 files
+- 21.99% documented
+
+### Changed
+
 - [kc] kettle-jem/prepare: updated 8 project files:
   - dependencies (8)
 
@@ -31,14 +48,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (1)
   - other (1)
   - workflows (5)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [4.1.6] - 2026-11-09
 
@@ -518,7 +527,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.6...HEAD
+[Unreleased]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.7...HEAD
+[4.1.7]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.6...v4.1.7
+[4.1.7t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.7
 [4.1.6]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.5...v4.1.6
 [4.1.6t]: https://github.com/galtzo-floss/debug_logging/releases/tag/v4.1.6
 [4.1.5]: https://github.com/galtzo-floss/debug_logging/compare/v4.1.4...v4.1.5
